@@ -1,0 +1,37 @@
+﻿body {
+}
+.content{
+    text-align:center;
+    padding:200px;
+}
+.content h3 {
+    color: white;
+}
+.content span {
+    color: white;
+}
+.content span:hover {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+.locationIcon{
+    color:white;
+    font-size:140px;
+   
+}
+    .locationIcon .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+       
+     
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        font-size:20px;
+    }
+    .locationIcon:hover .tooltiptext {
+        visibility: visible;
+    }

@@ -1,0 +1,38 @@
+
+.table[b-k73m1lwagc] {
+    padding: 100px;
+    width: 100%;
+    height:400px;
+    font-size: 15px;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+}
+table[b-k73m1lwagc] {
+    width: 100%;
+    border-color:dimgray;
+   
+}
+td[b-k73m1lwagc] {
+   
+    height: 100px;
+}
+tr:nth-child(even)[b-k73m1lwagc] {
+   
+}
+.ResumeButton button[b-k73m1lwagc] {
+    background-color: #FF5733;
+    color: white;
+    border:none;
+    border-radius:5px;
+}
+.ResumeButton button:hover[b-k73m1lwagc]{
+    transform:scale(1.02);
+}
+
+
+
+
+
+

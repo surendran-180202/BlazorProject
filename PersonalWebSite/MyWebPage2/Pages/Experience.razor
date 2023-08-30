@@ -1,0 +1,60 @@
+﻿@page "/Experience"
+@using MyWebPage2.Data
+@inject NavigationManager uriHelper;
+@inject UserServices dataAccessLayer
+
+<PageTitle>Buiness</PageTitle>
+<h1>Experience</h1>
+
+<div class="table">
+    <table>
+        @if (Experiencetable == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var experience in Experiencetable)
+            {
+                <tr>
+                    <td width="20%">@experience.YEAR</td>
+                    <td width="40%">@experience.LEARING</td>
+                    <td width="40%">@experience.INSTITUTE</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+<center>
+    <div class="ResumeButton">
+        <a href="PdfView"> <button @onclick="ViewResume">View Resume <i class="fa fa-arrow-circle-down"></i> </button></a>
+
+    </div>
+   
+</center>
+
+
+
+@code{
+    List<tblExperience> Experiencetable = new List<tblExperience>();
+
+    UserServices userService = new UserServices();
+
+    
+  
+    protected override void OnInitialized()
+    {
+        Experiencetable = userService.Experience();
+
+    }
+    public void ViewResume()
+    {
+       // uriHelper.NavigateTo(uriHelper.Uri, true);
+       
+       
+        
+    }
+  
+   
+}
