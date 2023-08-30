@@ -1,0 +1,37 @@
+body[b-gb0ofual5f] {
+}
+.content[b-gb0ofual5f]{
+    text-align:center;
+    padding:200px;
+}
+.content h3[b-gb0ofual5f] {
+    color: white;
+}
+.content span[b-gb0ofual5f] {
+    color: white;
+}
+.content span:hover[b-gb0ofual5f] {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+.locationIcon[b-gb0ofual5f]{
+    color:white;
+    font-size:140px;
+   
+}
+    .locationIcon .tooltiptext[b-gb0ofual5f] {
+        visibility: hidden;
+        width: 300px;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+       
+     
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        font-size:20px;
+    }
+    .locationIcon:hover .tooltiptext[b-gb0ofual5f] {
+        visibility: visible;
+    }

@@ -1,0 +1,56 @@
+﻿
+.body {
+    margin: -20px -24px 0 -35px;
+    width: auto;
+    height: 760px;
+    background-position: center;
+    border-bottom: 1px solid white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    backdrop-filter:blur(100px);
+  
+}
+.h1 {
+    font-size: 25px;
+    color:white;
+    
+}
+.insideCircle {
+    padding: 30px;
+    animation: slow 1s forwards;
+}
+insideCircle:hover {
+
+}
+@keyframes slow {
+    from {
+       margin-left:-250px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+.imageStyle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+   
+}
+.imageStyle:hover{
+    transform: scale(1.02);
+}
+
+.introText {
+    
+    font-size: 12px;
+    color: white;
+}
+.GreetingText {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+

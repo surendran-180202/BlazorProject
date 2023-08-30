@@ -1,0 +1,55 @@
+
+.body[b-zllp0tmasc] {
+    margin: -20px -24px 0 -35px;
+    width: auto;
+    height: 760px;
+    background-position: center;
+    border-bottom: 1px solid white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+  
+}
+.h1[b-zllp0tmasc] {
+    font-size: 25px;
+    color:white;
+    
+}
+.insideCircle[b-zllp0tmasc] {
+    padding: 30px;
+    animation: slow-b-zllp0tmasc 1s forwards;
+}
+insideCircle:hover[b-zllp0tmasc] {
+
+}
+@keyframes slow-b-zllp0tmasc {
+    from {
+       margin-left:-250px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+.imageStyle[b-zllp0tmasc] {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+   
+}
+.imageStyle:hover[b-zllp0tmasc]{
+    transform: scale(1.02);
+}
+
+.introText[b-zllp0tmasc] {
+    
+    font-size: 12px;
+    color: white;
+}
+.GreetingText[b-zllp0tmasc] {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+

@@ -1,0 +1,48 @@
+﻿@page "/NewUser"
+@using MyWebPage2.Data
+@inject NavigationManager uriHelper;
+@inject UserServices dataAccessLayer
+
+<div class="col-md-4 offset-4">
+    <div class="@RegisterClass">
+        <form>
+            <div class="icon">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="col-md-auto offset-1 ">
+                <i class="fa fa-address-book"></i><input type="text" placeholder="Enter username" @bind="usertable.USERNAME" />
+                <i class="fa fa-envelope"></i><input type="text" placeholder="Enter Email" @bind=" usertable.EMAIL" />
+                <i class="fa fa-mobile"></i><input type="text" placeholder="Enter PhoneNumber" @bind="usertable.PHONE" />
+                <i class="fa fa-key"></i><input type="password" placeholder="Enter password" @bind="usertable.PASSWORD" />
+                <i class="fa fa-key"></i><input type="password" placeholder="Enter Conform password" @bind="ConformPassword" />
+            </div>
+            <center>
+                <br />
+                <a href="Education"><button @onclick="NewUserRegister">REIGESTER</button></a>
+               @* <a href="LoginPage"><input type="submit" @onclick="NewUserRegister" class="btnlogin" value="REIGESTER" /></a>*@
+            </center>
+          
+           
+
+        </form>
+    </div>
+</div>
+
+@code {
+   
+    public string? RegisterClass { get; set; }
+    public string? ConformPassword { get; set; }
+    tblUser usertable = new tblUser();
+    UserServices userService = new UserServices();
+
+    protected override void OnInitialized()
+    {
+        RegisterClass = "LoginClass";
+    }
+    public void NewUserRegister()
+    {
+        if (usertable.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(usertable.EMAIL)) userService.Create(usertable);
+
+    }
+   
+}

@@ -1,0 +1,64 @@
+﻿@page "/LoginPage"
+@using MyWebPage2.Data
+@inject NavigationManager uriHelper;
+@inject UserServices dataAccessLayer
+
+<PageTitle>LoginPage</PageTitle>
+
+    <div class="col-md-4 offset-4">
+        <div class="@LoginClass">
+            <form>
+                <div class="icon">
+                    <div class="newuser"><a href="NewUser"><i class="fa fa-user-plus"></i></a> </div>
+                    <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="col-md-12 offset-1">
+                    <i class="fa fa-address-book"></i>
+                    <input type="text" placeholder="Enter username" @bind="usertable.USERNAME" /><br />
+                    <i class="fa fa-key"></i>
+                    <input type="@type" placeholder="Enter password" @bind="usertable.PASSWORD" /><br />
+                <input type="checkbox" class="cheackBox" @onclick="showpassword" /><span>show Password</span>
+                </div>
+                <center>
+                    <br />
+                <a href="Education"><button @onclick="LoginUser">LOGIN</button></a>
+                
+                </center>
+            </form>
+        </div>
+    </div>
+@code {
+    public string? type { get; set; }
+    public string? LoginClass { get; set;}
+    public string? ConformPassword { get; set; }
+    public bool? check { get; set; }
+    public string? PageNavigation { get; set; }
+
+    tblUser usertable = new tblUser();
+    UserServices userService = new UserServices();
+
+    protected override void OnInitialized()
+    {
+        type = "password";
+        LoginClass = "LoginClass";
+    }
+    public void LoginUser()
+    {
+        if (userService.UserCheck(usertable) == true)
+        {
+            PageNavigation ="Contact";
+        }
+        else
+        {
+            PageNavigation = "Education";
+        }
+
+
+    }
+    private void showpassword()
+    {
+      type = "text";
+
+    }
+
+}
