@@ -2,7 +2,6 @@
 }
 .content{
     text-align:center;
-    padding:200px;
 }
 .content h3 {
     color: white;
@@ -17,21 +16,22 @@
 .locationIcon{
     color:white;
     font-size:140px;
-   
 }
-    .locationIcon .tooltiptext {
-        visibility: hidden;
-        width: 300px;
-        background-color: transparent;
-        color: white;
-        text-align: center;
-       
-     
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-        font-size:20px;
-    }
-    .locationIcon:hover .tooltiptext {
-        visibility: visible;
-    }
+input {
+    outline:none;
+    min-width: 30%;
+    padding: 10px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    background:none;
+    color:white;
+}
+.content a {
+  color:white;
+}
+.content a :hover{
+    color:white;
+}
+
+   

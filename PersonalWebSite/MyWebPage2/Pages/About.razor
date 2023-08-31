@@ -5,65 +5,6 @@
 <h1>Counter</h1>
 
 
-<div class="input-field">
-    <input type="text" required spellcheck="false">
-    <label>Leave Your Comment</label>
-
-</div>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="progress blue">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">90%</div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-            <div class="progress yellow">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">75%</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    *{
-        color:white;
-    }
-    .active {
-        display: block;
-    }
-
-    .inactive {
-        display: none;
-    }
-</style>
-
-<a class="btn btn-login" @onclick="RedirectPage">Log in</a>
-
-<div class="@PopupClass">
-    Error: @ErrorText
-</div>
 
 @code {
     private int currentCount = 0;
