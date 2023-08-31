@@ -1,8 +1,13 @@
-﻿
+﻿.Title {
+    position: fixed;
+    color: white;
+    z-index: 1;
+}
+ 
 .table {
     padding: 100px;
     width: 100%;
-    height:400px;
+    height:500px;
     font-size: 15px;
     color: white;
     overflow-x: hidden;
@@ -18,9 +23,7 @@ td {
    
     height: 100px;
 }
-tr:nth-child(even) {
-   
-}
+
 .ResumeButton button {
     background-color: #FF5733;
     color: white;

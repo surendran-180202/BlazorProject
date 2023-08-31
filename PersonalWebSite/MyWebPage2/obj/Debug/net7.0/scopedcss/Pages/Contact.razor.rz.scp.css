@@ -2,7 +2,6 @@ body[b-gb0ofual5f] {
 }
 .content[b-gb0ofual5f]{
     text-align:center;
-    padding:200px;
 }
 .content h3[b-gb0ofual5f] {
     color: white;
@@ -17,21 +16,22 @@ body[b-gb0ofual5f] {
 .locationIcon[b-gb0ofual5f]{
     color:white;
     font-size:140px;
-   
 }
-    .locationIcon .tooltiptext[b-gb0ofual5f] {
-        visibility: hidden;
-        width: 300px;
-        background-color: transparent;
-        color: white;
-        text-align: center;
-       
-     
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-        font-size:20px;
-    }
-    .locationIcon:hover .tooltiptext[b-gb0ofual5f] {
-        visibility: visible;
-    }
+input[b-gb0ofual5f] {
+    outline:none;
+    min-width: 30%;
+    padding: 10px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    background:none;
+    color:white;
+}
+.content a[b-gb0ofual5f] {
+  color:white;
+}
+.content a :hover[b-gb0ofual5f]{
+    color:white;
+}
+
+   

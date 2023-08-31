@@ -2,55 +2,84 @@
 .body {
     margin: -20px -24px 0 -35px;
     width: auto;
-    height: 760px;
+    min-height : 1000px;
     background-position: center;
     border-bottom: 1px solid white;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
-    backdrop-filter:blur(100px);
   
+    backdrop-filter: blur(100px);
 }
+
 .h1 {
     font-size: 25px;
-    color:white;
-    
+    color: white;
 }
+
 .insideCircle {
     padding: 30px;
     animation: slow 1s forwards;
 }
-insideCircle:hover {
 
+insideCircle:hover {
 }
+
 @keyframes slow {
     from {
-       margin-left:-250px;
+        margin-left: -250px;
     }
+
     to {
         margin-left: 0px;
     }
 }
-.imageStyle {
+
+.imageBg {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-   
+    overflow: hidden;
 }
-.imageStyle:hover{
-    transform: scale(1.02);
+
+    .imageBg img {
+        transition: transform .5s ease;
+    }
+
+    .imageBg:hover img {
+        transform: scale(1.5);
+    }
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.imageBg:hover .body {
+    transform: scale(1.5);
 }
 
 .introText {
-    
     font-size: 12px;
     color: white;
 }
+
 .GreetingText {
-    margin-top: 50px;
+    margin-top: 15vw;
     text-align: center;
     color: white;
 }
-
-
+.GreetingText p {
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 28px;
+    padding-bottom: 8px;
+}

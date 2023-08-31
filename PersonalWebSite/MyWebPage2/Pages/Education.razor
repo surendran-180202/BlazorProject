@@ -2,96 +2,57 @@
 
 <PageTitle>Education</PageTitle>
 
-<div class="content">
-    <h3>Education</h3>
-    <center>
-        <h1> Electronics and Communication Engineer</h1>
-    </center>
-</div>
+<div class="Title">
+    <h1>Education: </h1>
 
-<div class="row box">
-    <div class="col-md-4 ">
-      
-            <div class=container>
-                <div class=card>
-                    <div class=image>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <img href="#" src=https://cdn.wallpapersafari.com/85/92/iFp3T5.jpg>
-                    </div>
-                    <div class=content>
-                        <h3>Schooling</h3>
-                        <p>Name:ZkM.Hr.Sec.School , Bodinayakanur</p>
-                    </div>
-                </div>
-                <progress value="81" max="100"></progress>
+</div>
+<br/>
+<div class="container">
+    <div class="gradient-cards">
+        <div class="card">
+            <div class="container-card  bg-blue-box">
+                <p class="card-title">Primary school</p>
+                <p class="card-description">Year:2016-2017<br />Class:10 th<br />Institute: Zkm.Hr.Sec.School <br />percentage:81% </p>
+                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
+                <i class="fas fa-comment"></i><label> @currentCount</label>
             </div>
         </div>
-    <div class="col-md-4 ">
-            <div class=container>
-                <div class=card>
-                    <div class=image>
-                        <i class="fas fa-user-graduate"></i>
-                        <img href="#" src=https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80>
-                    </div>
-                    <div class=content>
-                        <h3>College</h3>
-                        <p>Name:NSCET,<br /> Place: Theni</p>
-                    </div>
-                </div>
-                <progress value="80" max="100"></progress>
+
+        <div class="card">
+            <div class="container-card  bg-blue-box">
+                <p class="card-title">Secodary School</p>
+                <p class="card-description">Year: 2018-2019<br />Class:12 th<br/>Institute: Zkm.Hr.Sec.School <br />percentage:55% </p>
+                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
+                <i class="fas fa-comment"></i><label> @currentCount</label>
             </div>
         </div>
-    <div class="col-md-4 ">
-            <div class=container>
-                <div class=card>
-                    <div class=image>
-                        <i class="fa fa-laptop"></i>
-                        <img href="#" src=https://wallpaperaccess.com/full/1393237.jpg>
-                    </div>
-                    <div class=content>
-                        <h3>WORK</h3>
-                        <p>Currently : M&S Software</p>
-                    </div>
-                </div>
-                <progress value="98" max="100"></progress>
+
+        <div class="card">
+            <div class="container-card  bg-blue-box">
+                <p class="card-title">UnderGraduate</p>
+                <p class="card-description">Year: 2019-2023<br />Institute:NSCET <br />Degree :BE/ECE<br />CGPA:8 </p>
+                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
+                <i class="fas fa-comment"></i><label> @currentCount</label>
             </div>
+        </div>
+
+        <div class="card">
+            <div class="container-card bg-blue-box">
+                <p class="card-title">PostGraduate</p>
+                <p class="card-description">Year: Loding . . .<br />Degree :BE/ECE<br />Institute:Loding . . .<br />CGPA:Loding . . .</p>
+                <i class="fa fa-heart" @onclick="IncrementCount" ></i><label> @currentCount</label>
+                <i class="fas fa-comment"></i><label> @currentCount</label>
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="row Technical">
-        <div class="col-md-4 ">
-            <h5>Html</h5>
-            <progress value="90" max="100"></progress>
-            <h5>Css</h5>
-            <progress value="90" max="100"></progress>
-            <h5>JavaScript</h5>
-            <progress value="70" max="100"></progress>
-            </div>
-         <div class="col-md-4 ">
-            <h5>Asp.Net</h5>
-            <progress value="90" max="100"></progress>
-            <h5>Blazor</h5>
-            <progress value="90" max="100"></progress>
-            <h5>C#</h5>
-            <progress value="70" max="100"></progress>
-        </div>
-        <div class="col-md-4 ">
-            <h5>C</h5>
-            <progress value="90" max="100"></progress>
-            <h5>C++</h5>
-            <progress value="90" max="100"></progress>
-            <h5>Java</h5>
-            <progress value="70" max="100"></progress>
-        </div>
-        
-
-        
-
-    </div>
-
-
-
 
 @code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
 
 }

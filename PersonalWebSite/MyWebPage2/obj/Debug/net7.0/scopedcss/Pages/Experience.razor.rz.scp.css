@@ -1,8 +1,13 @@
-
+.Title[b-k73m1lwagc] {
+    position: fixed;
+    color: white;
+    z-index: 1;
+}
+ 
 .table[b-k73m1lwagc] {
     padding: 100px;
     width: 100%;
-    height:400px;
+    height:500px;
     font-size: 15px;
     color: white;
     overflow-x: hidden;
@@ -18,9 +23,7 @@ td[b-k73m1lwagc] {
    
     height: 100px;
 }
-tr:nth-child(even)[b-k73m1lwagc] {
-   
-}
+
 .ResumeButton button[b-k73m1lwagc] {
     background-color: #FF5733;
     color: white;

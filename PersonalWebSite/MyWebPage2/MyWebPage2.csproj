@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\LoginPage.razor" />
+    <Content Remove="Pages\NewUser.razor" />
     <Content Remove="popupdemo.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\LoginPage.razor.css" />
+    <None Remove="Pages\NewUser.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
