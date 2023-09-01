@@ -2,7 +2,7 @@
 
 <PageTitle>Index</PageTitle>
 
-<div class="body" style="background-image:url('../css/images/image7.jpg'); ">
+<div class="body" style="background-image:url('../css/images/image7.jpg'); " >
 
     <div class="insideCircle">
         <div class="row">
@@ -23,13 +23,43 @@
        
     </div>
 </div>
+
+<div class="loginBtn"><i class="fa fa-arrow-circle-left" style="font-size:36px" @onclick="OpenPopUp"></i></div>
+<div class="@PopUp">
+    <div class="form-popup">
+        <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+        <div class="form-container">
+            <h4>LOGIN</h4>
+            <input type="text" placeholder="Enter Your Name"><br/>
+            <input type="password" placeholder="enter your password">
+            <div class="col-md-1"> <input type="checkbox"/><p style="font-size:10px;">Show Password</p></div>
+           
+            <center>
+                <input type="submit" value="submit">
+            </center>
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 @code {
     private string? imageSource;
     private string? Datetime;
+    private string? PopUp { get; set; }
 
 
     protected override void OnInitialized()
     {
+        PopUp = "popuphide";
         if(DateTime.Now.Hour < 12)
         {
             Datetime = "Good Morning";
@@ -44,6 +74,19 @@
         }
 
         imageSource = $"css/images/image8.png";
+
+       
     }
+   
+    private void OpenPopUp()
+    {
+        PopUp = "popupshow";
+    }
+    private void closePopUp()
+    {
+        PopUp = "popuphide";
+    }
+
+   
 
 }

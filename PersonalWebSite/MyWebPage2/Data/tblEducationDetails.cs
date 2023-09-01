@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MyWebPage2.Pages;
 
 namespace MyWebPage2.Data
 {
@@ -18,6 +19,14 @@ namespace MyWebPage2.Data
         [Required]
         public int LIKES { get; set; }
         [Required]
-        public string[]? COMMENT { get; set; }
+       
+        public List<tblEducationDetailsComments> COMMENT
+        {
+            get
+            {
+                if(TITLE == null) throw new Exception();
+                return DataAccessLayer.GetAllComments(this.TITLE);
+            }
+        }
     }
 }
