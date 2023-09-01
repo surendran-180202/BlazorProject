@@ -113,3 +113,118 @@ label[b-6w8w18izqc] {
     color: aliceblue;
     transform: scale(1.05);
 }
+.form-popup[b-6w8w18izqc] {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 9;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    height: 40%;
+    color: white;
+    background: linear-gradient( 50deg, rgba(255, 255, 255, 0.4) 12%, rgba(255, 255, 255, 0.1) 77% );
+    background-blend-mode: normal;
+    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius:12px;
+    
+}
+.cancelbtn[b-6w8w18izqc] {
+  
+    background-color:transparent;
+    border: none;
+    right: 0;
+    top:5px;
+    position: fixed;
+  
+}
+    .cancelbtn:hover[b-6w8w18izqc]{
+        transform:scale(1.2)
+
+    }
+    .form-container[b-6w8w18izqc] {
+        max-width: 300px;
+        padding: 20px;
+        background-color: transparent;
+    }
+    .form-container input[b-6w8w18izqc] {
+        outline: none;
+        width: 70%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background: none;
+        color:antiquewhite;
+      
+    }
+.form-container input[b-6w8w18izqc]::placeholder{
+         font-size:12px;
+ }
+.SubmitCmdBtn[b-6w8w18izqc] {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    transition:1s;
+}
+.SubmitCmdBtn:hover[b-6w8w18izqc] {
+    transform: scale(1.2);
+    
+}
+.SubmitCmdBtn i:active[b-6w8w18izqc]{
+        color:lightgreen;
+        transform:rotate(90deg);
+        
+    }
+table[b-6w8w18izqc] {
+    color: white;
+   
+   
+}
+.CommentUser[b-6w8w18izqc] {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+   
+   
+}
+    .CommentUser img[b-6w8w18izqc] {
+  
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    .table p[b-6w8w18izqc] {
+        font-size: 7px;
+    }
+.table tr[b-6w8w18izqc] {
+    border-style: none;
+    border-color:transparent;
+    margin-top:-30px;
+}
+.table td[b-6w8w18izqc] {
+    padding: 0;
+}
+.table td .cmd[b-6w8w18izqc] {
+    width:80%;
+    overflow-wrap: break-word;
+    margin: -10px 0 0 30px;
+    font-size: 12px;
+    color: antiquewhite;
+}
+
+
+.popuphide[b-6w8w18izqc] {
+    display: none;
+}
+.popupshow[b-6w8w18izqc] {
+    display: block;
+  
+}
+
+
+

@@ -17,16 +17,19 @@ body[b-gb0ofual5f] {
     color:white;
     font-size:140px;
 }
-input[b-gb0ofual5f] {
-    outline:none;
-    min-width: 30%;
-    padding: 10px;
-    border:none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 4px;
-    background:none;
-    color:white;
-}
+    .locationIcon i:hover[b-gb0ofual5f]{
+        transform:translateY(-20px);
+    }
+    input[b-gb0ofual5f] {
+        outline: none;
+        min-width: 30%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background: none;
+        color: white;
+    }
 .content a[b-gb0ofual5f] {
   color:white;
 }

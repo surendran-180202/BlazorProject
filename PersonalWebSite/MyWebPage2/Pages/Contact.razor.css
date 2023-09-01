@@ -17,16 +17,19 @@
     color:white;
     font-size:140px;
 }
-input {
-    outline:none;
-    min-width: 30%;
-    padding: 10px;
-    border:none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 4px;
-    background:none;
-    color:white;
-}
+    .locationIcon i:hover{
+        transform:translateY(-20px);
+    }
+    input {
+        outline: none;
+        min-width: 30%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background: none;
+        color: white;
+    }
 .content a {
   color:white;
 }

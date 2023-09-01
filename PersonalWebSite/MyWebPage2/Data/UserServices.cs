@@ -26,6 +26,10 @@ namespace MyWebPage2.Data
             List<tblExperience> result = dataAccessLayer.GetAllExperience().ToList();
             return result;
         }
-
+        public List<tblEducationDetails> Education()
+        {
+            List<tblEducationDetails> result = dataAccessLayer.GetAllEducation().ToList();
+            return result;
+        }
     }
 }

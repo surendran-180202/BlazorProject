@@ -2,6 +2,7 @@
 using Syncfusion.Blazor;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
@@ -12,12 +13,12 @@ public class DataAccessLayer
     public List<tblUser> GetAllUser()
     {
         List<tblUser> PersonDetails = new List<tblUser>();
-        using (SqlConnection con = new SqlConnection(connectionString))
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand("Select * from tblUserData", con);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while(reader.Read())
             {
                 tblUser data = new tblUser();
                 data.USERID = reader.GetInt32(0);
@@ -33,7 +34,7 @@ public class DataAccessLayer
     public void AddUser(tblUser user)
     {
         string strPersonalQuery = "insert into tblUserData(USERNAME,EMAIL,PHONE,PASSWORD)values (@username,@email,@phone,@password)";
-        using (SqlConnection con = new SqlConnection(connectionString))
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand(strPersonalQuery, con);
             cmd.Parameters.AddWithValue("@username", user.USERNAME);
@@ -48,14 +49,14 @@ public class DataAccessLayer
     public bool checkUser(tblUser checkdata)
     {
         bool result = false;
-        using (SqlConnection con = new SqlConnection(connectionString))
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand("Select * from tblUserData", con);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while(reader.Read())
             {
-                if (reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD)) result = true;
+                if(reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD)) result = true;
             }
         }
         return result;
@@ -63,15 +64,15 @@ public class DataAccessLayer
 
 
 
-    public  List<tblExperience> GetAllExperience()
+    public List<tblExperience> GetAllExperience()
     {
         List<tblExperience> ExperienceDetails = new List<tblExperience>();
-        using (SqlConnection con = new SqlConnection(connectionString))
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand("Select * from tblExperience", con);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            while(reader.Read())
             {
                 tblExperience data = new tblExperience();
                 data.USERID = reader.GetInt32(0);
@@ -83,4 +84,45 @@ public class DataAccessLayer
         }
         return ExperienceDetails;
     }
-}
+    public List<tblEducationDetails> GetAllEducation()
+    {
+        List<tblEducationDetails> ExperienceDetails = new List<tblEducationDetails>()
+        {
+             new tblEducationDetails(){ USERID = 1, TITLE="school",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22},
+             new tblEducationDetails(){ USERID = 1, TITLE="UG",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22},
+             new tblEducationDetails(){ USERID = 1, TITLE="PG",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22}
+        };
+
+
+
+
+ 
+
+
+
+
+        return ExperienceDetails;
+
+    }
+    public static List<tblEducationDetailsComments> GetAllComments(string? Title)
+    {
+        List<tblEducationDetailsComments> ExperienceDetails = new List<tblEducationDetailsComments>()
+        {
+             new tblEducationDetailsComments(){ USERID = 1, TITLE="school",COMMENTEDUSER="surendran@123",COMMENT="This is cool"},
+             new tblEducationDetailsComments(){ USERID = 1, TITLE="UG",COMMENTEDUSER="surendran",COMMENT="fentastic"},
+             new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="vj",COMMENT="suppcugcucgtcujcucucucucucycuer"},
+              new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="arun",COMMENT="supper"},
+               new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="naveen",COMMENT="supper"},
+        };
+        List<tblEducationDetailsComments> ExperienceDetails1 = new List<tblEducationDetailsComments>();
+        foreach(var i in ExperienceDetails)
+        {
+            if(i.TITLE == Title)
+            {
+                ExperienceDetails1.Add(i);
+            }
+        }
+
+        return ExperienceDetails1;
+    }
+ }
