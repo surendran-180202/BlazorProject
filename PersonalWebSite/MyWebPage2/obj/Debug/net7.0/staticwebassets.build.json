@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EKVwsKLLURxjDJPsIiZ6mEJtKSJ66eAAV5E28AptgM0=",
+  "Hash": "imNpNdTBUtk3w38mP2W3xIrHP+thmLL1UQ5wguNxyrg=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -119,23 +119,6 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image2.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image3.png",
-      "SourceId": "MyWebPage2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
-      "BasePath": "_content/MyWebPage2",
-      "RelativePath": "css/images/image3.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\images\\image3.png"
-    },
-    {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image4.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
@@ -204,23 +187,6 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image7.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image8.png",
-      "SourceId": "MyWebPage2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
-      "BasePath": "_content/MyWebPage2",
-      "RelativePath": "css/images/image8.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\images\\image8.png"
-    },
-    {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\MR.B.Surendran Resume.pdf",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
@@ -236,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\images\\MR.B.Surendran Resume.pdf"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\UserImage1.png",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/images/UserImage1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\UserImage1.png"
     },
     {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

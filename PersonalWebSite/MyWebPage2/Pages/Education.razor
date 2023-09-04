@@ -1,5 +1,7 @@
 ﻿@page "/Education"
 @using MyWebPage2.Data
+
+
 @inject NavigationManager uriHelper;
 @inject UserServices dataAccessLayer
 
@@ -12,92 +14,53 @@
 <br/>
 <div class="container">
     <div class="gradient-cards">
-       @* <div class="card">
-            <div class="container-card  bg-blue-box">
-                <p class="card-title">Primary school</p>
-                <p class="card-description">Year:2016-2017<br />Class:10 th<br />Institute: Zkm.Hr.Sec.School <br />percentage:81% </p>
-                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
-                <i class="fas fa-comment"></i><label> @currentCount</label>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container-card  bg-blue-box">
-                <p class="card-title">Secodary School</p>
-                <p class="card-description">Year: 2018-2019<br />Class:12 th<br/>Institute: Zkm.Hr.Sec.School <br />percentage:55% </p>
-                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
-                <i class="fas fa-comment"></i><label> @currentCount</label>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container-card  bg-blue-box">
-                <p class="card-title">UnderGraduate</p>
-                <p class="card-description">Year: 2019-2023<br />Institute:NSCET <br />Degree :BE/ECE<br />CGPA:8 </p>
-                <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @currentCount</label>
-                <i class="fas fa-comment"></i><label> @currentCount</label>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container-card bg-blue-box">
-                <p class="card-title">PostGraduate</p>
-                <p class="card-description">Year: Loding . . .<br />Degree :BE/ECE<br />Institute:Loding . . .<br />CGPA:Loding . . .</p>
-                <i class="fa fa-heart" @onclick="IncrementCount" ></i><label> @currentCount</label>
-                <i class="fas fa-comment"></i><label> @currentCount</label>
-            </div>
-        </div>*@
-
-
-
         @if(EducationDetails == null)
         {
             <p><em>Loading...</em></p>
         }
-        else
-        {
-            @foreach(var educationDetails in EducationDetails)
-            {
+        else  @foreach(var educationDetails in EducationDetails)
+              {
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title" >@educationDetails.TITLE</p>
-                        <p class="card-description">Year: @educationDetails.YEAR<br />Degree :@educationDetails.CLASS<br />Institute:@educationDetails.INSTITUTE<br />CGPA:@educationDetails.PERCENTAGE</p>
-                        <i class="fa fa-heart" @onclick="IncrementCount"></i><label> @educationDetails.LIKES</label>
-                        <i class="fas fa-comment" @onclick="OpenPopUp"></i><label> @currentCount</label>
+                        @if(educationDetails.TITLE.ToLower().Contains("school")) Cource = "Class";else Cource = "Degree";
+                        <p class="card-description">Year: @educationDetails.YEAR<br />@Cource :@educationDetails.CLASS<br />Institute:@educationDetails.INSTITUTE<br />CGPA:@educationDetails.PERCENTAGE</p>
+                        <i class="fa fa-heart" @onclick="() => AddLike(educationDetails.TITLE ,educationDetails.LIKES)"></i><label> @educationDetails.LIKES</label>
+                        <i class="fas fa-comment" @onclick="() => HandleItemClick(educationDetails.TITLE)"></i><label>@educationDetails.COMMENT.Count</label>
                     </div>
                 </div>
-                
-            }
-        }
+              }
+        
         <div class="@PopUp">
             <div class="form-popup">
                 <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
                 <div class="form-container">
                     <h4>Commends</h4>
-                    <input type="text" placeholder="Leave Your Commends">
-                    <button type="submit" class="SubmitCmdBtn"><i class="fa fa-arrow-circle-right"></i></button>
-                    <br /><br />
+                    <input type="text" placeholder="Leave Your Commends" @bind="NewComment">
+                    <button type="submit" class="SubmitCmdBtn" @onclick="newComment"><i class="fa fa-arrow-circle-right"></i></button>
+                 
                     <div class="table">
                          <table>
                         @foreach(var educationDetails in EducationDetails)
                         {
                             @foreach(var i in educationDetails.COMMENT)
                             {
-                               <tr>
-                                   <th>
-                                       <div class="row">
-                                           <div class="col-md-1"><div class="CommentUser"><img src="../css/images/image7.jpg" /></div></div>
-                                           <div class="col-md-6"><p>@i.COMMENTEDUSER</p></div>
-                                       </div>
-                                   </th>
-                               </tr>
-                               <tr><td><p class="cmd">@i.COMMENT</p></td></tr>
-                                
+                               if(i.TITLE == Title)
+                               {
+                                   <tr>
+                                       <th>
+                                           <div class="row">
+                                               <div class="col-md-1"><div class="CommentUser"><img src="../css/images/image7.jpg" /></div></div>
+                                               <div class="col-md-6"><p>@i.COMMENTEDUSER</p></div>
+                                           </div>
+                                       </th>
+                                   </tr>
+                                   <tr><td><p class="cmd">@i.COMMENT</p></td></tr>
+                               }
                             }
                         }
                         </table>
-                       
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>
@@ -105,17 +68,17 @@
 </div>
 
 @code {
-    List<tblEducationDetails> EducationDetails = new List<tblEducationDetails>();
-
+    List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
     UserServices userService = new UserServices();
     private string? PopUp { get; set; }  
-
+    private string? NewComment { get; set; }
+    private string? Title { get; set; }
+    private string? Cource { get; set; }
 
     protected override void OnInitialized()
     {
         PopUp = "popuphide";
         EducationDetails = userService.Education();
-
     }
     private void OpenPopUp()
     {
@@ -125,12 +88,21 @@
     {
         PopUp = "popuphide";
     }
-
-    private int currentCount = 0;
-
-    private void IncrementCount()
+    private void newComment()
     {
-        currentCount++;
+        userService.newComment(NewComment, Title);
     }
+    private void HandleItemClick(string item)
+    {
+        PopUp = "popupshow";
+        Title = item;
+    }
+    private void AddLike(string Title , int Like)
+    {
+        int like = Like + 1;
+        userService.AddLike(Title, like);
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+    }
+   
 
 }
