@@ -1,5 +1,7 @@
 ﻿@page "/"
-
+@using MyWebPage2.Data
+@inject NavigationManager uriHelper;
+@inject UserServices dataAccessLayer
 <PageTitle>Index</PageTitle>
 
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
@@ -18,36 +20,55 @@
             </div>
         </div>
     </div>
-    <div class="GreetingText">
-        <p>@Datetime Mr.Surendran !</p>
-       
-    </div>
+    <center>
+        <div class="GreetingText">
+            <p>@Datetime Mr.Surendran !</p>
+
+        </div>
+    </center>
+   
 </div>
 
 <div class="loginBtn"><i class="fa fa-arrow-circle-left" style="font-size:36px" @onclick="OpenPopUp"></i></div>
 <div class="@PopUp">
+  
     <div class="form-popup">
+        
         <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+        <button type="button" class="newUser" @onclick="SignInPopUp"> <i class='fas fa-user-plus' style='font-size:15px ; color:darkblue;'></i></button>
+       
         <div class="form-container">
             <h4>LOGIN</h4>
-            <input type="text" placeholder="Enter Your Name"><br/>
-            <input type="password" placeholder="enter your password">
-            <div class="col-md-1"> <input type="checkbox"/><p style="font-size:10px;">Show Password</p></div>
-           
+            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME"><br />
+          
+            <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
+            <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
             <center>
-                <input type="submit" value="submit">
+                <input type="submit" value="submit" @onclick="LoginUser">
             </center>
            
         </div>
     </div>
 </div>
 
+<div class="@PopUpRegister">
+    <div class="form-popup">
+        <button type="button" class="cancelbtn" @onclick="closePopUpsignIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+        <div class="form-container">
+            <h4>Register</h4>
+            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME">
+            <input type="text" placeholder="Enter Your Email" @bind="AddUser.EMAIL">
+            <input type="text" placeholder="Enter Your Phone Number" @bind="AddUser.PHONE">
+            <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
+            <input type="@passwordClass" placeholder="Conform password" @bind="ConformPassword">
+            <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
+            <center>
+                <input type="submit" value="submit" @onclick="NewUser">
+            </center>
 
-
-
-
-
-
+        </div>
+    </div>
+</div>
 
 
 
@@ -55,36 +76,64 @@
     private string? imageSource;
     private string? Datetime;
     private string? PopUp { get; set; }
+    private string? PopUpRegister { get; set; }
+    private string? passwordClass { get; set; }
+    private string? ConformPassword { get; set; }
 
+    private string? LoginUserName { get; set; }
+    private string? LoginPassword { get; set; }
+    tblUser AddUser = new tblUser();
+    UserServices userService = new UserServices();
 
     protected override void OnInitialized()
     {
+        imageSource = $"css/images/UserImage{userService.CurrentUsername()}.png";
+        passwordClass = "password";
         PopUp = "popuphide";
-        if(DateTime.Now.Hour < 12)
+        PopUpRegister = "popuphide";
+        if(DateTime.Now.Hour < 12) Datetime = "Good Morning";
+        else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
+        else Datetime = "Good Evening";
+    }
+    private void LoginUser()
+    {
+        if(userService.UserCheck(AddUser))
         {
-            Datetime = "Good Morning";
+            //uriHelper.NavigateTo("/");
+            uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
         }
-        else if(DateTime.Now.Hour < 17)
-        {
-            Datetime = "Good Afternoon";
-        }
-        else
-        {
-            Datetime = "Good Evening";
-        }
-
-        imageSource = $"css/images/image8.png";
-
        
     }
-   
+    private void NewUser()
+    {
+        if(AddUser.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(AddUser.EMAIL)) userService.Create(AddUser);
+    }
+
+
+
+    private void show_password()
+    {
+        if(passwordClass == "password") passwordClass = "text";
+        else passwordClass = "password";
+    }
     private void OpenPopUp()
     {
         PopUp = "popupshow";
+        PopUpRegister = "popuphide";
     }
     private void closePopUp()
     {
         PopUp = "popuphide";
+    }
+    private void SignInPopUp()
+    {
+        PopUp = "popuphide";
+        PopUpRegister = "popupshow";
+    }
+    private void closePopUpsignIn()
+    {
+        PopUpRegister = "popuphide";
+        PopUp = "popupshow";
     }
 
    

@@ -5,9 +5,14 @@ namespace MyWebPage2.Data
     public class UserServices
     {
         DataAccessLayer dataAccessLayer = new DataAccessLayer();
-        public string Create(tblUser objCustomer)
+
+        public int CurrentUsername()
         {
-            dataAccessLayer.AddUser(objCustomer);
+            return DataAccessLayer.currentUserID;
+        }
+        public string Create(tblUser newUser)
+        {
+            dataAccessLayer.AddUser(newUser);
             return "Added Successfully";
         }
         public List<tblUser> GetAllUser()
@@ -31,5 +36,15 @@ namespace MyWebPage2.Data
             List<tblEducationDetails> result = dataAccessLayer.GetAllEducation().ToList();
             return result;
         }
+        public void newComment(string NewComment,string Title)
+        {
+            dataAccessLayer.NewComment(NewComment, Title);
+        }
+        public void AddLike (string NewLike, int currentLikeCount)
+        {
+            dataAccessLayer.AddLike(NewLike, currentLikeCount);
+        }
+     
+
     }
 }

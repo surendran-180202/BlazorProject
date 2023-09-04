@@ -17,16 +17,16 @@
       "PackagePath": "staticwebassets\\css\\images\\MR.B.Surendran Resume.pdf"
     },
     {
+      "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\UserImage1.png",
+      "PackagePath": "staticwebassets\\css\\images\\UserImage1.png"
+    },
+    {
       "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image1.jpg",
       "PackagePath": "staticwebassets\\css\\images\\image1.jpg"
     },
     {
       "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image2.jpg",
       "PackagePath": "staticwebassets\\css\\images\\image2.jpg"
-    },
-    {
-      "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image3.png",
-      "PackagePath": "staticwebassets\\css\\images\\image3.png"
     },
     {
       "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image4.jpg",
@@ -43,10 +43,6 @@
     {
       "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image7.jpg",
       "PackagePath": "staticwebassets\\css\\images\\image7.jpg"
-    },
-    {
-      "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image8.png",
-      "PackagePath": "staticwebassets\\css\\images\\image8.png"
     },
     {
       "Id": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\FONT-LICENSE",

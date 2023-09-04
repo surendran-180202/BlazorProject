@@ -1,15 +1,18 @@
 ﻿using MyWebPage2.Data;
+using MyWebPage2.Pages;
 using Syncfusion.Blazor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
+using System.Numerics;
 using System.Reflection;
 
 public class DataAccessLayer
 {
-    public static string connectionString = "Data Source=MS-00715;Initial Catalog=Education;Integrated Security=True";
+    internal static int currentUserID { get; set; }
+    public static string connectionString = "Data Source=MS-00715;Initial Catalog=SBPERSONAL;Integrated Security=True";
     public List<tblUser> GetAllUser()
     {
         List<tblUser> PersonDetails = new List<tblUser>();
@@ -56,14 +59,15 @@ public class DataAccessLayer
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
             {
-                if(reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD)) result = true;
+                if(reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD))
+                {
+                    currentUserID = reader.GetInt32(0);
+                    result = true;
+                }
             }
         }
         return result;
     }
-
-
-
     public List<tblExperience> GetAllExperience()
     {
         List<tblExperience> ExperienceDetails = new List<tblExperience>();
@@ -86,43 +90,85 @@ public class DataAccessLayer
     }
     public List<tblEducationDetails> GetAllEducation()
     {
-        List<tblEducationDetails> ExperienceDetails = new List<tblEducationDetails>()
+        List<tblEducationDetails> ExperienceDetails = new List<tblEducationDetails>();
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
-             new tblEducationDetails(){ USERID = 1, TITLE="school",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22},
-             new tblEducationDetails(){ USERID = 1, TITLE="UG",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22},
-             new tblEducationDetails(){ USERID = 1, TITLE="PG",YEAR ="2022-2023",CLASS="12 th",INSTITUTE="zkm.hr.sec.school",PERCENTAGE="99%",LIKES=22}
-        };
+            SqlCommand cmd = new SqlCommand("Select * from tblEducationDetails", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                tblEducationDetails data = new tblEducationDetails();
+                data.USERID = reader.GetInt32(0);
+                data.TITLE = reader.GetString(1);
+                data.YEAR = reader.GetString(2);
+                data.CLASS = reader.GetString(3);
+                data.INSTITUTE = reader.GetString(4);
+                data.PERCENTAGE = reader.GetString(5); 
+                data.LIKES =  reader.GetInt32(6);
 
-
-
-
- 
-
-
-
-
+                ExperienceDetails.Add(data);
+            }
+        }
         return ExperienceDetails;
-
     }
     public static List<tblEducationDetailsComments> GetAllComments(string? Title)
     {
-        List<tblEducationDetailsComments> ExperienceDetails = new List<tblEducationDetailsComments>()
+        List<tblEducationDetailsComments> ExperienceDetails = new List<tblEducationDetailsComments>();
+        using(SqlConnection con = new SqlConnection(connectionString))
         {
-             new tblEducationDetailsComments(){ USERID = 1, TITLE="school",COMMENTEDUSER="surendran@123",COMMENT="This is cool"},
-             new tblEducationDetailsComments(){ USERID = 1, TITLE="UG",COMMENTEDUSER="surendran",COMMENT="fentastic"},
-             new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="vj",COMMENT="suppcugcucgtcujcucucucucucycuer"},
-              new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="arun",COMMENT="supper"},
-               new tblEducationDetailsComments(){ USERID = 1, TITLE="PG",COMMENTEDUSER="naveen",COMMENT="supper"},
-        };
-        List<tblEducationDetailsComments> ExperienceDetails1 = new List<tblEducationDetailsComments>();
-        foreach(var i in ExperienceDetails)
-        {
-            if(i.TITLE == Title)
+            SqlCommand cmd = new SqlCommand("Select * from tblEducationDetailsComments where TITLE =@title ", con);
+            SqlParameter parameter = new SqlParameter();
+            parameter.ParameterName = "@title";
+            parameter.Value = Title;
+            cmd.Parameters.Add(parameter);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
             {
-                ExperienceDetails1.Add(i);
+                tblEducationDetailsComments data = new tblEducationDetailsComments();
+                data.USERID = reader.GetInt32(0);
+                data.TITLE = reader.GetString(1);
+                data.COMMENTEDUSER = reader.GetString(2);
+                data.COMMENT = reader.GetString(3);
+
+                ExperienceDetails.Add(data);
             }
         }
-
-        return ExperienceDetails1;
+        return ExperienceDetails;
     }
- }
+    public void NewComment(string newComment,string Title)
+    {
+        currentUserID =1;
+        string commendedUser = "UnKnown";
+        List<tblEducationDetailsComments> commends = new List<tblEducationDetailsComments>();
+        string strNewCommmentQuery = "insert into tblEducationDetailsComments(USERID,TITLE,COMMENTEDUSER,COMMENT)values (@userid,@title,@commenteduser,@comment)";
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand(strNewCommmentQuery, con);
+            cmd.Parameters.AddWithValue("@userid", currentUserID);
+            cmd.Parameters.AddWithValue("@title", Title);
+            cmd.Parameters.AddWithValue("@commenteduser", commendedUser);
+            cmd.Parameters.AddWithValue("@comment", newComment);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+    }
+
+    public void AddLike(string Title,int ctrLikeCount)
+    {
+        currentUserID =1;
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand("UPDATE tblEducationDetails SET LIKES=@like  WHERE USERID=@userid AND TITLE=@title", con);
+            cmd.Parameters.AddWithValue("@userid", currentUserID);
+            cmd.Parameters.AddWithValue("@title", Title);
+            cmd.Parameters.AddWithValue("@like", ctrLikeCount);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+    }
+
+}
