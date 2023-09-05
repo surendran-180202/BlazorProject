@@ -102,7 +102,7 @@
     color: white;
     background: linear-gradient( 150deg, rgb(255, 010, 110,0.2) 20%, rgba(255, 255, 255, 0.2) 77% );
     background-blend-mode: normal;
-    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 12px;
@@ -182,9 +182,9 @@
 }
 
 
-    @media screen and (min-width: 992px) and (max-width: 1439px) {
 
-        .body[b-zllp0tmasc] {
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+    .body[b-zllp0tmasc] {
             max-height: 610px;
         }
     }
@@ -204,6 +204,115 @@
 
 
 
+
+.viewComments[b-zllp0tmasc] {
+    width: 500px;
+  
+    position: fixed;
+    bottom: 8%;
+  
+
+}
+
+
+.message[b-zllp0tmasc] {
+    padding: 8px 15px;
+    margin-top: 5px 0 0 0;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    display: inline-block;
+    color: white;
+    position: relative;
+    border-radius: 20px;
+    border-bottom-left-radius: 0%;
+    background: linear-gradient( 150deg, rgb(255, 255, 255,0.2) 20%, rgba(255, 255, 255, 0.2) 77% );
+    background-blend-mode: normal;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.content[b-zllp0tmasc] {
+    position: absolute;
+   
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    width: 100%;
+    line-height: 20px;
+    color: black;
+}
+
+.container[b-zllp0tmasc] {
+    font-weight: 600;
+    overflow-y: hidden;
+    height: 70px;
+   
+   
+  
+}
+.list[b-zllp0tmasc] {
+    animation-name: change;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+.UserIcon[b-zllp0tmasc]{
+    width:10px;
+    height:10px;
+}
+.UserIcon img[b-zllp0tmasc]{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    margin-top:40px;
+    
+
+}
+
+
+
+
+@-webkit-keyframes change {
+    0%, 10% ,100%{
+        transform: translate3d(0,0,0);
+    }
+
+    20%, 70% {
+        transform: translate3d(0,-25%,0);
+    }
+
+    30%,100% {
+        transform: translate3d(0,-55%,0);
+    }
+
+    40%,90% {
+        transform: translate3d(0,-70%,0);
+    }
+
+    50%,80% {
+        transform: translate3d(0,-55%,0);
+    }
+
+    60%,70% {
+        transform: translate3d(0,-25%,0);
+    }
+}
+
+.userIcon[b-zllp0tmasc]
+{
+    width:100px;
+    height:100px;
+    background-color:black;
+    border-radius:50%;
+    
+
+}
+    .userIcon input[type=file][b-zllp0tmasc] {
+        width: 20px;
+     
+        
+      
+    }
 
 
 

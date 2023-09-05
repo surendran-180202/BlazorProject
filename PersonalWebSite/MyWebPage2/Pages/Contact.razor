@@ -1,4 +1,6 @@
 ﻿@page "/Contact"
+@using MyWebPage2.Data
+@using System.IO
 
 <PageTitle>Education</PageTitle>
 <h3>Contact :</h3>
@@ -54,9 +56,78 @@
 
 <br/>
     <div class="col-75">
-        <input type="text" id="fname"  placeholder="Leave Your Command...">
+        <input type="text" id="fname" placeholder="Leave Your Command..." @bind="NewComment">
+      
+        <button type="submit" class="SubmitCmdBtn" @onclick="newComment"><i class="fa fa-arrow-circle-right"></i></button><br />
+        <label style="color:red;font-size:10px;">@ErrorMsg</label>
     </div>
 </center>
+
+@*<InputFile OnChange="HandleFileUpload" />
+
+<button @onclick="UploadImage">Upload</button>
+*@
+
 @code {
 
+    UserServices userService = new UserServices();
+    private string? NewComment { get; set; }
+    private string? Title { get; set; }
+    private string? ErrorMsg { get; set; }
+
+
+    //private IFileListEntry file;
+    //private byte[] imageBytes;
+
+
+
+    protected override void OnInitialized()
+    {
+
+
+    }
+     private void newComment()
+    {
+        if(NewComment != null)
+        {
+            Title = "Contact";
+            userService.newComment(NewComment, Title);
+            NewComment = null;
+        }
+        else
+        {
+            ErrorMsg = "Input Field is Empty";
+        }
+
+    }
+
+
+    //private void HandleFileUpload(IFileListEntry[] files)
+    //{
+    //    file = files.FirstOrDefault();
+    //    if(file != null)
+    //    {
+    //        using(var ms = new MemoryStream())
+    //        {
+    //            file.Data.CopyTo(ms);
+    //            imageBytes = ms.ToArray();
+    //        }
+    //    }
+    //}
+
+
+    //private async Task UploadImage()
+    //{
+    //    if(file != null)
+    //    {
+    //        // Save imageBytes to the SQL database using Entity Framework or your preferred method
+    //        // Example: dbContext.Images.Add(new Image { Data = imageBytes });
+    //        // Then, save changes to the database
+    //        // await dbContext.SaveChangesAsync();
+    //    }
+    //}
+   
+}
+
+   
 }

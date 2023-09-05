@@ -16,7 +16,7 @@ namespace MyWebPage2.Data
                     result = true;
                 }
             }
-            catch (Exception ex)
+            catch(Exception)
             {
             }
             return result;

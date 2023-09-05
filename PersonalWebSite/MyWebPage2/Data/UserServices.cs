@@ -6,9 +6,13 @@ namespace MyWebPage2.Data
     {
         DataAccessLayer dataAccessLayer = new DataAccessLayer();
 
-        public int CurrentUsername()
+        public int CurrentUserID()
         {
             return DataAccessLayer.currentUserID;
+        }
+        public string? CurrentUserName()
+        {
+            return DataAccessLayer.currentUserName;
         }
         public string Create(tblUser newUser)
         {

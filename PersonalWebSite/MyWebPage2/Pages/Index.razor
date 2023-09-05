@@ -5,8 +5,9 @@
 <PageTitle>Index</PageTitle>
 
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
-
+    
     <div class="insideCircle">
+        <div class="@LoginImageClass">
         <div class="row">
             <div class="col-md-12">
                 <div class="imageBg">
@@ -15,14 +16,16 @@
 
             </div>
             <div class="col-md-10">
-                <h1 class="h1">MR.B.Surendran</h1>
+                <h1 class="h1">MR.B.@CurrentUserName</h1>
                 <span class="introText">CEO of SB Software & Solution</span>
             </div>
         </div>
     </div>
+    </div>
+
     <center>
         <div class="GreetingText">
-            <p>@Datetime Mr.Surendran !</p>
+            <p>@Datetime Mr.@CurrentUserName !</p>
 
         </div>
     </center>
@@ -56,12 +59,21 @@
         <button type="button" class="cancelbtn" @onclick="closePopUpsignIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
         <div class="form-container">
             <h4>Register</h4>
+          @*  <center>
+                <div class="userIcon"><img src=""/>
+                    <i class="fa fa-user icon"></i>
+                    <input type="file">
+                </div>
+            </center>*@
+           
             <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME">
             <input type="text" placeholder="Enter Your Email" @bind="AddUser.EMAIL">
             <input type="text" placeholder="Enter Your Phone Number" @bind="AddUser.PHONE">
             <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
             <input type="@passwordClass" placeholder="Conform password" @bind="ConformPassword">
             <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
+
+           
             <center>
                 <input type="submit" value="submit" @onclick="NewUser">
             </center>
@@ -71,6 +83,24 @@
 </div>
 
 
+<div class="viewComments">
+    <div class="content">
+        <div class="container">
+            <div class="list">
+                 @foreach(var educationDetails in EducationDetails)
+                {
+                   @foreach(var i in educationDetails.COMMENT)
+                   {
+                           <div class="UserIcon"><img src=@imageSource/></div><br/>
+                           <div class="message">@i.COMMENT </div>
+                   }
+                }
+               
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @code {
     private string? imageSource;
@@ -78,30 +108,44 @@
     private string? PopUp { get; set; }
     private string? PopUpRegister { get; set; }
     private string? passwordClass { get; set; }
+    private string? LoginImageClass { get; set; }
     private string? ConformPassword { get; set; }
 
     private string? LoginUserName { get; set; }
     private string? LoginPassword { get; set; }
+
+    private string? CurrentUserName { get; set; }
     tblUser AddUser = new tblUser();
     UserServices userService = new UserServices();
 
+    List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
+
+
+
     protected override void OnInitialized()
     {
-        imageSource = $"css/images/UserImage{userService.CurrentUsername()}.png";
+        LoginImageClass = "popuphide";
+        if(userService.CurrentUserName()!=null) 
+        {
+            CurrentUserName = userService.CurrentUserName(); LoginImageClass = "popupshow";
+        }
+        else CurrentUserName = "Guest";
+       
+        imageSource = $"css/images/UserImage{userService.CurrentUserID()}.png";
         passwordClass = "password";
         PopUp = "popuphide";
         PopUpRegister = "popuphide";
         if(DateTime.Now.Hour < 12) Datetime = "Good Morning";
         else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
         else Datetime = "Good Evening";
+        EducationDetails = userService.Education();
+
+
     }
     private void LoginUser()
     {
-        if(userService.UserCheck(AddUser))
-        {
-            //uriHelper.NavigateTo("/");
-            uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        }
+        if(userService.UserCheck(AddUser)) uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        
        
     }
     private void NewUser()
