@@ -8,10 +8,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Numerics;
 using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class DataAccessLayer
 {
     internal static int currentUserID { get; set; }
+    internal static string? currentUserName { get; set; }
     public static string connectionString = "Data Source=MS-00715;Initial Catalog=SBPERSONAL;Integrated Security=True";
     public List<tblUser> GetAllUser()
     {
@@ -62,6 +64,7 @@ public class DataAccessLayer
                 if(reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD))
                 {
                     currentUserID = reader.GetInt32(0);
+                    currentUserName =reader.GetString(1);
                     result = true;
                 }
             }
@@ -73,7 +76,11 @@ public class DataAccessLayer
         List<tblExperience> ExperienceDetails = new List<tblExperience>();
         using(SqlConnection con = new SqlConnection(connectionString))
         {
-            SqlCommand cmd = new SqlCommand("Select * from tblExperience", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblExperience where USERID =@userid", con);
+            SqlParameter parameter = new SqlParameter();
+            parameter.ParameterName = "@userid";
+            parameter.Value = currentUserID;
+            cmd.Parameters.Add(parameter);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
@@ -93,7 +100,11 @@ public class DataAccessLayer
         List<tblEducationDetails> ExperienceDetails = new List<tblEducationDetails>();
         using(SqlConnection con = new SqlConnection(connectionString))
         {
-            SqlCommand cmd = new SqlCommand("Select * from tblEducationDetails", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblEducationDetails where USERID =@userid", con);
+            SqlParameter parameter = new SqlParameter();
+            parameter.ParameterName = "@userid";
+            parameter.Value = currentUserID;
+            cmd.Parameters.Add(parameter);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
@@ -139,7 +150,7 @@ public class DataAccessLayer
     }
     public void NewComment(string newComment,string Title)
     {
-        currentUserID =1;
+       
         string commendedUser = "UnKnown";
         List<tblEducationDetailsComments> commends = new List<tblEducationDetailsComments>();
         string strNewCommmentQuery = "insert into tblEducationDetailsComments(USERID,TITLE,COMMENTEDUSER,COMMENT)values (@userid,@title,@commenteduser,@comment)";
@@ -158,7 +169,7 @@ public class DataAccessLayer
 
     public void AddLike(string Title,int ctrLikeCount)
     {
-        currentUserID =1;
+        
         using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand("UPDATE tblEducationDetails SET LIKES=@like  WHERE USERID=@userid AND TITLE=@title", con);
@@ -170,5 +181,27 @@ public class DataAccessLayer
             con.Close();
         }
     }
+    public void AddImage(string Title, int ctrLikeCount)
+    {
+
+        string strNewCommmentQuery = "insert into tblUserImage(USERID,USERIMAGE,IMAGENAME)values (@userid,@userimage,@imagename)";
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand(strNewCommmentQuery, con);
+            cmd.Parameters.AddWithValue("@userid", currentUserID);
+            cmd.Parameters.AddWithValue("@userimage", Title);
+            cmd.Parameters.AddWithValue("@imagename", "s");
+            
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+
+
+
+    }
+
+    
 
 }

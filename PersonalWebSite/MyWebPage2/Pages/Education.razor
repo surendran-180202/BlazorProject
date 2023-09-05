@@ -9,14 +9,14 @@
 
 <div class="Title">
     <h1>Education: </h1>
-
+   
 </div>
 <br/>
 <div class="container">
     <div class="gradient-cards">
         @if(EducationDetails == null)
         {
-            <p><em>Loading...</em></p>
+            <p>Loading...</p>
         }
         else  @foreach(var educationDetails in EducationDetails)
               {
@@ -36,7 +36,7 @@
                 <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
                 <div class="form-container">
                     <h4>Commends</h4>
-                    <input type="text" placeholder="Leave Your Commends" @bind="NewComment">
+                    <input type="text" placeholder="Leave Your Commends" @bind="NewComment" >
                     <button type="submit" class="SubmitCmdBtn" @onclick="newComment"><i class="fa fa-arrow-circle-right"></i></button>
                  
                     <div class="table">
@@ -74,6 +74,8 @@
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? Cource { get; set; }
+    private string? afterSubmit { get; set; }
+
 
     protected override void OnInitialized()
     {
@@ -91,6 +93,7 @@
     private void newComment()
     {
         userService.newComment(NewComment, Title);
+        NewComment = "";
     }
     private void HandleItemClick(string item)
     {
