@@ -14,9 +14,18 @@
 <br/>
 <div class="container">
     <div class="gradient-cards">
-        @if(EducationDetails == null)
+        @if(EducationDetails.Count == 0)
         {
-            <p>Loading...</p>
+            <div class="wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <span>Loading</span>
+            </div>
+          
         }
         else  @foreach(var educationDetails in EducationDetails)
               {

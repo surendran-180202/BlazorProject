@@ -166,3 +166,4 @@ C:\Education\Trining\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\
 C:\Education\Trining\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\MyWebPage2.pdb
 C:\Education\Trining\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\MyWebPage2.genruntimeconfig.cache
 C:\Education\Trining\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\ref\MyWebPage2.dll
+C:\Education\Trining\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\ProfilePage.razor.rz.scp.css

@@ -11,9 +11,17 @@
 <br/>
 <center>
 <div class="table">
-     @if (Experiencetable == null)
+     @if (Experiencetable.Count == 0)
         {
-            <p><em>Loading...</em></p>
+            <div class="wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <span>Loading</span>
+            </div>
         }
         else
         {

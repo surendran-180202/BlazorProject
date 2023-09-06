@@ -9,7 +9,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: blur(100px);
-}
+}.body a{
+     text-decoration:none;
+ }
 
 .h1 {
     font-size: 25px;
@@ -164,16 +166,27 @@
 }
 .loginBtn {
     position: fixed;
-    bottom: 50%;
+    bottom: 49%;
     right: 20px;
     color: white;
 }
     .loginBtn:hover {
         animation: slow 4s forwards;
     }
+    .loginBtn i{
+        cursor:pointer;
+        font-size:60px;
+        z-index:100;
+    }
+        .loginBtn i:active {
+            transform: rotate(60deg);
+        }
+        .loginBtn i:hover {
+            transform: scale(1.05);
+        }
 
-@keyframes slow1 {
-    from {
+    @keyframes slow1 {
+        from {
         bottom: 25%;
     }
     to {
@@ -313,6 +326,74 @@
         
       
     }
+
+.iconContainer {
+    position: fixed;
+    
+    cursor:pointer;
+ 
+}
+    .iconContainer i {
+        animation: fadeIn 2s;
+        font-size:35px;
+       
+    }
+
+        .iconContainer i:nth-child(1) {
+            position: fixed;
+            top: 30%;
+            right: 2%;
+          
+        }
+    .iconContainer i:nth-child(2) {
+        position: fixed;
+        top: 35%;
+        right: 6%;
+       
+    }
+    .iconContainer i:nth-child(3) {
+        position: fixed;
+        top: 42%;
+        right: 8%;
+    
+    }
+    .iconContainer i:nth-child(4) {
+        position: fixed;
+        top: 50%;
+        right: 6%;
+       
+    }
+    .iconContainer i:nth-child(5) {
+        position: fixed;
+        top: 55%;
+        right: 2%;
+       
+    }
+    .iconContainer i:hover{
+        transform:translateY(-2px);
+    }
+
+
+
+    @keyframes fadeIn {
+
+        0% {
+            font-size: 1px;
+            margin-right: -100px;
+            opacity: 0;
+        }
+
+        100% {
+            margin-right: 0;
+            opacity: 1;
+        }
+}
+
+
+
+
+
+
 
 
 
