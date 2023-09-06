@@ -9,7 +9,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     backdrop-filter: blur(100px);
-}
+}.body a[b-zllp0tmasc]{
+     text-decoration:none;
+ }
 
 .h1[b-zllp0tmasc] {
     font-size: 25px;
@@ -164,16 +166,27 @@
 }
 .loginBtn[b-zllp0tmasc] {
     position: fixed;
-    bottom: 50%;
+    bottom: 49%;
     right: 20px;
     color: white;
 }
     .loginBtn:hover[b-zllp0tmasc] {
         animation: slow-b-zllp0tmasc 4s forwards;
     }
+    .loginBtn i[b-zllp0tmasc]{
+        cursor:pointer;
+        font-size:60px;
+        z-index:100;
+    }
+        .loginBtn i:active[b-zllp0tmasc] {
+            transform: rotate(60deg);
+        }
+        .loginBtn i:hover[b-zllp0tmasc] {
+            transform: scale(1.05);
+        }
 
-@keyframes slow1-b-zllp0tmasc {
-    from {
+    @keyframes slow1-b-zllp0tmasc {
+        from {
         bottom: 25%;
     }
     to {
@@ -313,6 +326,74 @@
         
       
     }
+
+.iconContainer[b-zllp0tmasc] {
+    position: fixed;
+    
+    cursor:pointer;
+ 
+}
+    .iconContainer i[b-zllp0tmasc] {
+        animation: fadeIn-b-zllp0tmasc 2s;
+        font-size:35px;
+       
+    }
+
+        .iconContainer i:nth-child(1)[b-zllp0tmasc] {
+            position: fixed;
+            top: 30%;
+            right: 2%;
+          
+        }
+    .iconContainer i:nth-child(2)[b-zllp0tmasc] {
+        position: fixed;
+        top: 35%;
+        right: 6%;
+       
+    }
+    .iconContainer i:nth-child(3)[b-zllp0tmasc] {
+        position: fixed;
+        top: 42%;
+        right: 8%;
+    
+    }
+    .iconContainer i:nth-child(4)[b-zllp0tmasc] {
+        position: fixed;
+        top: 50%;
+        right: 6%;
+       
+    }
+    .iconContainer i:nth-child(5)[b-zllp0tmasc] {
+        position: fixed;
+        top: 55%;
+        right: 2%;
+       
+    }
+    .iconContainer i:hover[b-zllp0tmasc]{
+        transform:translateY(-2px);
+    }
+
+
+
+    @keyframes fadeIn-b-zllp0tmasc {
+
+        0% {
+            font-size: 1px;
+            margin-right: -100px;
+            opacity: 0;
+        }
+
+        100% {
+            margin-right: 0;
+            opacity: 1;
+        }
+}
+
+
+
+
+
+
 
 
 

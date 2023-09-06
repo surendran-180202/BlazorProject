@@ -1,0 +1,95 @@
+﻿@page "/ProfilePage"
+@using MyWebPage2.Data
+@inject NavigationManager uriHelper;
+@inject UserServices dataAccessLayer
+<PageTitle>ProfilePage</PageTitle>
+
+
+<h3>ProfilePage:</h3>
+    <div class="profileBackground">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
+            <div class="profilePhoto"> <img src=@imageSource class="image" /></div>
+        </div>
+       
+        <div class="col-md-4">
+            <div class="profilePhotoContent">
+                
+                <h2>Name:Surendran</h2>
+                <h6>CompanyName:abcCompany</h6>
+                <h6>Posting:CEO</h6>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="profileNav">
+        <ul>
+            <li @onclick="PersonalDetails">PersonalDetails</li>
+            <li @onclick="EducationDetails">EduvationDetails</li>
+            <li @onclick="ExperienceDetails">ExperienceDetails</li>
+            <li>settings</li>
+        </ul>
+    </div>
+    <br/>
+</div>
+<div class="profileBackgroundContent">
+    <div class="content">
+        <div class="@PersonalDetailsContent">
+            <h1>welcome Mr.Surendran</h1>
+            <p>Name:sutendran<br />Age:21<br />Gender:Male<br />Email:Surendran18022002@gmail.com</p>
+        </div>
+        <div class="@EducationDetailsContent">
+            <p>Name:sutendran<br />College:NSCET<br />PLACE:theni<br />PinCode:625513</p>
+        </div>
+        <div class="@ExperienceDetailsContent">
+            <p>Year:2019-2020<br />Institude:M&S<br />PLACE:Chennai<br />Learn:Asp.net</p>
+        </div>
+
+
+
+    </div>
+    
+</div>
+
+
+
+@code {
+
+    public string? PersonalDetailsContent{ get; set; }
+    public string? EducationDetailsContent { get; set; }
+    public string? ExperienceDetailsContent { get; set; }
+    private string? imageSource;
+
+
+
+    protected override void OnInitialized()
+    {
+        PersonalDetailsContent = "show";
+        EducationDetailsContent = "hide";
+        ExperienceDetailsContent = "hide";
+        imageSource = $"css/images/UserImage{1}.png";
+    }
+
+    private void PersonalDetails()
+    {
+        PersonalDetailsContent = "show";
+        EducationDetailsContent = "hide";
+        ExperienceDetailsContent = "hide";
+
+    }
+    private void EducationDetails()
+    {
+        PersonalDetailsContent = "hide";
+        EducationDetailsContent = "show";
+        ExperienceDetailsContent = "hide";
+    }
+    private void ExperienceDetails()
+    {
+        PersonalDetailsContent = "hide";
+        EducationDetailsContent = "hide";
+        ExperienceDetailsContent = "show";
+        
+    }
+
+}
