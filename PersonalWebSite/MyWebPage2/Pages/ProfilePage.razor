@@ -5,37 +5,99 @@
 <PageTitle>ProfilePage</PageTitle>
 
 
-<h3>ProfilePage:</h3>
+<h3 style="color:white;position:fixed;">ProfilePage:</h3>
+<br/>
 
 <div class="row">
     <div class="col-md-3">
         <div class="nav" >
             <ul>
-                <li><i class='fas fa-user-circle' style='font-size:24px'></i>PersonalInfo</li>
-                <li><i class='fas fa-user-graduate' style='font-size:24px'></i>EducationInfo</li>
+                <li @onclick="PersonalDetails"><i class='fas fa-user-circle' style='font-size:24px'></i>PersonalInfo</li>
+                <li @onclick="EducationDetails"><i class='fas fa-user-graduate' style='font-size:24px'></i>EducationInfo</li>
                 <li><i class='fas fa-laptop-code' style='font-size:24px'></i>ExperienceInfo</li>
                 <li><i class='fas fa-cogs' style='font-size:24px'></i>Settings</li>
             </ul>
         </div>
-        <p style="color:white;"><i class="fa fa-exclamation-circle"></i>about</p>
+        <p class="about"><i class="fa fa-exclamation-circle"></i>about</p>
     </div>
-    <div class="col-md-9">
-        <center>
-            <h3>welcome Mr.Surendran</h3>
-            <div class="profileBackground">
-                <div class="profilePhoto"> <img src=@imageSource class="image" /></div>
-          
-            </div>
-        </center>
+    <div class="col-md-7">
         
-        <div class="profileBackgroundContent">
-          
+        
+        <div class="@PersonalDetailsContent">
+            <center>
+                <h3>welcome Mr.Surendran</h3>
+                <div class="profileBackground">
+                    <div class="profilePhoto"> <img src=@imageSource class="image" /><i class='fas fa-cogs' style='font-size:24px'></i></div>
+                   
+
+                </div>
+            </center>
 
             <div class="content">
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">PersonalInfo</p>
-                        <p class="card-description">Name:Surendran<br />BirthDay:18022002<br />Gender:Male</p>
+                        <table >
+                           <tr>
+                                <th>Name</th>
+                                <td>Surendran</td>
+                           </tr>
+                            <tr>
+                                <th>BirthDay</th>
+                                <td>18022002</td>
+                            </tr>
+                            <tr>
+                                <th>Gender</th>
+                                <td>Male</td>
+                           </tr>
+                          
+                        </table> 
+                      @*  <p class="card-description">:Surendran<br />BirthDay:18022002<br />Gender:Male</p>*@
+                        <center>
+                            <button class="btnclass">Manage Your PersonalInfo</button>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">ContactInfo</p>
+                        <p class="card-description">Phone:8190970043<br />Alternative:6383329281<br />Email:Surendran18022002@gmail.com</p>
+                        <center>
+                            <button class="btnclass">Manage Your ContactInfo</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">AddressInfo</p>
+                        <p class="card-description">DoorNo:24/35<br />Street:ViveganantherStreet<br />AREA:KulalarPalayam<br />City:Bodinayakanur<br />District:Theni<br />Pincode:625513</p>
+                        <center>
+                            <button class="btnclass">Manage Your AddressInfo</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="@EducationDetailsContent">
+
+
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">EduvationInfo</p>
+                      
                         <center>
                             <button class="btnclass">Manage Your PersonalInfo</button>
                         </center>
