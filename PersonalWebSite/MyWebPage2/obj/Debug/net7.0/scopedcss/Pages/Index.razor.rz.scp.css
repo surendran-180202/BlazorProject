@@ -379,7 +379,7 @@
 
         0% {
             font-size: 1px;
-            margin-right: -100px;
+            margin-right: -20px;
             opacity: 0;
         }
 
@@ -388,6 +388,7 @@
             opacity: 1;
         }
 }
+
 
 
 

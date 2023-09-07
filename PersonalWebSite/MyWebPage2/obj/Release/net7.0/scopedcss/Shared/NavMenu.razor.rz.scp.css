@@ -1,68 +1,56 @@
+*[b-fx568spddw]{
+    margin:0;
+    padding:0;
+}.navbar[b-fx568spddw] {
+    z-index:1;
+}
 .navbar-toggler[b-fx568spddw] {
-    background-color: rgba(255, 255, 255, 0.1);
+    display: block;
+    position: absolute;
+    right: 10PX;
+    top: 10PX;
 }
-
+.top-row a[b-fx568spddw] {
+    display: block;
+}
 .top-row[b-fx568spddw] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
+   
+    position: relative;
 }
-
-.navbar-brand[b-fx568spddw] {
-    font-size: 1.1rem;
-}
-
-.oi[b-fx568spddw] {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}
-
-.nav-item[b-fx568spddw] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type[b-fx568spddw] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-fx568spddw] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-fx568spddw]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-.nav-item[b-fx568spddw]  a.active {
-    background-color: rgba(255,255,255,0.25);
+.top-row a[b-fx568spddw] {
     color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
 }
-
-.nav-item[b-fx568spddw]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+.top-row a:hover[b-fx568spddw] {
+    color: black;
 }
-
 @media (min-width: 641px) {
     .navbar-toggler[b-fx568spddw] {
-        display: none;
-    }
-
-    .collapse[b-fx568spddw] {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
+    display: none;
+}
+.top-row[b-fx568spddw] {
+   position:fixed;
+display:flex;
+justify-content:flex-end;
+width:100%;
+   background-color:transparent;
     
-    .nav-scrollable[b-fx568spddw] {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
+}
+    .top-row a[b-fx568spddw] {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
     }
+    .top-row a:hover[b-fx568spddw] {
+        color: antiquewhite;
+      
+    }
+.collapse[b-fx568spddw] {
+    /* Never collapse the sidebar for wide screens */
+    display: block;
+}
 }

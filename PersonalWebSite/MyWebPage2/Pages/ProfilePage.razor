@@ -6,52 +6,79 @@
 
 
 <h3>ProfilePage:</h3>
-    <div class="profileBackground">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-1">
-            <div class="profilePhoto"> <img src=@imageSource class="image" /></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="nav" >
+            <ul>
+                <li><i class='fas fa-user-circle' style='font-size:24px'></i>PersonalInfo</li>
+                <li><i class='fas fa-user-graduate' style='font-size:24px'></i>EducationInfo</li>
+                <li><i class='fas fa-laptop-code' style='font-size:24px'></i>ExperienceInfo</li>
+                <li><i class='fas fa-cogs' style='font-size:24px'></i>Settings</li>
+            </ul>
         </div>
-       
-        <div class="col-md-4">
-            <div class="profilePhotoContent">
-                
-                <h2>Name:Surendran</h2>
-                <h6>CompanyName:abcCompany</h6>
-                <h6>Posting:CEO</h6>
+        <p style="color:white;"><i class="fa fa-exclamation-circle"></i>about</p>
+    </div>
+    <div class="col-md-9">
+        <center>
+            <h3>welcome Mr.Surendran</h3>
+            <div class="profileBackground">
+                <div class="profilePhoto"> <img src=@imageSource class="image" /></div>
+          
             </div>
+        </center>
+        
+        <div class="profileBackgroundContent">
+          
+
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">PersonalInfo</p>
+                        <p class="card-description">Name:Surendran<br />BirthDay:18022002<br />Gender:Male</p>
+                        <center>
+                            <button class="btnclass">Manage Your PersonalInfo</button>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">ContactInfo</p>
+                        <p class="card-description">Phone:8190970043<br />Alternative:6383329281<br />Email:Surendran18022002@gmail.com</p>
+                        <center>
+                            <button class="btnclass">Manage Your ContactInfo</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">AddressInfo</p>
+                        <p class="card-description">DoorNo:24/35<br />Street:ViveganantherStreet<br />AREA:KulalarPalayam<br />City:Bodinayakanur<br />District:Theni<br />Pincode:625513</p>
+                        <center>
+                            <button class="btnclass">Manage Your AddressInfo</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </div>
-    <br/>
-    <div class="profileNav">
-        <ul>
-            <li @onclick="PersonalDetails">PersonalDetails</li>
-            <li @onclick="EducationDetails">EduvationDetails</li>
-            <li @onclick="ExperienceDetails">ExperienceDetails</li>
-            <li>settings</li>
-        </ul>
-    </div>
-    <br/>
+
 </div>
-<div class="profileBackgroundContent">
-    <div class="content">
-        <div class="@PersonalDetailsContent">
-            <h1>welcome Mr.Surendran</h1>
-            <p>Name:sutendran<br />Age:21<br />Gender:Male<br />Email:Surendran18022002@gmail.com</p>
-        </div>
-        <div class="@EducationDetailsContent">
-            <p>Name:sutendran<br />College:NSCET<br />PLACE:theni<br />PinCode:625513</p>
-        </div>
-        <div class="@ExperienceDetailsContent">
-            <p>Year:2019-2020<br />Institude:M&S<br />PLACE:Chennai<br />Learn:Asp.net</p>
-        </div>
+   
 
 
-
-    </div>
-    
-</div>
-
+       
+          
+            
+      
 
 
 @code {

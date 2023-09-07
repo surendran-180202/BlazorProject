@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "imNpNdTBUtk3w38mP2W3xIrHP+thmLL1UQ5wguNxyrg=",
+  "Hash": "yn68omKq72mXfDyI+U6ZznznrmduFHgsx+jBRhMiFZI=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -221,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\UserImage1.png"
     },
     {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
@@ -321,23 +338,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "MyWebPage2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
-      "BasePath": "_content/MyWebPage2",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
@@ -578,23 +578,6 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\svgbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
-      "SourceId": "Syncfusion.Blazor.Core",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Core",
-      "RelativePath": "scripts/syncfusion-blazor.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
-    },
-    {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
@@ -627,6 +610,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
+      "SourceId": "Syncfusion.Blazor.Core",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Core",
+      "RelativePath": "scripts/syncfusion-blazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.core\\22.2.9\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap-dark.css",
+      "SourceId": "Syncfusion.Blazor.Themes",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Themes",
+      "RelativePath": "bootstrap-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap-dark.css"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap.css",
@@ -663,23 +680,6 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap4.css"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5.css",
-      "SourceId": "Syncfusion.Blazor.Themes",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "bootstrap5.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5.css"
-    },
-    {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5-dark.css",
       "SourceId": "Syncfusion.Blazor.Themes",
       "SourceType": "Package",
@@ -697,12 +697,12 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap-dark.css",
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5.css",
       "SourceId": "Syncfusion.Blazor.Themes",
       "SourceType": "Package",
       "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "bootstrap-dark.css",
+      "RelativePath": "bootstrap5.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -711,24 +711,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap-dark.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric.css",
-      "SourceId": "Syncfusion.Blazor.Themes",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "fabric.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric.css"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\bootstrap5.css"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric-dark.css",
@@ -748,12 +731,12 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent.css",
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric.css",
       "SourceId": "Syncfusion.Blazor.Themes",
       "SourceType": "Package",
       "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "fluent.css",
+      "RelativePath": "fabric.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -762,7 +745,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent.css"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fabric.css"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent-dark.css",
@@ -782,6 +765,23 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent-dark.css"
     },
     {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent.css",
+      "SourceId": "Syncfusion.Blazor.Themes",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Themes",
+      "RelativePath": "fluent.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\fluent.css"
+    },
+    {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\highcontrast.css",
       "SourceId": "Syncfusion.Blazor.Themes",
       "SourceType": "Package",
@@ -797,57 +797,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\highcontrast.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material.css",
-      "SourceId": "Syncfusion.Blazor.Themes",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "material.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3.css",
-      "SourceId": "Syncfusion.Blazor.Themes",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "material3.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3.css"
-    },
-    {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3-dark.css",
-      "SourceId": "Syncfusion.Blazor.Themes",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "material3-dark.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3-dark.css"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material-dark.css",
@@ -867,12 +816,12 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind.css",
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material.css",
       "SourceId": "Syncfusion.Blazor.Themes",
       "SourceType": "Package",
       "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Themes",
-      "RelativePath": "tailwind.css",
+      "RelativePath": "material.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -881,7 +830,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind.css"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material.css"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3-dark.css",
+      "SourceId": "Syncfusion.Blazor.Themes",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Themes",
+      "RelativePath": "material3-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3.css",
+      "SourceId": "Syncfusion.Blazor.Themes",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Themes",
+      "RelativePath": "material3.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\material3.css"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind-dark.css",
@@ -899,6 +882,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind.css",
+      "SourceId": "Syncfusion.Blazor.Themes",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Themes",
+      "RelativePath": "tailwind.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.themes\\22.2.10\\staticwebassets\\tailwind.css"
     }
   ]
 }
