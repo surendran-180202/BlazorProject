@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yzERKXzI3wzUQFcDZan6IasWiqLnCXWvud8rZRd+g1U=",
+  "Hash": "wVL206RpGj9kogzhoOFs7Ou/W9fqXbr9218uq8JBwDI=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyWebPage2\\wwwroot",
       "Source": "MyWebPage2",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\MyWebPage2.styles.css",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\MyWebPage2.styles.css",
       "SourceId": "MyWebPage2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "MyWebPage2.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\MyWebPage2.styles.css"
+      "OriginalItemSpec": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\bundle\\MyWebPage2.styles.css"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\MyWebPage2.bundle.scp.css",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\MyWebPage2.bundle.scp.css",
       "SourceId": "MyWebPage2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "MyWebPage2.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\MyWebPage2.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\MyWebPage2.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image1.jpg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image1.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image1.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image1.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image2.jpg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image2.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image2.jpg",
       "AssetKind": "All",
@@ -119,27 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image2.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image3.png",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image4.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
-      "BasePath": "_content/MyWebPage2",
-      "RelativePath": "css/images/image3.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\images\\image3.png"
-    },
-    {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image4.jpg",
-      "SourceId": "MyWebPage2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image4.jpg",
       "AssetKind": "All",
@@ -153,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image4.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image5.jpg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image5.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image5.jpg",
       "AssetKind": "All",
@@ -170,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image5.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image6.jpg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image6.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image6.jpg",
       "AssetKind": "All",
@@ -187,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image6.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\images\\image7.jpg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\image7.jpg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/images/image7.jpg",
       "AssetKind": "All",
@@ -204,10 +187,44 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image7.jpg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\MR.B.Surendran Resume.pdf",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/images/MR.B.Surendran Resume.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\MR.B.Surendran Resume.pdf"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\UserImage1.png",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/images/UserImage1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\UserImage1.png"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -221,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -238,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -255,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -272,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -289,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -306,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -323,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -340,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -357,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\site.css",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -374,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\favicon.png",
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\favicon.png",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\MyWebPage2\\MyWebPage2\\wwwroot\\",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
       "BasePath": "_content/MyWebPage2",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
