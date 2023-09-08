@@ -1,7 +1,8 @@
 ﻿@page "/"
 @using MyWebPage2.Data
 @inject NavigationManager uriHelper;
-@inject UserServices dataAccessLayer
+@inject UserServices userService;
+
 <PageTitle>Index</PageTitle>
 
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
@@ -141,7 +142,7 @@
 
     private string? CurrentUserName { get; set; }
     tblUser AddUser = new tblUser();
-    UserServices userService = new UserServices();
+ 
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
 
@@ -171,8 +172,8 @@
     }
     private void LoginUser()
     {
-        if(userService.UserCheck(AddUser)) uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-
+        if(userService.UserCheck(AddUser)) /*uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);*/
+        OnInitialized();
 
     }
     private void NewUser()

@@ -1,7 +1,6 @@
 ﻿@page "/Contact"
 @using MyWebPage2.Data
-@using System.IO
-
+@inject UserServices userService;
 <PageTitle>Education</PageTitle>
 <h3>Contact :</h3>
 <center> 
@@ -62,25 +61,10 @@
         <label style="color:red;font-size:10px;">@ErrorMsg</label>
     </div>
 </center>
-
-@*<InputFile OnChange="HandleFileUpload" />
-
-<button @onclick="UploadImage">Upload</button>
-*@
-
 @code {
-
-    UserServices userService = new UserServices();
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? ErrorMsg { get; set; }
-
-
-    //private IFileListEntry file;
-    //private byte[] imageBytes;
-
-
-
     protected override void OnInitialized()
     {
 

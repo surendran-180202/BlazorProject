@@ -21,18 +21,15 @@
         <p class="about"><i class="fa fa-exclamation-circle"></i>about</p>
     </div>
     <div class="col-md-7">
-        
-        
+        @foreach(var i in tblUserInfo)
+        {
         <div class="@PersonalDetailsContent">
             <center>
                 <h3>welcome Mr.Surendran</h3>
                 <div class="profileBackground">
-                    <div class="profilePhoto"> <img src=@imageSource class="image" /><i class='fas fa-cogs' style='font-size:24px'></i></div>
-                   
-
+                    <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /> @*<img src=@imageSource class="image" />*@</div>
                 </div>
             </center>
-
             <div class="content">
                 <div class="card">
                     <div class="container-card bg-blue-box">
@@ -40,21 +37,25 @@
                         <table >
                            <tr>
                                 <th>Name</th>
-                                <td>Surendran</td>
+                                <td>@i.NAME</td>
                            </tr>
+                                <tr>
+                                    <th>LastName</th>
+                                    <td>@i.LASTNAME</td>
+                                </tr>
                             <tr>
                                 <th>BirthDay</th>
-                                <td>18022002</td>
+                                <td>@i.BIRTHDAY</td>
                             </tr>
                             <tr>
                                 <th>Gender</th>
-                                <td>Male</td>
+                                <td>@i.GENDER</td>
                            </tr>
                           
                         </table> 
-                      @*  <p class="card-description">:Surendran<br />BirthDay:18022002<br />Gender:Male</p>*@
+                     
                         <center>
-                            <button class="btnclass">Manage Your PersonalInfo</button>
+                            <button class="btnclass" @onclick="manageboxinfo">Manage Your PersonalInfo</button>
                         </center>
 
                     </div>
@@ -65,7 +66,7 @@
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">ContactInfo</p>
-                        <p class="card-description">Phone:8190970043<br />Alternative:6383329281<br />Email:Surendran18022002@gmail.com</p>
+                            <p class="card-description">Phone:@i.PHONE<br />Email:@i.EMAIL</p>
                         <center>
                             <button class="btnclass">Manage Your ContactInfo</button>
                         </center>
@@ -76,7 +77,7 @@
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">AddressInfo</p>
-                        <p class="card-description">DoorNo:24/35<br />Street:ViveganantherStreet<br />AREA:KulalarPalayam<br />City:Bodinayakanur<br />District:Theni<br />Pincode:625513</p>
+                            <p class="card-description">@i.ADDRESS</p>
                         <center>
                             <button class="btnclass">Manage Your AddressInfo</button>
                         </center>
@@ -86,78 +87,75 @@
 
         </div>
 
+  
 
-
-
+}
 
         <div class="@EducationDetailsContent">
 
-
+  @foreach(var educationDetails in EducationDetails1)
+                        {
             <div class="content">
                 <div class="card">
                     <div class="container-card bg-blue-box">
-                        <p class="card-title">EduvationInfo</p>
-                      
+                         <p class="card-title">@educationDetails.TITLE</p>
+                         @if(educationDetails.TITLE.ToLower().Contains("school")) Cource = "Class"; else Cource = "Degree";
+                         <p class="card-description">Year: @educationDetails.YEAR<br />@Cource :@educationDetails.CLASS<br />Institute:@educationDetails.INSTITUTE<br />CGPA:@educationDetails.PERCENTAGE</p>
                         <center>
-                            <button class="btnclass">Manage Your PersonalInfo</button>
-                        </center>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
-                        <p class="card-title">ContactInfo</p>
-                        <p class="card-description">Phone:8190970043<br />Alternative:6383329281<br />Email:Surendran18022002@gmail.com</p>
-                        <center>
-                            <button class="btnclass">Manage Your ContactInfo</button>
+                                <button class="btnclass">Manage Your @educationDetails.TITLE Info</button>
                         </center>
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
-                        <p class="card-title">AddressInfo</p>
-                        <p class="card-description">DoorNo:24/35<br />Street:ViveganantherStreet<br />AREA:KulalarPalayam<br />City:Bodinayakanur<br />District:Theni<br />Pincode:625513</p>
-                        <center>
-                            <button class="btnclass">Manage Your AddressInfo</button>
-                        </center>
-                    </div>
-                </div>
-            </div>
-
+            }
         </div>
 
     </div>
 
 </div>
-   
+<div class="@managebox">
+     <div class="ManageInfo">
+        <button type="button" @onclick=@(() => managebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+    
+     
+     </div>
+
+</div>
 
 
-       
-          
-            
-      
+
 
 
 @code {
-
+    List<tblEducationDetails>? EducationDetails1 = new List<tblEducationDetails>();
+    List<tblUserInfo>? tblUserInfo = new List<tblUserInfo>();
+    UserServices userService = new UserServices();
     public string? PersonalDetailsContent{ get; set; }
     public string? EducationDetailsContent { get; set; }
     public string? ExperienceDetailsContent { get; set; }
+    public string? managebox { get; set; }
     private string? imageSource;
+    private string? Cource { get; set; }
 
-
+    protected override async Task OnInitializedAsync()
+    {
+        tblUserInfo = userService.GetPersonalInfo();
+        //Image = await dbContext.Images.FindAsync(Id);
+    }
 
     protected override void OnInitialized()
     {
+
+
+        managebox = "hide";
+
         PersonalDetailsContent = "show";
         EducationDetailsContent = "hide";
         ExperienceDetailsContent = "hide";
         imageSource = $"css/images/UserImage{1}.png";
+        EducationDetails1 = userService.Education();
+
+        // tblUserInfo = userService.GetPersonalInfo();
     }
 
     private void PersonalDetails()
@@ -178,7 +176,22 @@
         PersonalDetailsContent = "hide";
         EducationDetailsContent = "hide";
         ExperienceDetailsContent = "show";
-        
+
     }
+    private void manageboxinfo()
+    {
+        managebox = "show";
+    }
+    //private void cancelbtn()
+    //{
+    //    managebox = "hide";
+    //}
 
 }
+
+
+     
+  
+   
+
+ 

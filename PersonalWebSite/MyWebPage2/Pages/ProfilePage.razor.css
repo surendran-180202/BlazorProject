@@ -183,7 +183,7 @@
 .about{
 	color:white;
 	position:fixed;
-	top:74%;
+	top:75%;
 }
 .NewImage{
 	width:100%;
@@ -191,4 +191,19 @@
 	background-color:red;
 	z-index:100;
 	position:fixed;
+}
+.ManageInfo{
+	position:fixed;
+	width:80%;
+	height:80%;
+	top:10%;
+	left:10%;
+	background-color:white;
+}
+.cancelbtn {
+	background-color: transparent;
+
+	right: 0;
+	top: 5px;
+	position: fixed;
 }
