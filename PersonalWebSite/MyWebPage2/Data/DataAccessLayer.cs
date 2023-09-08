@@ -1,15 +1,6 @@
 ﻿using MyWebPage2.Data;
-using MyWebPage2.Pages;
-using Syncfusion.Blazor;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
-using System.Numerics;
-using System.Reflection;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 public class DataAccessLayer
 {
     internal static int currentUserID { get; set; }
@@ -17,7 +8,7 @@ public class DataAccessLayer
     public static string connectionString = "Data Source=MS-00715;Initial Catalog=SBPERSONAL;Integrated Security=True";
     public List<tblUser> GetAllUser()
     {
-        List<tblUser> PersonDetails = new List<tblUser>();
+        List<tblUser> UserDetails = new List<tblUser>();
         using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand("Select * from tblUserData", con);
@@ -31,6 +22,55 @@ public class DataAccessLayer
                 data.EMAIL = reader.GetString(2);
                 data.PHONE = reader.GetInt64(3);
                 data.PASSWORD = reader.GetString(4);
+                UserDetails.Add(data);
+            }
+        }
+        return UserDetails;
+    }
+    public void AddPersonalInfo(tblUserInfo tbldata) 
+    {
+       
+        string strPersonalQuery = "insert into tblUserInfo(USERID,USERIMAGE,USERBIO,NAME,LASTNAME,BIRTHDAY,GENDER,EMAIL,PHONE,ADDRESS)values (@userid,@userimage,@userbio,@name,@lastname,@birthday,@gender,@email,@phone,@address)";
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand(strPersonalQuery, con);
+            cmd.Parameters.AddWithValue("@userid", tbldata.USERID);
+            cmd.Parameters.AddWithValue("@userimage", tbldata.USERIMAGE);
+            cmd.Parameters.AddWithValue("@userbio", tbldata.USERBIO);
+            cmd.Parameters.AddWithValue("@name", tbldata.NAME);
+            cmd.Parameters.AddWithValue("@lastname", tbldata.LASTNAME);
+            cmd.Parameters.AddWithValue("@birthday", tbldata.BIRTHDAY);
+            cmd.Parameters.AddWithValue("@gender", tbldata.GENDER);
+            cmd.Parameters.AddWithValue("@email", tbldata.EMAIL);
+            cmd.Parameters.AddWithValue("@phone", tbldata.PHONE);
+            cmd.Parameters.AddWithValue("@address", tbldata.ADDRESS);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+    }
+
+    public List<tblUserInfo> GetPersonalInfo()
+    {
+        List<tblUserInfo> PersonDetails = new List<tblUserInfo>();
+        tblUserInfo data = new tblUserInfo();
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tblUserInfo", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                data.USERID = reader.GetInt32(0);
+                data.USERIMAGE = (Byte[]) reader[1];
+                data.USERBIO = reader.GetString(2);
+                data.NAME = reader.GetString(3);
+                data.LASTNAME = reader.GetString(4);
+                data.BIRTHDAY = reader.GetDateTime(5);
+                data.GENDER = reader.GetString(6);
+                data.EMAIL = reader.GetString(7);
+                data.PHONE = reader.GetInt64(8);
+                data.ADDRESS = reader.GetString(9);
                 PersonDetails.Add(data);
             }
         }
@@ -205,3 +245,48 @@ public class DataAccessLayer
     
 
 }
+
+
+
+
+
+
+
+
+
+
+//    string fName;
+//    SqlConnection cnn;
+//    string connectionString = null;
+
+//        connectionString = "Data Source=servername; Initial Catalog=databasename; User ID=sa; Password=password";
+//        cnn = new SqlConnection(connectionString);
+//        fName = "D:\\picfile.jpg";
+//        if(File.Exists(fName))
+//        {
+//            int id = 2;
+//            byte[] content = ImageToStream(fName);
+//            cnn.Open();
+//            SqlCommand cmd = new SqlCommand("insert into imgtable (id,img) values ( @id,@img)", cnn);
+//            cmd.Parameters.AddWithValue("@id", id);
+//            cmd.Parameters.AddWithValue("@img", content);
+//            cmd.ExecuteNonQuery();
+//            cnn.Close();
+
+//        }
+//        else
+//        {
+
+//        }
+//    }
+//private byte[] ImageToStream(string fileName)
+//{
+//    byte[] MyImg = (byte[]) Row[0];
+
+//    data.USERIMAGE = MyImg;
+//    MemoryStream ms = new MemoryStream(MyImg);
+//    ms.Position = 0;
+
+//    //Image img = Image.FromStream(ms); //error 
+
+//    //pictureBox1.Image = img;

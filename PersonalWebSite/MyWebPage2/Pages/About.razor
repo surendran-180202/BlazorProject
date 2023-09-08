@@ -1,29 +1,45 @@
 ﻿@page "/About"
+@using MyWebPage2.Data
 
+@inject UserServices userService;
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
+<input type="file" @bind="imagepath">
 
+<button class="btnclass" @onclick="submitimg"> Manage Your PersonalInfo</button>
+@foreach(var i in data)
+{
+    <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" />
+    <img src=img class="image" />
+}
 
 
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
+    tblUserInfo user = new tblUserInfo();
+    List<tblUserInfo> data = new List<tblUserInfo>();
+    public string? imagepath { get; set;}
+
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+        data = userService.GetPersonalInfo();
+        //Image = await dbContext.Images.FindAsync(Id);
     }
-    
 
-     bool InvalidLogin { get; set; } = false;
 
-    string PopupClass => InvalidLogin ? "active" : "inactive";
-    public string ErrorText { get; set; } = "Example of exception";
-
-    private void RedirectPage()
+   
+   
+    private void submitimg()
     {
-        this.InvalidLogin = !this.InvalidLogin;
+        userService.imagedata(imagepath);
+        //byte[] imageData = ReadFile(imagepath);
+        
     }
+    //private byte[] ReadFile(string sPath)
+    //{
+       
+    //}
 
     
 }

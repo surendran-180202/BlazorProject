@@ -1,7 +1,8 @@
 ﻿@page "/Experience"
 @using MyWebPage2.Data
 @inject NavigationManager uriHelper;
-@inject UserServices dataAccessLayer
+@inject UserServices userService;
+
 
 <PageTitle>Buiness</PageTitle>
 
@@ -48,8 +49,8 @@
 
 
 @code{
+    tblUser AddUser = new tblUser();
     List<tblExperience> Experiencetable = new List<tblExperience>();
-    UserServices userService = new UserServices();
     protected override void OnInitialized()
     {
         Experiencetable = userService.Experience();

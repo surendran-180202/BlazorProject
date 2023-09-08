@@ -1,9 +1,7 @@
 ﻿@page "/Education"
 @using MyWebPage2.Data
-
-
 @inject NavigationManager uriHelper;
-@inject UserServices dataAccessLayer
+@inject UserServices userService;
 
 <PageTitle>Education</PageTitle>
 
@@ -78,7 +76,7 @@
 
 @code {
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
-    UserServices userService = new UserServices();
+ 
     private string? PopUp { get; set; }  
     private string? NewComment { get; set; }
     private string? Title { get; set; }
