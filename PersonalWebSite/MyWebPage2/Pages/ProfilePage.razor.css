@@ -1,7 +1,5 @@
 ﻿
 .profileBackground {
-
-	
 }
 .profilePhoto {
 	width: 100px;
@@ -9,25 +7,33 @@
 	border-radius: 50%;
 	background-color: white;
 	padding:2px;
-
-
+	overflow:hidden;
 }
-
 .image {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
+
+}
+.profilePhoto i{
+ position:relative;
+ top:-30%;
+ display:none;
+ padding:8px;
+
+
+}
+.profilePhoto:hover i {
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	display: block;
 }
 .profilePhotoContent{
 	color:white;
-	
 }
-
 .profileBackgroundContent {
 	width: 100%;
 	height: 300px;
-
-
 }
 .profileBackgroundContent .content p{
 	color:white;
@@ -35,60 +41,23 @@
 .hide {
 	display: none;
 }
-
 .show {
 	display: block;
 	animation: slow 1s forwards;
 }
 
-
-
-
-
-
-
-
-/*
-//card view*/
-
-
+/*card view*/
 .container {
 	width: 1200px !important;
 	padding: 0 !important;
 	margin-right: auto;
 	margin-left: auto;
 }
-
-@media screen and (min-width: 992px) and (max-width: 1439px) {
-	.container {
-		max-width: 1279px !important;
-		padding: 0 !important;
-		margin: 0 80px !important;
-		width: auto !important;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	.container {
-		max-width: 959px !important;
-		margin: 0 16px !important;
-		padding: 0 !important;
-		width: auto !important;
-	}
-}
-
-
 .gradient-cards {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 32px;
 	padding: 30px;
-}
-
-@media screen and (max-width: 991px) {
-	.gradient-cards {
-		grid-template-columns: 1fr;
-	}
 }
 
 .container-title {
@@ -133,8 +102,6 @@
 		border-radius: 45px;
 	
 	}
-
-
 .card-title {
 	font-weight: 600;
 	color: white;
@@ -144,10 +111,6 @@
 	font-size: 28px;
 	padding-bottom: 8px;
 }
-
-
-
-
 .btnclass{
 	border:1px solid white;
 	padding:5px;
@@ -156,14 +119,10 @@
 	color:lightgoldenrodyellow;
 	background-color:transparent;
 }
-
-
 .nav{
 	border-bottom:1px solid white;
 	position:fixed;
 	top:10%
-
-	
 }
 	.nav li {
 		color: white;
@@ -192,18 +151,317 @@
 	z-index:100;
 	position:fixed;
 }
-.ManageInfo{
-	position:fixed;
-	width:80%;
-	height:80%;
-	top:10%;
-	left:10%;
-	background-color:white;
+.ManageInfo {
+	position: fixed;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	background-color: rgb(0,0,0,0.8);
+
+
+}
+.SubmitBtn{
+	color:white;
+	background-color:green;
+	border:none;
+	border-radius:20px;
 }
 .cancelbtn {
 	background-color: transparent;
-
 	right: 0;
 	top: 5px;
 	position: fixed;
+}
+.popupbtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	background-color: transparent;
+
+	
+}
+.editContent {
+	padding: 5%;
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	top: 6%;
+	left: 5%;
+}
+
+	.editContent input {
+		margin-bottom: 10px;
+		padding: 4px;
+		border-radius: 20px;
+		outline: none;
+		border: none;
+		text-align: center;
+		background-color: rgba(255, 255, 255,0.4);
+		color:white;
+	}
+	.editContent select {
+		padding: 4px;
+		width: 80px;
+		border-radius: 20px;
+		font-size: 12px;
+		background-color: rgba(255, 255, 255,0.4);
+		color:white;
+	}
+		.editContent select:focus {
+			color:black;
+		}
+		.editContent input[type=date] {
+			width: 120px;
+		}
+
+	.editContent input::placeholder, .address::placeholder{
+		font-size: 15px;
+		text-align: center;
+		color: rgb(255,255,255,0.7);
+	}
+.address {
+	background-color: rgba(255, 255, 255,0.4);
+	color:white;
+}
+/*tblstyel */
+.table, .table1 {
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	background-color: transparent;
+	color: white;
+}
+	.table th{
+		width: 50%;
+		padding:5px;
+	}
+	.table1 td, .table1 th {
+		text-align: center;
+		padding: 8px;
+	}
+	.table1 tr:nth-child(even) {
+		background-color: rgba(173, 216, 230,0.1);
+	}
+.experienceOverflow {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+.addmorebtn{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	border:none;
+	background-color:transparent;
+	color:white;
+}
+	.addmorebtn i{
+		font-size:25px;
+	}
+
+/* Responsive */
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+	.container {
+		max-width: 1279px !important;
+		padding: 0 !important;
+		margin: 0 80px !important;
+		width: auto !important;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.container {
+		max-width: 959px !important;
+		margin: 0 16px !important;
+		padding: 0 !important;
+		width: auto !important;
+	}
+	.gradient-cards {
+		grid-template-columns: 1fr;
+	}
+	
+}
+@media (max-width: 767px) {
+	.nav {
+		display: none;
+	}
+	.editContent{
+		padding:5px;
+	}
+	.editContent1{
+		display:none;
+	}
+/*	.ManageInfo{
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+
+	}*/
+}
+
+
+
+
+/*msgBox animation*/
+.letter-image {
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	width: 200px;
+	height: 200px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.animated-mail {
+	position: absolute;
+	height: 150px;
+	width: 200px;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	transition: .4s;
+}
+	 .body {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 100px 200px;
+		border-color: transparent transparent #e95f55 transparent;
+		z-index: 2;
+	}
+
+	 .top-fold {
+		position: absolute;
+		top: 50px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 50px 100px 0 100px;
+		-webkit-transform-origin: 50% 0%;
+		-webkit-transition: transform .4s .4s, z-index .2s .4s;
+		-moz-transform-origin: 50% 0%;
+		-moz-transition: transform .4s .4s, z-index .2s .4s;
+		transform-origin: 50% 0%;
+		transition: transform .4s .4s, z-index .2s .4s;
+		border-color: #cf4a43 transparent transparent transparent;
+		z-index: 2;
+	}
+
+.back-fold {
+	position: absolute;
+	bottom: 0;
+	width: 200px;
+	height: 100px;
+	background: #cf4a43;
+	z-index: 0;
+}
+
+.left-fold {
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 50px 0 50px 100px;
+	border-color: transparent transparent transparent #e15349;
+	z-index: 2;
+}
+
+.letter {
+	left: 20px;
+	bottom: 0px;
+	position: absolute;
+	width: 160px;
+	height: 60px;
+	background: white;
+	z-index: 1;
+	overflow: hidden;
+	-webkit-transition: .4s .2s;
+	-moz-transition: .4s .2s;
+	transition: .4s .2s;
+}
+	.letter-border
+
+{
+	height: 10px;
+	width: 100%;
+	background: repeating-linear-gradient( -45deg, #cb5a5e, #cb5a5e 8px, transparent 8px, transparent 18px );
+}
+
+.letter-title {
+	margin-top: 10px;
+	margin-left: 5px;
+	height: 10px;
+	width: 40%;
+	background: #cb5a5e;
+}
+
+.letter-context {
+	margin-top: 10px;
+	margin-left: 5px;
+	height: 10px;
+	width: 20%;
+	background: #cb5a5e;
+}
+
+.letter-stamp {
+	margin-top: 30px;
+	margin-left: 120px;
+	border-radius: 100%;
+	height: 30px;
+	width: 30px;
+	background: #cb5a5e;
+	opacity: 0.3;
+}
+
+.shadow {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	width: 400px;
+	height: 30px;
+	transition: .4s;
+	transform: translateX(-50%);
+	-webkit-transition: .4s;
+	-webkit-transform: translateX(-50%);
+	-moz-transition: .4s;
+	-moz-transform: translateX(-50%);
+	border-radius: 100%;
+	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+}
+
+.letter-image:hover .animated-mail
+
+{
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+}
+
+	.letter-image:hover .animated-mail .top-fold {
+		transition: transform .4s, z-index .2s;
+		transform: rotateX(180deg);
+		-webkit-transition: transform .4s, z-index .2s;
+		-webkit-transform: rotateX(180deg);
+		-moz-transition: transform .4s, z-index .2s;
+		-moz-transform: rotateX(180deg);
+		z-index: 0;
+	}
+
+	.letter-image:hover .animated-mail .letter {
+		height: 180px;
+	}
+
+.letter-image:hover .shadow {
+	width: 250px;
 }

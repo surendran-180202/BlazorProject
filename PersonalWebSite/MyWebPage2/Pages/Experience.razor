@@ -27,6 +27,11 @@
         else
         {
           <table>
+              <tr>
+                  <th>Year</th>
+                  <th>Learing</th>
+                  <th>Institute</th>
+              </tr>
             @foreach (var experience in Experiencetable)
             {
                 <tr>
@@ -38,12 +43,9 @@
            </table>
         }
 </div>
-
     <div class="ResumeButton">
         <a href="PdfView"> <button @onclick="ViewResume">View Resume <i class="fa fa-arrow-circle-down"></i> </button></a>
-
     </div>
-   
 </center>
 
 

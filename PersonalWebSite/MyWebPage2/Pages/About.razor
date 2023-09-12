@@ -8,11 +8,11 @@
 <input type="file" @bind="imagepath">
 
 <button class="btnclass" @onclick="submitimg"> Manage Your PersonalInfo</button>
-@foreach(var i in data)
+@*@foreach(var i in data)
 {
     <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" />
     <img src=img class="image" />
-}
+}*@
 
 
 @code {
