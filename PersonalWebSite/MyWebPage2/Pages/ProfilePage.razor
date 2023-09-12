@@ -4,17 +4,15 @@
 @inject UserServices dataAccessLayer
 <PageTitle>ProfilePage</PageTitle>
 
-
 <h3 style="color:white;position:fixed;">ProfilePage:</h3>
 <br/>
-
 <div class="row">
     <div class="col-md-3">
         <div class="nav" >
             <ul>
                 <li @onclick="PersonalDetails"><i class='fas fa-user-circle' style='font-size:24px'></i>PersonalInfo</li>
                 <li @onclick="EducationDetails"><i class='fas fa-user-graduate' style='font-size:24px'></i>EducationInfo</li>
-                <li><i class='fas fa-laptop-code' style='font-size:24px'></i>ExperienceInfo</li>
+                <li @onclick="ExperienceDetails"><i class='fas fa-laptop-code' style='font-size:24px'></i>ExperienceInfo</li>
                 <li><i class='fas fa-cogs' style='font-size:24px'></i>Settings</li>
             </ul>
         </div>
@@ -27,22 +25,22 @@
             <center>
                 <h3>welcome Mr.Surendran</h3>
                 <div class="profileBackground">
-                    <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /> @*<img src=@imageSource class="image" />*@</div>
+                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit'></i></div>
                 </div>
             </center>
             <div class="content">
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">PersonalInfo</p>
-                        <table >
+                        <table class="table">
                            <tr>
                                 <th>Name</th>
                                 <td>@i.NAME</td>
                            </tr>
-                                <tr>
-                                    <th>LastName</th>
-                                    <td>@i.LASTNAME</td>
-                                </tr>
+                           <tr>
+                                <th>LastName</th>
+                                <td>@i.LASTNAME</td>
+                           </tr>
                             <tr>
                                 <th>BirthDay</th>
                                 <td>@i.BIRTHDAY</td>
@@ -51,13 +49,10 @@
                                 <th>Gender</th>
                                 <td>@i.GENDER</td>
                            </tr>
-                          
                         </table> 
-                     
                         <center>
-                            <button class="btnclass" @onclick="manageboxinfo">Manage Your PersonalInfo</button>
+                            <button class="btnclass" @onclick=@(() => managebox ="show")>Manage Your PersonalInfo</button>
                         </center>
-
                     </div>
                 </div>
             </div>
@@ -66,9 +61,19 @@
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">ContactInfo</p>
-                            <p class="card-description">Phone:@i.PHONE<br />Email:@i.EMAIL</p>
+                            <table class="table">
+                                <tr>
+                                    <th>Phone</th>
+                                    <td>@i.PHONE</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>@i.EMAIL</td>
+                                </tr>
+                            </table>
+                         
                         <center>
-                            <button class="btnclass">Manage Your ContactInfo</button>
+                                <button class="btnclass" @onclick=@(() => managebox ="show")>Manage Your ContactInfo</button>
                         </center>
                     </div>
                 </div>
@@ -77,57 +82,141 @@
                 <div class="card">
                     <div class="container-card bg-blue-box">
                         <p class="card-title">AddressInfo</p>
-                            <p class="card-description">@i.ADDRESS</p>
+                            <p class="card-description" style="color:white;">@i.ADDRESS</p>
                         <center>
-                            <button class="btnclass">Manage Your AddressInfo</button>
+                                <button class="btnclass" @onclick=@(() => managebox ="show")>Manage Your AddressInfo</button>
                         </center>
                     </div>
                 </div>
             </div>
-
         </div>
-
-  
-
 }
 
-        <div class="@EducationDetailsContent">
-
-  @foreach(var educationDetails in EducationDetails1)
-                        {
+   <div class="@EducationDetailsContent">
+        @foreach(var educationDetails in EducationDetails1)
+           {
             <div class="content">
                 <div class="card">
                     <div class="container-card bg-blue-box">
                          <p class="card-title">@educationDetails.TITLE</p>
-                         @if(educationDetails.TITLE.ToLower().Contains("school")) Cource = "Class"; else Cource = "Degree";
-                         <p class="card-description">Year: @educationDetails.YEAR<br />@Cource :@educationDetails.CLASS<br />Institute:@educationDetails.INSTITUTE<br />CGPA:@educationDetails.PERCENTAGE</p>
+                            @if(educationDetails.TITLE.ToLower().Contains("school")) Cource = "Class"; else Cource = "Degree";
+                            <table class="table">
+                                <tr>
+                                    <th>Year</th>
+                                    <td>@educationDetails.YEAR</td>
+                                </tr>
+                                <tr>
+                                    <th>@Cource</th>
+                                    <td>@educationDetails.CLASS</td>
+                                </tr>
+                                <tr>
+                                    <th>Institute:</th>
+                                    <td>@educationDetails.INSTITUTE</td>
+                                </tr>
+                                <tr>
+                                    <th>CGPA</th>
+                                    <td>@educationDetails.PERCENTAGE</td>
+                                </tr>
+                            </table>
                         <center>
-                                <button class="btnclass">Manage Your @educationDetails.TITLE Info</button>
+                                <button class="btnclass" @onclick=@(() => managebox ="show")>Manage Your @educationDetails.TITLE Info</button>
                         </center>
                     </div>
                 </div>
             </div>
             }
+            <button class="addmorebtn">  <i class="fa fa-plus-circle"></i></button>
         </div>
+        <div class="@ExperienceDetailsContent">
+                <div class="content">
+                    <div class="card">
+                        <div class="container-card bg-blue-box">
+                            <p class="card-title">Experience</p>
+                         <div class="experienceOverflow">
 
+                   
+                           <table class="table1">
+                               <tr>
+                                <th>Year</th>
+                                <th>Cource</th>
+                                <th>Institute</th>
+                               </tr>
+                            @foreach(var experience in Experience)
+                            {
+                               <tr>
+                                    <td>@experience.YEAR</td>
+                                    <td>@experience.LEARING</td>
+                                    <td>@experience.INSTITUTE</td>
+                                    <td><i class='far fa-edit'></i> <i class='fas fa-trash-alt'></i></td>
+                               </tr>
+                            }
+                           </table>
+                        </div>
+
+                            <center>
+                            <button class="btnclass" @onclick=@(() => managebox ="show")>Manage Your Info</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </div>
-
 </div>
+
 <div class="@managebox">
+   
      <div class="ManageInfo">
-        <button type="button" @onclick=@(() => managebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-    
-     
+        <button type="button" class="popupbtn" @onclick=@(() => managebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+     <div class="row">
+         <div class="col-md-6">
+                <div class="editContent">
+                         <center>
+                        <input type="text" placeholder="Enter your name" /><br/>
+                        <input type="text" placeholder="Enter your Lastname" /><br />
+                        <input type="date" placeholder="Enter DOB" />
+                        <select>
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select><br />
+                        <input type="number"placeholder="Enter your Phone" /><br />
+                        <input type="email" placeholder="Enter your Email" /><br />
+                        <textarea class="address" rows="3" cols="23" placeholder="Please enter Address..."></textarea><br/>
+                        <button class="SubmitBtn">submit</button>
+                    </center>
+                </div>
+
+
+            </div>   
+      
+         <div class="col-md-6">
+                <div class="editContent1">
+                        <div class="letter-image">
+                            <div class="animated-mail">
+                                <div class="back-fold"></div>
+                                <div class="letter">
+                                    <div class="letter-border"></div>
+                                    <div class="letter-title"></div>
+                                    <div class="letter-context"></div>
+                                    <div class="letter-stamp">
+                                        <div class="letter-stamp-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="top-fold"></div>
+                                <div class="body"></div>
+                                <div class="left-fold"></div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+                </div>
+         </div>
      </div>
-
+     </div>
 </div>
-
-
-
-
-
 @code {
     List<tblEducationDetails>? EducationDetails1 = new List<tblEducationDetails>();
+    List<tblExperience>? Experience = new List<tblExperience>();
     List<tblUserInfo>? tblUserInfo = new List<tblUserInfo>();
     UserServices userService = new UserServices();
     public string? PersonalDetailsContent{ get; set; }
@@ -154,6 +243,7 @@
         ExperienceDetailsContent = "hide";
         imageSource = $"css/images/UserImage{1}.png";
         EducationDetails1 = userService.Education();
+        Experience = userService.Experience();
 
         // tblUserInfo = userService.GetPersonalInfo();
     }
@@ -178,10 +268,10 @@
         ExperienceDetailsContent = "show";
 
     }
-    private void manageboxinfo()
-    {
-        managebox = "show";
-    }
+    //private void manageboxinfo()
+    //{
+    //    managebox = "show";
+    //}
     //private void cancelbtn()
     //{
     //    managebox = "hide";
