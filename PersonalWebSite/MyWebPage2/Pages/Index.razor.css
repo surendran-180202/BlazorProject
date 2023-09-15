@@ -329,9 +329,7 @@
 
 .iconContainer {
     position: fixed;
-    
     cursor:pointer;
- 
 }
     .iconContainer i {
         animation: fadeIn 2s;

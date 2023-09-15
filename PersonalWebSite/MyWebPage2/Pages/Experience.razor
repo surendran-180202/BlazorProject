@@ -6,9 +6,6 @@
 
 <PageTitle>Buiness</PageTitle>
 
-<div class="Title">
-    <h1>Experience :</h1>
-</div>
 <br/>
 <center>
 <div class="table">
@@ -53,9 +50,19 @@
 @code{
     tblUser AddUser = new tblUser();
     List<tblExperience> Experiencetable = new List<tblExperience>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Run(LoadEducation);
+    }
+    private void LoadEducation()
+    {
+        System.Threading.Thread.Sleep(2000);
+        Experiencetable = userService.Experience();
+    }
     protected override void OnInitialized()
     {
-        Experiencetable = userService.Experience();
+       
     }
     public void ViewResume()
     { }

@@ -5,10 +5,7 @@
 
 <PageTitle>Education</PageTitle>
 
-<div class="Title">
-    <h1>Education: </h1>
-   
-</div>
+
 <br/>
 <div class="container">
     <div class="gradient-cards">
@@ -76,18 +73,26 @@
 
 @code {
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
- 
+
     private string? PopUp { get; set; }  
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? Cource { get; set; }
     private string? afterSubmit { get; set; }
 
-
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Run(LoadEducation);
+    }
+    private void LoadEducation()
+    {
+        System.Threading.Thread.Sleep(2000);
+        EducationDetails = userService.Education();
+    }
     protected override void OnInitialized()
     {
         PopUp = "popuphide";
-        EducationDetails = userService.Education();
+      
     }
     private void OpenPopUp()
     {
@@ -99,8 +104,8 @@
     }
     private void newComment()
     {
-        userService.newComment(NewComment, Title);
-        NewComment = "";
+        if(NewComment != null) userService.newComment(NewComment, Title);
+        NewComment = null;
     }
     private void HandleItemClick(string item)
     {

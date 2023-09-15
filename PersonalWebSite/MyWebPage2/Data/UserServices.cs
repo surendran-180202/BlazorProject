@@ -77,22 +77,7 @@ namespace MyWebPage2.Data
             tbldata.EMAIL ="surendran1822002@gmail.com";
             tbldata.PHONE =8190970043;
             tbldata.ADDRESS ="24/33,vivegananther Street, kulalar Palayam,Bodinayakanur, Theni -625513";
-           
-
-
             dataAccessLayer.AddPersonalInfo(tbldata);
-
-
-
-
-
-
-
-
-
-
     }
-     
-
     }
 }

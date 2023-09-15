@@ -2,9 +2,10 @@
 @using MyWebPage2.Data
 @inject NavigationManager uriHelper;
 @inject UserServices dataAccessLayer
+@inject IJSRuntime JSRuntime
 <PageTitle>ProfilePage</PageTitle>
 
-<h3 style="color:white;position:fixed;">ProfilePage:</h3>
+
 <br/>
 <div class="row">
     <div class="col-md-3">
@@ -25,7 +26,7 @@
             <center>
                 <h3>welcome Mr.Surendran</h3>
                 <div class="profileBackground">
-                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit'></i></div>
+                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit' @onclick=@(() => managebox ="show") /></div>
                 </div>
             </center>
             <div class="content">
@@ -43,7 +44,7 @@
                            </tr>
                             <tr>
                                 <th>BirthDay</th>
-                                <td>@i.BIRTHDAY</td>
+                                <td>@i.BIRTHDAY.ToString("dd/MM/yyyy")</td>
                             </tr>
                             <tr>
                                 <th>Gender</th>
@@ -164,35 +165,50 @@
 </div>
 
 <div class="@managebox">
-   
+     @foreach(var i in tblUserInfo)
+      {
      <div class="ManageInfo">
         <button type="button" class="popupbtn" @onclick=@(() => managebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
      <div class="row">
          <div class="col-md-6">
                 <div class="editContent">
+                    
                          <center>
-                        <input type="text" placeholder="Enter your name" /><br/>
-                        <input type="text" placeholder="Enter your Lastname" /><br />
-                        <input type="date" placeholder="Enter DOB" />
-                        <select>
-                            <option value="">Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select><br />
-                        <input type="number"placeholder="Enter your Phone" /><br />
-                        <input type="email" placeholder="Enter your Email" /><br />
-                        <textarea class="address" rows="3" cols="23" placeholder="Please enter Address..."></textarea><br/>
-                        <button class="SubmitBtn">submit</button>
+                            <input type="text" placeholder="Enter your name" @bind-value="i.NAME"/><br />
+                            <input type="text" placeholder="Enter your Lastname" @bind-value="i.LASTNAME" /><br />
+                            <input type="date" placeholder="Enter DOB" @bind-value="i.BIRTHDAY" />
+                           
+                            <select >
+                              <option value="None">Gender</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Other">Other</option>
+                            </select><br />
+                       
+                            <input type="number" placeholder="Enter your Phone" @bind-value="i.PHONE" /><br />
+                            <input type="email" placeholder="Enter your Email" @bind-value="i.EMAIL" /><br />
+                            <textarea class="address" rows="3" cols="23" placeholder="Please enter Address..."  value="@i.ADDRESS"/><br />
+                        <button class="SubmitBtn" @onclick="upDatePersonalInfo">Update</button>
                     </center>
+                  
                 </div>
-
-
             </div>   
       
          <div class="col-md-6">
                 <div class="editContent1">
-                        <div class="letter-image">
+                    <center>
+                            <div class="SelectProfilePhoto">
+                                <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" />
+                            </div>
+                            <input type="file" @bind="OnChooseFile" directory accept="image/*" />
+                            <button type="submit" @onclick="ChangeProfile">click Me</button>
+                          
+  
+                           
+
+                    </center>
+                   
+                     @*   <div class="letter-image">
                             <div class="animated-mail">
                                 <div class="back-fold"></div>
                                 <div class="letter">
@@ -208,21 +224,25 @@
                                 <div class="left-fold"></div>
                             </div>
                             <div class="shadow"></div>
-                        </div>
+                        </div>*@
                 </div>
          </div>
      </div>
      </div>
+    }
 </div>
+
 @code {
     List<tblEducationDetails>? EducationDetails1 = new List<tblEducationDetails>();
     List<tblExperience>? Experience = new List<tblExperience>();
     List<tblUserInfo>? tblUserInfo = new List<tblUserInfo>();
     UserServices userService = new UserServices();
-    public string? PersonalDetailsContent{ get; set; }
-    public string? EducationDetailsContent { get; set; }
-    public string? ExperienceDetailsContent { get; set; }
-    public string? managebox { get; set; }
+    private string? PersonalDetailsContent { get; set; }
+    private string? EducationDetailsContent { get; set; }
+    private string? ExperienceDetailsContent { get; set; }
+    private string? managebox { get; set; }
+    private string? OnChooseFile { get; set; }
+    private string? ProFilePhotoManagebox { get; set; }
     private string? imageSource;
     private string? Cource { get; set; }
 
@@ -268,6 +288,18 @@
         ExperienceDetailsContent = "show";
 
     }
+    private void upDatePersonalInfo()
+    {
+
+    }
+    private void ChangeProfile()
+    {
+       string a= System.IO.Path.GetDirectoryName(this.OnChooseFile);
+        string b= System.IO.Path.GetFileName(this.OnChooseFile);
+        string s = OnChooseFile;
+       
+    }
+ 
     //private void manageboxinfo()
     //{
     //    managebox = "show";
@@ -276,7 +308,14 @@
     //{
     //    managebox = "hide";
     //}
+    //private ElementReference fileInput;
 
+    //private async Task OnFileSelected()
+    //{
+    //    var fullPath = await JSRuntime.InvokeAsync<string>("getFilePath", fileInput);
+    //    var fullPath1 = await JSRuntime.InvokeAsync<string>("getFilePath", OnChooseFile);
+       
+    //}
 }
 
 
