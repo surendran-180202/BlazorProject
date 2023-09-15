@@ -263,7 +263,11 @@
 	.addmorebtn i[b-ay5ry5vugk]{
 		font-size:25px;
 	}
-
+.SelectProfilePhoto[b-ay5ry5vugk]{
+	
+	width:35%;
+	height:35%;
+}
 /* Responsive */
 @media screen and (min-width: 992px) and (max-width: 1439px) {
 	.container[b-ay5ry5vugk] {

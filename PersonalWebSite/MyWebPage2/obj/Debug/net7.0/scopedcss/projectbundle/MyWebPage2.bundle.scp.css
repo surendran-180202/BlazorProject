@@ -1100,9 +1100,7 @@ td[b-k73m1lwagc] {
 
 .iconContainer[b-zllp0tmasc] {
     position: fixed;
-    
     cursor:pointer;
- 
 }
     .iconContainer i[b-zllp0tmasc] {
         animation: fadeIn-b-zllp0tmasc 2s;
@@ -1438,7 +1436,11 @@ td[b-k73m1lwagc] {
 	.addmorebtn i[b-ay5ry5vugk]{
 		font-size:25px;
 	}
-
+.SelectProfilePhoto[b-ay5ry5vugk]{
+	
+	width:35%;
+	height:35%;
+}
 /* Responsive */
 @media screen and (min-width: 992px) and (max-width: 1439px) {
 	.container[b-ay5ry5vugk] {
@@ -1763,16 +1765,204 @@ main[b-y9royroacc] {
 }
 .top-row a:hover[b-fx568spddw] {
     color: black;
+}.Logo[b-fx568spddw]{
+     width:50px;
+     height:50px;
+     }
+.UserLogo[b-fx568spddw]{
+    width:40px;
+    height:40px;
+    background-color:white;
+    border-radius:50%;
 }
+    .UserLogo a[b-fx568spddw]{
+        padding:0;
+        margin:0;
+    }
+    .UserImage[b-fx568spddw] {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      
+    }
+.iconContainer[b-fx568spddw]{
+    display:none;
+    
+}
+.UserLogo:hover .iconContainer[b-fx568spddw] {
+    display: inline-block;
+    position:fixed;
+    top:3%;
+    right:3%;
+    width:200px;
+    height:40px;
+    cursor:pointer;
+    color:white;
+    z-index:-1;
+ 
+    
+   /* animation: fadeIn 1s;*/
+}
+    .iconContainer i:hover[b-fx568spddw]{
+        transform:translateY(-5px);
+    }
+.iconContainer i:hover i[b-fx568spddw]::before {
+    width:300px;
+    height:20px;
+    background-color:black;
+   
+}
+    @keyframes fadeIn-b-fx568spddw {
+        0% {
+    
+        right: 10%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0%;
+        opacity: 1;
+    }
+}
+.iconContainer i[b-fx568spddw]{
+    font-size:25px;
+}
+.iconContainer i:nth-child(1)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 6%;
+}
+
+.iconContainer i:nth-child(2)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 8%;
+}
+.iconContainer i:nth-child(3)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 10%;
+}
+.iconContainer i:nth-child(4)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 12%;
+}
+.iconContainer i:nth-child(5)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 14%;
+}
+/*animation 2*/
+/*    .iconContainer i:nth-child(1) {
+        position: fixed;
+        top: 1%;
+        right: 72px;
+        animation: chaild1 1s;
+    }
+
+    .iconContainer i:nth-child(2) {
+        position: fixed;
+        top: 5%;
+        right: 75px;
+        animation: chaild2 1s;
+   
+    }
+
+    .iconContainer i:nth-child(3) {
+        position: fixed;
+        top: 9%;
+        right: 55px;
+        animation: chaild3 1s;
+  
+    }
+
+    .iconContainer i:nth-child(4) {
+        position: fixed;
+        top: 10%;
+        right: 30px;
+        animation: chaild4 1s;
+     
+    }
+
+    .iconContainer i:nth-child(5) {
+        position: fixed;
+        top: 8%;
+        right: 4px;
+        animation: chaild5 1s;
+       
+    }
+
+@keyframes chaild1 {
+    0% {
+        top: 3%;
+        right: 3%;
+    }
+
+    100% {
+        top: 1%;
+        right: 72px;
+    }
+}
+@keyframes chaild2 {
+    0% {
+        top: 3%;
+        right: 3%;
+    }
+
+    100% {
+        top: 5%;
+        right: 75px;
+    }
+}
+@keyframes chaild3 {
+    0% {
+        top: 3%;
+        right: 3%;
+    }
+
+    100% {
+        top: 9%;
+        right: 55px;
+    }
+}
+@keyframes chaild4 {
+    0% {
+        top: 3%;
+        right: 3%;
+    }
+
+    100% {
+        top: 10%;
+        right: 30px;
+    }
+}
+@keyframes chaild5 {
+    0% {
+        top: 3%;
+        right: 3%;
+    }
+
+    100% {
+      
+        top: 8%;
+        right: 4px;
+    }
+}
+*/
+
+
+
+
+/*Responsive */
 @media (min-width: 641px) {
     .navbar-toggler[b-fx568spddw] {
     display: none;
 }
 .top-row[b-fx568spddw] {
    position:fixed;
-display:flex;
-justify-content:flex-end;
-width:100%;
+   display:flex;
+   width:100%;
    background-color:transparent;
     
 }
@@ -1785,8 +1975,21 @@ width:100%;
         color: antiquewhite;
       
     }
-.collapse[b-fx568spddw] {
+    .UserLogo[b-fx568spddw] {
+        position: fixed;
+        top:2%;
+        right:2%;
+    }
+        .collapse[b-fx568spddw] {
     /* Never collapse the sidebar for wide screens */
     display: block;
 }
+}
+@media screen (max-width: 1439px) {
+    .UserLogo:hover .iconContainer[b-fx568spddw] {
+      
+        width: 250px;
+       
+        /* animation: fadeIn 1s;*/
+    }
 }

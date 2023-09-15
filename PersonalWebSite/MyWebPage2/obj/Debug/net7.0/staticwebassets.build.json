@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "imNpNdTBUtk3w38mP2W3xIrHP+thmLL1UQ5wguNxyrg=",
+  "Hash": "3BmQd02bd62dYoQUhTbDQwrjzy7MPcHJDs5TxYhjrWU=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -187,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\image7.jpg"
     },
     {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\Logo1.png",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/images/Logo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\Logo1.png"
+    },
+    {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\MR.B.Surendran Resume.pdf",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\images\\MR.B.Surendran Resume.pdf"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\s_logo.jpg",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "css/images/s_logo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\s_logo.jpg"
     },
     {
       "Identity": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\images\\UserImage1.png",

@@ -5,7 +5,6 @@ namespace MyWebPage2.Data
 {
     public class tblUserInfo
     {
-
         public int? USERID { get; set; }
         [Required]
         public byte[]? USERIMAGE { get; set; }
