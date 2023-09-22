@@ -1,0 +1,25 @@
+﻿<div class="@PopUp">
+<div class="popupbox">
+    <button type="button" class="cancelbtn" @onclick="closePopup"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="css/images/UserImageBgRemoved.png" />
+        </div>
+        <div class="col-md-9">
+            <div class="content">
+                <h5>Welcome Back Mr.Surendran</h5>
+                <p>You Have 99+ Notification and One Mail</p>
+                <input type="button" value="check In" />
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+@code {
+    private string PopUp { get; set; }
+    private void closePopup()
+    {
+        PopUp = "HidePopup";
+    }
+}

@@ -1,21 +1,23 @@
 ﻿@page "/"
-@using MyWebPage2.Data
-@inject NavigationManager uriHelper;
-@inject UserServices userService;
 
 <PageTitle>Index</PageTitle>
-
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
- <br/>
-   
-    <div class="insideCircle">
+    <br /> 
+    <div class="motivationQuote">
+      @*  <p>SUCCESS IS NOT FINAL;FAILURE IS NOT FATAL: IT IS THE COURAGE TO CONTINUE THAT COUNTS. </p>*@
+        <h6>
+            <span>SUCCESS </span><span>IS </span><span>NOT </span><span>FINAL; </span><span>FAILURE; </span><span>IS </span><span>NOT </span><span>FATAL: </span><span>IT </span><span>IS </span><span>THE </span><span>COURAGE </span><span>TO </span><span>CONTINUE </span><span>THAT </span><span>COUNTS </span>
+         
+        </h6>
+
+    </div>
+    @*<div class="insideCircle">
         <div class="@LoginImageClass">
         <div class="row">
             <div class="col-md-12">
                 <div class="imageBg">
                     <img src=@imageSource class="image" />
                 </div>
-
             </div>
             <div class="col-md-10">
                 <h1 class="h1">MR.B.@CurrentUserName</h1>
@@ -23,93 +25,50 @@
             </div>
         </div>
     </div>
-    </div>
-
-    <center>
-        <div class="GreetingText">
-            <p>@Datetime Mr.@CurrentUserName !</p>
-        </div>
-    </center>
+    </div>*@
    
+    <div class="UserImageDesign"></div>
+
+        <div class="GreetingText">
+        <img src="css/images/PAGif2.gif" />
+            <p>@Datetime Mr.@CurrentUserName !</p>
+            <p class="hoverMsg">What Can I Do For You ?</p>
+        </div>
+ 
 </div>
 
 <div class="loginBtn">
     <i class="material-icons"  @onclick="showMenuIcons">blur_on</i>
-
     <div class="@IconAmimationNameClass">
-
         <div class="iconContainer">
             <i class="material-icons" >power_settings_new</i>
             <i class="material-icons" @onclick="OpenPopUp">person_pin</i>
             <i class="material-icons" @onclick="SignInPopUp">person_add</i>
             <i class="material-icons">fingerprint</i>
             <i class="material-icons" @onclick="profilePage">settings</i>
-           
         </div>
-
     </div>
-
-
-
-
 </div>
-
 <div class="@PopUp">
-  
     <div class="form-popup">
-        
-        <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-       @* <button type="button" class="newUser" @onclick="SignInPopUp"> <i class='fas fa-user-plus' style='font-size:15px ; color:darkblue;'></i></button>*@
+        <button type="button" class="cancelbtn" @onclick=@(() => PopUp = "popuphide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+      <UserLoginPage/>
        
-        <div class="form-container">
-            <h4>LOGIN</h4>
-            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME"><br />
-          
-            <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
-            <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
-            <center>
-                <input type="submit" value="submit" @onclick="LoginUser">
-            </center>
-           
-        </div>
     </div>
 </div>
-
 <div class="@PopUpRegister">
     <div class="form-popup">
-        <button type="button" class="cancelbtn" @onclick="closePopUpsignIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-        <div class="form-container">
-            <h4>Register</h4>
-          @*  <center>
-                <div class="userIcon"><img src=""/>
-                    <i class="fa fa-user icon"></i>
-                    <input type="file">
-                </div>
-            </center>*@
-           
-            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME">
-            <input type="text" placeholder="Enter Your Email" @bind="AddUser.EMAIL">
-            <input type="text" placeholder="Enter Your Phone Number" @bind="AddUser.PHONE">
-            <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
-            <input type="@passwordClass" placeholder="Conform password" @bind="ConformPassword">
-            <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
-
-           
-            <center>
-                <input type="submit" value="submit" @onclick="NewUser">
-            </center>
-
-        </div>
+        <button type="button" class="cancelbtn" @onclick="closePopUpsignIn" ><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+       <RegisterPage />
     </div>
 </div>
-
 
 <div class="viewComments">
     <div class="content">
         <div class="container">
             <div class="list">
                  @foreach(var educationDetails in EducationDetails)
-                {
+                 {
                    @foreach(var i in educationDetails.COMMENT)
                    {
                            <div class="UserIcon"><img src=@imageSource/></div><br/>
@@ -121,85 +80,42 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
+<PopupImage />
 @code {
     private string? imageSource;
     private string? Datetime;
-   
-   
-  
-    public string? PopUp { get; set; }
-    private string? PopUpRegister { get; set; }
-    private string? passwordClass { get; set; }
-    private string? LoginImageClass { get; set; }
-    private string? ConformPassword { get; set; }
-    private string? IconAmimationNameClass { get; set; }
+    public string? PopUp { get; set; } = "popuphide";
+    private string? PopUpRegister { get; set; } = "popuphide";
 
-    private string? LoginUserName { get; set; }
-    private string? LoginPassword { get; set; }
+    private string? LoginImageClass { get; set; } = "popuphide";
+    private string? ConformPassword { get; set; }
+    private string? IconAmimationNameClass { get; set; } = "popuphide";
+
 
     private string? CurrentUserName { get; set; }
-    tblUser AddUser = new tblUser();
- 
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
-
-
-
     protected override void OnInitialized()
     {
-        LoginImageClass = "popuphide";
         if(userService.CurrentUserName()!=null) 
         {
             CurrentUserName = userService.CurrentUserName(); LoginImageClass = "popupshow";
         }
         else CurrentUserName = "Guest";
+        imageSource = $"css/images/UserImageBgRemoved.png";
 
-        imageSource = $"css/images/UserImage{userService.CurrentUserID()}.png";
-        passwordClass = "password";
-        PopUp = "popuphide";
-        PopUpRegister = "popuphide";
         if(DateTime.Now.Hour < 12) Datetime = "Good Morning";
         else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
         else Datetime = "Good Evening";
         EducationDetails = userService.Education();
 
-
-        IconAmimationNameClass = "popuphide";
-
-    }
-    private void LoginUser()
-    {
-        if(userService.UserCheck(AddUser)) /*uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);*/
-        OnInitialized();
-
-    }
-    private void NewUser()
-    {
-        if(AddUser.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(AddUser.EMAIL)) userService.Create(AddUser);
-    }
-
-
-
-    private void show_password()
-    {
-        if(passwordClass == "password") passwordClass = "text";
-        else passwordClass = "password";
     }
     private void OpenPopUp()
     {
         PopUp = "popupshow";
         PopUpRegister = "popuphide";
     }
-    private void closePopUp()
-    {
-        PopUp = "popuphide";
-    }
+
     private void SignInPopUp()
     {
         PopUp = "popuphide";
@@ -212,15 +128,13 @@
     }
     private void showMenuIcons()
     {
-
-
         if(IconAmimationNameClass == "popupshow") IconAmimationNameClass = "popuphide";
         else IconAmimationNameClass = "popupshow";
-
     }
     private void profilePage()
     {
         uriHelper.NavigateTo("/ProfilePage");
-    }
 
+    }
+    
 }

@@ -10,7 +10,14 @@
 @using MyWebPage2.Shared
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
+@using MyWebPage2.Data
+@using MyWebPage2.Pages
+@inject NavigationManager uriHelper;
+@inject UserServices userService;
 
+@inject IJSRuntime JSRuntime
+@using Microsoft.AspNetCore.Hosting
+@using Microsoft.Extensions.Logging
 
-
+@inject IWebHostEnvironment Environment
 

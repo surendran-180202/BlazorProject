@@ -4,7 +4,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /*background: #000033;*/
+    background: #000033;
     height: 610px;
     background: linear-gradient(#04619F, #000000);
     background-position: center;
