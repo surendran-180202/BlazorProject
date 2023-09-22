@@ -1,6 +1,10 @@
 ﻿using MyWebPage2.Data;
+using Syncfusion.Blazor;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 public class DataAccessLayer
 {
     internal static int currentUserID { get; set; }
@@ -31,6 +35,27 @@ public class DataAccessLayer
     {
        
         string strPersonalQuery = "insert into tblUserInfo(USERID,USERIMAGE,USERBIO,NAME,LASTNAME,BIRTHDAY,GENDER,EMAIL,PHONE,ADDRESS)values (@userid,@userimage,@userbio,@name,@lastname,@birthday,@gender,@email,@phone,@address)";
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand(strPersonalQuery, con);
+            cmd.Parameters.AddWithValue("@userid", tbldata.USERID);
+            cmd.Parameters.AddWithValue("@userimage", tbldata.USERIMAGE);
+            cmd.Parameters.AddWithValue("@userbio", tbldata.USERBIO);
+            cmd.Parameters.AddWithValue("@name", tbldata.NAME);
+            cmd.Parameters.AddWithValue("@lastname", tbldata.LASTNAME);
+            cmd.Parameters.AddWithValue("@birthday", tbldata.BIRTHDAY);
+            cmd.Parameters.AddWithValue("@gender", tbldata.GENDER);
+            cmd.Parameters.AddWithValue("@email", tbldata.EMAIL);
+            cmd.Parameters.AddWithValue("@phone", tbldata.PHONE);
+            cmd.Parameters.AddWithValue("@address", tbldata.ADDRESS);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+    }
+    public void UpdatePersonalInfo(tblUserInfo tbldata)
+    {
+        string strPersonalQuery = "UPDATE tblUserInfo SET USERID =@userid,USERIMAGE =@userimage ,USERBIO =@userbio,NAME = @name ,LASTNAME = @lastname,BIRTHDAY = @birthday,GENDER = @gender,EMAIL =@email,PHONE =@phone,ADDRESS = @address  WHERE USERID = @userid";
         using(SqlConnection con = new SqlConnection(connectionString))
         {
             SqlCommand cmd = new SqlCommand(strPersonalQuery, con);

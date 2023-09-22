@@ -1,0 +1,104 @@
+﻿.ManageInfo {
+	position: fixed;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	background-color: rgb(0,0,0,0.8);
+}
+.SubmitBtn {
+	color: white;
+	background-color: green;
+	border: none;
+	border-radius: 20px;
+}
+
+.cancelbtn {
+	background-color: transparent;
+	right: 0;
+	top: 5px;
+	position: fixed;
+}
+
+
+.editContent {
+	padding: 5%;
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	top: 6%;
+	left: 5%;
+}
+
+	.editContent input {
+		margin-bottom: 10px;
+		padding: 4px;
+		border-radius: 20px;
+		outline: none;
+		border: none;
+		text-align: center;
+		background-color: rgba(255, 255, 255,0.4);
+		color: white;
+	}
+
+	.editContent select {
+		padding: 4px;
+		width: 80px;
+		border-radius: 20px;
+		font-size: 12px;
+		background-color: rgba(255, 255, 255,0.4);
+		color: white;
+	}
+
+		.editContent select:focus {
+			color: black;
+		}
+
+	.editContent input[type=date] {
+		width: 120px;
+	}
+
+	.editContent input::placeholder, .address::placeholder {
+		font-size: 15px;
+		text-align: center;
+		color: rgb(255,255,255,0.7);
+	}
+
+.address {
+	background-color: rgba(255, 255, 255,0.4);
+	color: white;
+}
+.profilePhoto {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	padding: 2px;
+	overflow: hidden;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.profilePhoto i {
+	position: relative;
+	top: -30%;
+	display: none;
+	padding: 8px;
+}
+
+.profilePhoto:hover i {
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	display: block;
+}
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+	animation: slow 1s forwards;
+}

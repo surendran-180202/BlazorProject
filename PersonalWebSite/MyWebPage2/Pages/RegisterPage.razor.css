@@ -1,0 +1,71 @@
+﻿.form-container {
+	padding: 10%;
+}
+
+	.form-container input {
+		width: 100%;
+		height: auto;
+		margin-top: 7%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid white;
+		background-color: transparent;
+		font-weight: 300;
+		color: white;
+		text-align: center;
+		font-size: 18px;
+	}
+
+		.form-container input::placeholder {
+			text-align:left;
+			color: lightyellow;
+			font-size: 10px;
+		
+		}
+		.form-container input:focus::placeholder
+		{
+	       transform:translateY(-15px);
+	       font-size:8px;
+	       transition:0.5s;
+		}
+
+		.form-container input[type=submit] {
+			width: 30%;
+			font-size: 15px;
+			border: 1px solid white;
+			border-radius: 10%;
+		}
+
+			.form-container input[type=submit]:hover {
+				transform: scale(1.05);
+			}
+
+			.form-container input[type=submit]:active {
+				transform: scale(0.99);
+			}
+
+.cancelbtn {
+	background-color: transparent;
+	border: none;
+	right: 0;
+	top: 5px;
+	position: fixed;
+}
+
+.form-container label {
+	position: absolute;
+	bottom: 2%;
+	font-size: 10px;
+}
+
+	.form-container label a {
+		color: black;
+	}
+
+.newUser {
+	background-color: transparent;
+	border: none;
+	left: 0;
+	top: 5px;
+	position: fixed;
+}

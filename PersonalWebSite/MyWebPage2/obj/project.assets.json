@@ -3086,11 +3086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
+      "projectUniqueName": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
       "projectName": "MyWebPage2",
-      "projectPath": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
+      "projectPath": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\",
+      "outputPath": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

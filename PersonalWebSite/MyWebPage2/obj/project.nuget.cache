@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oShzNBh9saCf6a+lufpf1KIZQaVMYiYDpdQXWMM+p9fQX8f199U2zT9kdTBcI7MYaxpnYJ573GHqvr/LeysQPg==",
+  "dgSpecHash": "rRpZhfLF9VBEPXiG/ohynOZW7zlsIi4S8ncM19TqY8S11flIcs02Vd2QmK0V4wdno/1h7hxvl9Mu4YXlpm22kA==",
   "success": true,
-  "projectFilePath": "C:\\Education\\Trining\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
+  "projectFilePath": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\MyWebPage2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

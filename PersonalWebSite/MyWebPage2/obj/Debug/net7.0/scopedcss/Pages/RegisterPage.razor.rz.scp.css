@@ -1,0 +1,71 @@
+.form-container[b-0xog2qcy5h] {
+	padding: 10%;
+}
+
+	.form-container input[b-0xog2qcy5h] {
+		width: 100%;
+		height: auto;
+		margin-top: 7%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid white;
+		background-color: transparent;
+		font-weight: 300;
+		color: white;
+		text-align: center;
+		font-size: 18px;
+	}
+
+		.form-container input[b-0xog2qcy5h]::placeholder {
+			text-align:left;
+			color: lightyellow;
+			font-size: 10px;
+		
+		}
+		.form-container input:focus[b-0xog2qcy5h]::placeholder
+		{
+	       transform:translateY(-15px);
+	       font-size:8px;
+	       transition:0.5s;
+		}
+
+		.form-container input[type=submit][b-0xog2qcy5h] {
+			width: 30%;
+			font-size: 15px;
+			border: 1px solid white;
+			border-radius: 10%;
+		}
+
+			.form-container input[type=submit]:hover[b-0xog2qcy5h] {
+				transform: scale(1.05);
+			}
+
+			.form-container input[type=submit]:active[b-0xog2qcy5h] {
+				transform: scale(0.99);
+			}
+
+.cancelbtn[b-0xog2qcy5h] {
+	background-color: transparent;
+	border: none;
+	right: 0;
+	top: 5px;
+	position: fixed;
+}
+
+.form-container label[b-0xog2qcy5h] {
+	position: absolute;
+	bottom: 2%;
+	font-size: 10px;
+}
+
+	.form-container label a[b-0xog2qcy5h] {
+		color: black;
+	}
+
+.newUser[b-0xog2qcy5h] {
+	background-color: transparent;
+	border: none;
+	left: 0;
+	top: 5px;
+	position: fixed;
+}

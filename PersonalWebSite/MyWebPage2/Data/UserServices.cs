@@ -78,6 +78,30 @@ namespace MyWebPage2.Data
             tbldata.PHONE =8190970043;
             tbldata.ADDRESS ="24/33,vivegananther Street, kulalar Palayam,Bodinayakanur, Theni -625513";
             dataAccessLayer.AddPersonalInfo(tbldata);
-    }
+        }
+        public void UpdateUserInfo(string imageData)
+        {
+            string a = imageData;
+            byte[] data = null;
+            FileInfo fInfo = new FileInfo(a);
+            long numBytes = fInfo.Length;
+            FileStream fStream = new FileStream(a, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fStream);
+            data = br.ReadBytes((int) numBytes);
+            tblUserInfo tbldata = new tblUserInfo();
+
+            tbldata.USERID =1;
+            tbldata.USERIMAGE=data;
+            tbldata.USERBIO ="My Life My Rule";
+            tbldata.NAME ="Surendran";
+            tbldata.LASTNAME="B";
+            tbldata.BIRTHDAY =Convert.ToDateTime("18/02/2002");
+            tbldata.GENDER ="Male";
+            tbldata.EMAIL ="surendran1822002@gmail.com";
+            tbldata.PHONE =8190970043;
+            tbldata.ADDRESS ="24/33,vivegananther Street, kulalar Palayam,Bodinayakanur, Theni -625513";
+            dataAccessLayer.UpdatePersonalInfo(tbldata);
+        }
+
     }
 }

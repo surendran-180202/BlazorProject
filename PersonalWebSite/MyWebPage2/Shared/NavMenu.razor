@@ -4,14 +4,25 @@
         </button>
         <div class="@NavMenuCssClass " @onclick="ToggleNavMenu">
             <div class="top-row px-4">
-               <img src="css/images/Logo1.png" class="Logo" />
+            
+                <img src="css\images\Logo1.png" class="Logo" />
+             
                  <a href="#" >Home</a>
                  <a href="Education">Education</a>
                  <a href="Experience">Experience</a>
                  <a href="Contact" >Contact</a>
                  <a href="About" >About</a>
-            <div class="UserLogo">
-                <a href="ProfilePage"> <img src="css/images/UserImage1.png" class="UserImage" /></a>
+            <a href="#">
+                <div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search something ..." /></div>
+                 </a>
+               
+                <div class="UserLogo">
+                <a href="ProfilePage">
+                    @foreach(var i in ListUserInfo)
+                    {
+                        <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="UserImage" />
+                    }
+                </a>
               
             <div class="iconContainer">
                 <a href="index"> <i class="material-icons">person_pin</i></a>
@@ -28,6 +39,12 @@
 @code {
     private bool collapseNavMenu = true;
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
+    protected override async Task OnInitializedAsync()
+    {
+        ListUserInfo = userService.GetPersonalInfo();
+
+    }
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
