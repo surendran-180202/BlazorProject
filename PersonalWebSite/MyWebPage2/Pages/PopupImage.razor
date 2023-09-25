@@ -1,4 +1,4 @@
-﻿<div class="@PopUp">
+﻿<div class="@NotificationPopUp">
 <div class="popupbox">
     <button type="button" class="cancelbtn" @onclick="closePopup"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
     <div class="row">
@@ -17,9 +17,11 @@
 </div>
 </div>
 @code {
-    private string PopUp { get; set; }
+    [Parameter]
+    public string? NotificationPopUp { get; set; } = "notificationBoxHidePopup";
+
     private void closePopup()
     {
-        PopUp = "HidePopup";
+        NotificationPopUp = "notificationBoxHidePopup";
     }
 }

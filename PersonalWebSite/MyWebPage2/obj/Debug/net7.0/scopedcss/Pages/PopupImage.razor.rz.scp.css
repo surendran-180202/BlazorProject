@@ -32,8 +32,11 @@ body[b-a55mp78tkh] {
 	position:absolute;
 	right:2%;
 }
-.HidePopup[b-a55mp78tkh] {
+.notificationBoxHidePopup[b-a55mp78tkh] {
 	display:none;
+}
+.notificationBoxShowPopup[b-a55mp78tkh] {
+	display: block;
 }
 
 @keyframes slowmo-b-a55mp78tkh {

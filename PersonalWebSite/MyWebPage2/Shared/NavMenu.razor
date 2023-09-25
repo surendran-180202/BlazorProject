@@ -25,8 +25,8 @@
                 </a>
               
             <div class="iconContainer">
-                <a href="index"> <i class="material-icons">person_pin</i></a>
-                <i class="material-icons">person_add</i>
+               <i class="material-icons" @onclick="showLoginPopup">person_pin</i>
+               <i class="material-icons" @onclick="showRegisterPopup">person_add</i>
                 <i class="material-icons">power_settings_new</i>
                 <i class="material-icons">fingerprint</i>
                 <i class="material-icons">settings</i>
@@ -40,6 +40,10 @@
     private bool collapseNavMenu = true;
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
     List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
+    public string? popUpLogin { get; set; } = "LoginPopUpShow";
+    public string? popUpRegister { get; set; } = "RegisterPagePopUpShow";
+
+
     protected override async Task OnInitializedAsync()
     {
         ListUserInfo = userService.GetPersonalInfo();
@@ -48,5 +52,14 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+    private void showLoginPopup()
+    {
+        uriHelper.NavigateTo($"/LoginPopUp/{popUpLogin}");
+        //popUpValue = "popupshow";
+    }
+    private void showRegisterPopup()
+    {
+        uriHelper.NavigateTo($"/RegisterPopUp/{popUpRegister}");
     }
 }

@@ -32,8 +32,11 @@
 	position:absolute;
 	right:2%;
 }
-.HidePopup {
+.notificationBoxHidePopup {
 	display:none;
+}
+.notificationBoxShowPopup {
+	display: block;
 }
 
 @keyframes slowmo {

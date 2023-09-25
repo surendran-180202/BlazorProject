@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\Storage\\AadharCard.png"
     },
     {
+      "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\Dark.png",
+      "PackagePath": "staticwebassets\\Storage\\Dark.png"
+    },
+    {
       "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\images.jfif",
       "PackagePath": "staticwebassets\\Storage\\images.jfif"
     },

@@ -1,4 +1,7 @@
 ﻿@page "/"
+@page "/LoginPopUp/{popUpLogin}"
+@page "/RegisterPopUp/{popURegister}"
+
 
 <PageTitle>Index</PageTitle>
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
@@ -6,7 +9,11 @@
     <div class="motivationQuote">
       @*  <p>SUCCESS IS NOT FINAL;FAILURE IS NOT FATAL: IT IS THE COURAGE TO CONTINUE THAT COUNTS. </p>*@
         <h6>
-            <span>SUCCESS </span><span>IS </span><span>NOT </span><span>FINAL; </span><span>FAILURE; </span><span>IS </span><span>NOT </span><span>FATAL: </span><span>IT </span><span>IS </span><span>THE </span><span>COURAGE </span><span>TO </span><span>CONTINUE </span><span>THAT </span><span>COUNTS </span>
+            @foreach(var i in motivationQuote)
+            {
+                <span>@i  </span>
+            }
+           @* <span>SUCCESS </span><span>IS </span><span>NOT </span><span>FINAL; </span><span>FAILURE; </span><span>IS </span><span>NOT </span><span>FATAL: </span><span>IT </span><span>IS </span><span>THE </span><span>COURAGE </span><span>TO </span><span>CONTINUE </span><span>THAT </span><span>COUNTS </span>*@
          
         </h6>
 
@@ -49,19 +56,23 @@
         </div>
     </div>
 </div>
-<div class="@PopUp">
+@*<div class="@PopUpLogin">
     <div class="form-popup">
-        <button type="button" class="cancelbtn" @onclick=@(() => PopUp = "popuphide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-      <UserLoginPage/>
+        <button type="button" class="cancelbtn" @onclick="closePopUpLoginIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+        <UserLoginPage  />
        
     </div>
-</div>
-<div class="@PopUpRegister">
+</div>*@
+
+<UserLoginPage PopUpLogin=@popUpLogin />
+
+@*<div class="@PopUpRegister">
     <div class="form-popup">
         <button type="button" class="cancelbtn" @onclick="closePopUpsignIn" ><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
        <RegisterPage />
     </div>
-</div>
+</div>*@
+<RegisterPage PopUpRegister=@popURegister />
 
 <div class="viewComments">
     <div class="content">
@@ -80,23 +91,40 @@
         </div>
     </div>
 </div>
-<PopupImage />
+<PopupImage NotificationPopUp="notificationBoxShowPopup" />
 @code {
+    //[Parameter]
+    //public  string? LoginShow { get; set; }
+
     private string? imageSource;
     private string? Datetime;
-    public string? PopUp { get; set; } = "popuphide";
-    private string? PopUpRegister { get; set; } = "popuphide";
+    [Parameter]
+    public string? popUpLogin { get; set; }
+    [Parameter]
+    public string? popURegister { get; set; } 
+
+    //[Parameter]
+    //public string? PopUpRegister { get; set; } = "popuphide";
 
     private string? LoginImageClass { get; set; } = "popuphide";
     private string? ConformPassword { get; set; }
     private string? IconAmimationNameClass { get; set; } = "popuphide";
 
 
+
+
     private string? CurrentUserName { get; set; }
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
+    List<string> motivationQuote = new List<string>();
+
+
+
     protected override void OnInitialized()
     {
+        popUpLogin = "LoginPopUphide";
+        popURegister = "RegisterPagePopUpHide";
+
         if(userService.CurrentUserName()!=null) 
         {
             CurrentUserName = userService.CurrentUserName(); LoginImageClass = "popupshow";
@@ -109,32 +137,45 @@
         else Datetime = "Good Evening";
         EducationDetails = userService.Education();
 
+        motivationQuote = userService.motivationQuote();
+
+        //PopUpLogin = "popuphide";
+
+      
+        //up.Show();
     }
+    //private void closePopUpLoginIn()
+    //{
+    //    PopUpLogin = "popuphide";
+    //    uriHelper.NavigateTo("/");
+    //}
     private void OpenPopUp()
     {
-        PopUp = "popupshow";
-        PopUpRegister = "popuphide";
+        //PopUpLogin = "popupshow";
+        //PopUpRegister = "popuphide";
     }
 
     private void SignInPopUp()
     {
-        PopUp = "popuphide";
-        PopUpRegister = "popupshow";
+        //PopUpLogin = "popuphide";
+        //PopUpRegister = "popupshow";
     }
-    private void closePopUpsignIn()
-    {
-        PopUpRegister = "popuphide";
-        PopUp = "popupshow";
-    }
+    //private void closePopUpsignIn()
+    //{
+    //    PopUpRegister = "popuphide";
+    //    PopUpLogin = "popupshow";
+    //}
+  
     private void showMenuIcons()
     {
         if(IconAmimationNameClass == "popupshow") IconAmimationNameClass = "popuphide";
         else IconAmimationNameClass = "popupshow";
     }
-    private void profilePage()
+    private static void profilePage()
     {
-        uriHelper.NavigateTo("/ProfilePage");
+        //uriHelper.NavigateTo("/ProfilePage");
 
     }
-    
+  
+
 }
