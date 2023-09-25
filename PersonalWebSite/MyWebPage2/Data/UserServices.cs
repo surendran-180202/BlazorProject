@@ -102,6 +102,14 @@ namespace MyWebPage2.Data
             tbldata.ADDRESS ="24/33,vivegananther Street, kulalar Palayam,Bodinayakanur, Theni -625513";
             dataAccessLayer.UpdatePersonalInfo(tbldata);
         }
+        public List<string> motivationQuote()
+        {
+            string quote = "SUCCESS IS NOT FATAL: FAILURE; IS NOT FATAL IT IS THE COURAGE TO CONTINUE THAT COUNTS";
+            List<string> quoteData = new List<string>();
+            string[] SplitedData= quote.Split(' ');
+            quoteData.AddRange(SplitedData);
+            return quoteData;
+        }
 
     }
 }
