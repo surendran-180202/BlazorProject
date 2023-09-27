@@ -48,7 +48,6 @@
     }
 .iconContainer {
     display: none;
-   
 }
 .UserLogo:hover .iconContainer {
     display: inline-block;
@@ -64,39 +63,34 @@
     background-color: rgb(0,0,0,0.2);
     border-radius:20px;
   
-}.search{
-
 }
-    .search i{
-        position:absolute;
-        top:37%;
-        left:42%;
-    }
-    .search input {
-        background-color: rgb(0,0,0,0.4);
-        border: none;
-        padding: 2%;
-        padding-left:40px;
-        border-radius: 20px;
-        outline: none;
-        color:white;
-        
-    }
-    .search input::placeholder{
-        font-size:10px;
-    }
 
     .iconContainer i:hover {
         transform: translateY(-5px);
     }
+
+
 .iconContainer i:hover i::before {
     width:300px;
     height:20px;
     background-color:black;
    
 }
-    @keyframes fadeIn {
-        0% {
+.iconContainer span{
+    display:none;
+}
+.iconContainer:hover span {
+    display:block;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background-color:rgba(0,0,0,0.2);
+    padding: 5px 15px 5px 15px;
+    height: 30px;
+    border-radius: 20px;
+}
+@keyframes fadeIn {
+    0% {
     
         right: 10%;
         opacity: 0;
@@ -136,164 +130,169 @@
     top: 3%;
     right: 18%;
 }
-/*animation 2*/
-   /* .iconContainer i:nth-child(1) {
-        position: fixed;
-        top: 1%;
-        right: 72px;
-        animation: chaild1 1s;
-    }
 
-    .iconContainer i:nth-child(2) {
-        position: fixed;
-        top: 5%;
-        right: 75px;
-        animation: chaild2 1s;
-   
-    }
-
-    .iconContainer i:nth-child(3) {
-        position: fixed;
-        top: 9%;
-        right: 55px;
-        animation: chaild3 1s;
-  
-    }
-
-    .iconContainer i:nth-child(4) {
-        position: fixed;
-        top: 10%;
-        right: 30px;
-        animation: chaild4 1s;
-     
-    }
-
-    .iconContainer i:nth-child(5) {
-        position: fixed;
-        top: 8%;
-        right: 4px;
-        animation: chaild5 1s;
-       
-    }
-
-@keyframes chaild1 {
-    0% {
-        top: 3%;
-        right: 3%;
-    }
-
-    100% {
-        top: 1%;
-        right: 72px;
-    }
+.search {
 }
-@keyframes chaild2 {
-    0% {
-        top: 3%;
-        right: 3%;
+
+    .search i {
+        position: absolute;
+        top: 81%;
+        left: 15%;
     }
 
-    100% {
-        top: 5%;
-        right: 75px;
-    }
-}
-@keyframes chaild3 {
-    0% {
-        top: 3%;
-        right: 3%;
-    }
-
-    100% {
-        top: 9%;
-        right: 55px;
-    }
-}
-@keyframes chaild4 {
-    0% {
-        top: 3%;
-        right: 3%;
+    .search input {
+        background-color: rgb(0,0,0,0.4);
+        border: none;
+        padding: 2%;
+        padding-left: 40px;
+        border-radius: 20px;
+        outline: none;
+        color: white;
     }
 
-    100% {
-        top: 10%;
-        right: 30px;
-    }
-}
-@keyframes chaild5 {
-    0% {
-        top: 3%;
-        right: 3%;
-    }
-
-    100% {
-      
-        top: 8%;
-        right: 4px;
-    }
-}*/
-
-
+        .search input::placeholder {
+            font-size: 10px;
+        }
 
 
 
 /*Responsive */
-@media (min-width: 641px) {
-    .navbar-toggler {
-    display: none;
-}
-.top-row {
-   position:fixed;
-   display:flex;
-   width:100%;
-   background-color:transparent;
-    
-}
-    .top-row a {
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
-    }
-    .top-row a:hover {
-        color: antiquewhite;
-      
-    }
-    .UserLogo {
-        position: fixed;
-        top:2%;
-        right:2%;
-    }
-        .collapse {
-    /* Never collapse the sidebar for wide screens */
-    display: block;
-}
-}
-@media screen (min-width: 1439px) {
-    .UserLogo:hover .iconContainer {
-        width: 200px;
-        /* animation: fadeIn 1s;*/
-    }
-}
-.block{
-    display:none;
-}.show{
-     display:block;
- }
 
-.cancelbtn {
-    background-color: transparent;
-    border: none;
-    position: fixed;
-    right: 36%;
-    top: 16%;
-    z-index: 100;
-    animation: opacity 7s forwards;
-}
-@keyframes opacity{
-    0% {
-        opacity: 0;
+@media (max-width: 641px) {
+    .UserLogo {
+         position:fixed;
+         top:2%;
+         right:70%;
+         width:30px;
+         height:30px;
+     
     }
-    100% {
-        opacity: 1;
+    .UserImage {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
     }
+    .iconContainer {
+        display: inline-block;
+        position: fixed;
+        top: 1%;
+        right:18%;
+        width: 64%;
+        height: 40px;
+        cursor: pointer;
+        color: white;
+        z-index: -1;
+        padding: 1%;
+        background-color: rgb(0,0,0,0.2);
+        border-radius: 20px;
+    }
+        .iconContainer i {
+            display: block;
+            position: fixed;
+            z-index: 1000;
+        }
+
+            .iconContainer i:nth-child(1) {
+               top:2%;
+               right:20%;
+              
+            }
+
+            .iconContainer i:nth-child(2) {
+                top: 2%;
+                right: 30%;
+            }
+
+            .iconContainer i:nth-child(3) {
+                top: 2%;
+                right: 40%;
+            }
+
+            .iconContainer i:nth-child(4) {
+                top: 2%;
+                right: 50%;
+            }
+
+            .iconContainer i:nth-child(5) {
+                top: 2%;
+                right: 60%;
+            }
+
+
+
 }
+
+    @media (min-width: 641px) {
+        .navbar-toggler {
+            display: none;
+        }
+
+        .top-row {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            background-color: transparent;
+        }
+
+            .top-row a {
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+            }
+
+                .top-row a:hover {
+                    color: antiquewhite;
+                }
+
+        .UserLogo {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+        }
+
+        .collapse {
+            /* Never collapse the sidebar for wide screens */
+            display: block;
+        }
+
+        .search i {
+            position: absolute;
+            top: 37%;
+            left: 42%;
+        }
+    }
+
+    @media screen (min-width: 1439px) {
+        .UserLogo:hover .iconContainer {
+            width: 200px;
+            /* animation: fadeIn 1s;*/
+        }
+    }
+
+    .block {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .cancelbtn {
+        background-color: transparent;
+        border: none;
+        position: fixed;
+        right: 36%;
+        top: 16%;
+        z-index: 100;
+        animation: opacity 7s forwards;
+    }
+
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }

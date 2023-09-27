@@ -1,10 +1,10 @@
 ﻿    <div class="form-popup">
         <div class="form-container">
             <h4>Register</h4>
-            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME">
-            <input type="text" placeholder="Enter Your Email" @bind="AddUser.EMAIL">
-            <input type="text" placeholder="Enter Your Phone Number" @bind="AddUser.PHONE">
-            <input type="password" placeholder="enter your password" @bind="AddUser.PASSWORD">
+            <input type="text" placeholder="Enter Your Name" @bind="_user.USERNAME">
+            <input type="text" placeholder="Enter Your Email" @bind="_user.EMAIL">
+            <input type="text" placeholder="Enter Your Phone Number" @bind="_user.PHONE">
+            <input type="password" placeholder="enter your password" @bind="_user.PASSWORD">
             <input type="@passwordClass" placeholder="Conform password" @bind="ConformPassword">
             <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
             <center>
@@ -16,14 +16,13 @@
 
 
 @code {
-    tblUser AddUser = new tblUser();
+    tblUser _user = new tblUser();
     private string? ConformPassword { get; set; }
     private string? passwordClass { get; set; }
- 
+
 
     protected override void OnInitialized()
     {
-       
         passwordClass = "password";
     }
     private void show_password()
@@ -33,11 +32,12 @@
     }
     private void NewUser()
     {
-        if(AddUser.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(AddUser.EMAIL)) 
+        if(_user.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(_user.EMAIL))
         {
-            userService.Create(AddUser);
+            userService.Create(_user);
         }
     }
-   
+  
+
 
 }

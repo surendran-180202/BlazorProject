@@ -1,0 +1,14 @@
+﻿@typeparam VType
+
+<div class="motivationQuote">
+    <h6>
+        @foreach(var i in motivationQuote)
+        {
+            <span>@i</span>
+        }
+    </h6>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<VType>? motivationQuote { get; set; }
+}

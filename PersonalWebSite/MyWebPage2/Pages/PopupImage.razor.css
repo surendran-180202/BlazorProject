@@ -47,3 +47,11 @@
 		right: 1%;
 	}
 }
+@media (max-width: 641px)  {
+	.popupbox {
+		width: 60%;
+	}
+	.popupbox img {
+		display:none;
+	}
+}
