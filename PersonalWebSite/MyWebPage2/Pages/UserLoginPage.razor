@@ -1,9 +1,10 @@
-﻿    <div class="form-popup">
-        <div class="form-container">
+﻿<div class="form-popup">
+    <div class="form-container">
             <h4>LOGIN</h4>
-            <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME"><br />
-            <input type="@passwordClass" placeholder="enter your password" @bind="AddUser.PASSWORD">
+        <input type="text" placeholder="Enter Your Name" @bind="_user.USERNAME"><br />
+        <input type="@passwordClass" placeholder="enter your password" @bind="_user.PASSWORD">
             <i class="far fa-eye" style=" cursor: pointer;margin-left:90%;" @onclick="show_password"></i>
+            <p>@warning</p>
             <center>
                 <input type="submit" value="submit" @onclick="LoginUser">
             </center>
@@ -13,26 +14,34 @@
 
 
 @code {
-    tblUser AddUser = new tblUser();
+    tblUser _user = new tblUser();
     private string? LoginUserName { get; set; }
     private string? LoginPassword { get; set; }
     private string? passwordClass { get; set; }
 
+    string? warning;
     private void closePopUpLoginIn()
     {
-       
+
     }
     protected override void OnInitialized()
     {
+        _user.USERNAME = null;
+        _user.PASSWORD = null;
         passwordClass = "password";
-       
+
     }
     private void LoginUser()
     {
-        if (userService.UserCheck(AddUser)) OnInitialized();
+        if(userService.UserCheck(_user))
         {
+            warning = null;
+            OnInitialized();
             uriHelper.NavigateTo("/");
-            
+        }
+        else
+        {
+            warning = "Invalid UserName or Password";
         }
     }
     private void show_password()
@@ -40,4 +49,5 @@
         if(passwordClass == "password") passwordClass = "text";
         else passwordClass = "password";
     }
- }
+
+}

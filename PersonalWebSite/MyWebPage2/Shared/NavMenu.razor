@@ -12,9 +12,7 @@
                  <a href="Experience">Experience</a>
                  <a href="Contact" >Contact</a>
                  <a href="About" >About</a>
-            <a href="#">
-                <div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search something ..." /></div>
-                 </a>
+                 <a href="#"><div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search something ..." /></div></a>
                
                 <div class="UserLogo">
                 <a href="ProfilePage">
@@ -24,12 +22,13 @@
                     }
                 </a>
               
-            <div class="iconContainer">
-               <i class="material-icons" @onclick="showLoginPopup">person_pin</i>
-               <i class="material-icons" @onclick="showRegisterPopup">person_add</i>
-                <i class="material-icons">power_settings_new</i>
-                <i class="material-icons">fingerprint</i>
-                <i class="material-icons">settings</i>
+            <div class="iconContainer" >
+                <i class="material-icons" @onclick="showLoginPopup" @onmousemove=@(() => ToolKit ="Login")>person_pin</i>
+                <i class="material-icons" @onclick="showRegisterPopup" @onmousemove=@(() => ToolKit ="Register")>person_add</i>
+                <i class="material-icons" @onmousemove=@(() => ToolKit ="Log Out")>power_settings_new</i>
+                <i class="material-icons" @onmousemove=@(() => ToolKit ="Security")>fingerprint</i>
+                <i class="material-icons" @onmousemove=@(() => ToolKit ="Settings")>settings</i>
+                <span class="spanClass">@ToolKit</span>
             </div>
             </div>
         </div>
@@ -53,9 +52,12 @@
     public string? popUpLogin { get; set; } = "block";
     public string? popURegister { get; set; } = "block";
 
+    private string? ToolKit { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         ListUserInfo = userService.GetPersonalInfo();
+      
 
     }
     private void ToggleNavMenu()

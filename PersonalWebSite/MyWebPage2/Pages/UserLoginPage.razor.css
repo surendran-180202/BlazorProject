@@ -1,5 +1,4 @@
 ﻿
-
 .form-container {
 	padding: 10%;
 }
@@ -27,20 +26,20 @@
 		}
 
 		.form-container input[type=submit] {
-			margin-top: 20%;
+			margin-top: 15%;
 			width: 30%;
 			font-size: 15px;
 			border: 1px solid white;
 			border-radius: 10%;
 		}
 
-			.form-container input[type=submit]:hover {
-				transform: scale(1.05);
-			}
+.form-container input[type=submit]:hover {
+	transform: scale(1.05);
+}
 
-			.form-container input[type=submit]:active {
-				transform: scale(0.99);
-			}
+.form-container input[type=submit]:active {
+	transform: scale(0.99);
+}
 
 
 
@@ -53,9 +52,8 @@
 	.form-container label a {
 		color: black;
 	}
-.LoginPopUphide{
-	display:none;
-}
-.LoginPopUpShow{
-	display:inline-block;
+.form-container p{
+	color:red;
+	font-size:8px;
+	text-align:center;
 }

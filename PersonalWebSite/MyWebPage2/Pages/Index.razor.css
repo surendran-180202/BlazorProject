@@ -9,17 +9,8 @@
     background-attachment: fixed;
     backdrop-filter: blur(100px);
 
-}.body a{
-     text-decoration:none;
- }
-.motivationQuote{
-    padding:20px;
-    width:40%;
-    position:fixed;
-    top:40%;
-    color:white;
-    font-size:25px;
 }
+
 .UserImageDesign {
     position: fixed;
     width: 100%;
@@ -27,21 +18,9 @@
     top: 0;
     background-color: rgba(0,0,0,0.6);
 }
-    .UserImageDesign img{
-        width:50px;
-    }
-
-    .h1 {
-        font-size: 25px;
-        color: white;
-    }
-
-.insideCircle {
-    
-    padding: 30px;
-    animation: slow 1s forwards;
+.UserImageDesign img{
+    width:50px;
 }
-
 
 @keyframes slow {
     from {
@@ -53,39 +32,6 @@
     }
 }
 
-.imageBg {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-    .imageBg img {
-        transition: transform .5s ease;
-    }
-
-    .imageBg:hover img {
-        transform: scale(1.5);
-    }
-
-.image:hover {
-    transform: scale(1.05);
-}
-
-.image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.imageBg:hover .body {
-    transform: scale(1.5);
-}
-
-.introText {
-    font-size: 12px;
-    color: white;
-}
 
 .GreetingText {
    position:absolute;
@@ -94,16 +40,16 @@
    text-align: center;
     
 }
-    .GreetingText img{
-        width:100px;
+.GreetingText img{
+    width:100px;
 
 
-    }
-    .GreetingText p {
-        font-weight: 600;
-        color: white;
-        font-size: 10px;
-    }
+}
+.GreetingText p {
+    font-weight: 600;
+    color: white;
+    font-size: 10px;
+ }
 .hoverMsg{
     display:none;
 }
@@ -123,99 +69,6 @@
     display: block;
     
 }
-.form-popup {
-    position: fixed;
-    bottom: 20%;
-    right: 35%;
-    z-index: 9;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: justify;
-    height: 65%;
-    width: 25%;
-    color: white;
-    background: linear-gradient( 150deg, rgb(255, 010, 110,0.2) 20%, rgba(255, 255, 255, 0.2) 77% );
-    background-blend-mode: normal;
-    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 12px;
-    animation: slow1 0.30s forwards;
-   
-}
-.cancelbtn {
-    background-color: transparent;
-    border: none;
-    right: 0;
-    top: 5px;
-    position: fixed;
-}
-
-.newUser {
-    background-color: transparent;
-    border: none;
-    left: 0;
-    top: 5px;
-    position: fixed;
-}
-
-.loginBtn {
-    position: fixed;
-    bottom: 49%;
-    right: 20px;
-    color: white;
-}
-
-    .loginBtn:hover {
-        animation: slow 4s forwards;
-    }
-
-    .loginBtn i {
-        cursor: pointer;
-        font-size: 60px;
-        z-index: 100;
-    }
-
-        .loginBtn i:active {
-            transform: rotate(60deg);
-        }
-
-        .loginBtn i:hover {
-            transform: scale(1.05);
-        }
-
-@keyframes slow1 {
-    from {
-        bottom: 25%;
-    }
-
-    to {
-        bottom: 20%;
-    }
-}
-
-
-
-
-@media screen and (min-width: 992px) and (max-width: 1439px) {
-    .body {
-            max-height: 710px;
-        }
-    }
-
-@media screen and (max-width: 991px) {
-    .body {
-        max-height: auto;
-    }
-    .form-popup {
-        right: 20%;
-        width: 60%;
-    }
-   
-    }
-
-
-
 
 
 .viewComments {
@@ -382,102 +235,20 @@
 }
 
 
-
-h1 {
-    font-family: "Montserrat Medium";
-    max-width: 40ch;
-    text-align: center;
-    transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-}
-
-@keyframes scale {
-    100% {
-        transform: scale(1);
+/*Responsive Screen*/
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+    .body {
+        max-height: 710px;
     }
 }
-/*Text Animation*/
-span {
-    display: inline-block;
-    opacity: 0;
-    filter: blur(4px);
-}
 
-    span:nth-child(1) {
-        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+@media screen and (max-width: 991px) {
+    .body {
+        max-height: auto;
     }
 
-    span:nth-child(2) {
-        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(3) {
-        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(4) {
-        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(5) {
-        animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(6) {
-        animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(7) {
-        animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(8) {
-        animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(9) {
-        animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(10) {
-        animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(11) {
-        animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(12) {
-        animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(13) {
-        animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(14) {
-        animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(15) {
-        animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(16) {
-        animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(17) {
-        animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-    span:nth-child(18) {
-        animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    }
-
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-        filter: blur(0);
+    .form-popup {
+        right: 20%;
+        width: 60%;
     }
 }

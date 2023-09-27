@@ -1,5 +1,4 @@
 
-
 .form-container[b-v2drcwilbx] {
 	padding: 10%;
 }
@@ -27,20 +26,20 @@
 		}
 
 		.form-container input[type=submit][b-v2drcwilbx] {
-			margin-top: 20%;
+			margin-top: 15%;
 			width: 30%;
 			font-size: 15px;
 			border: 1px solid white;
 			border-radius: 10%;
 		}
 
-			.form-container input[type=submit]:hover[b-v2drcwilbx] {
-				transform: scale(1.05);
-			}
+.form-container input[type=submit]:hover[b-v2drcwilbx] {
+	transform: scale(1.05);
+}
 
-			.form-container input[type=submit]:active[b-v2drcwilbx] {
-				transform: scale(0.99);
-			}
+.form-container input[type=submit]:active[b-v2drcwilbx] {
+	transform: scale(0.99);
+}
 
 
 
@@ -53,9 +52,8 @@
 	.form-container label a[b-v2drcwilbx] {
 		color: black;
 	}
-.LoginPopUphide[b-v2drcwilbx]{
-	display:none;
-}
-.LoginPopUpShow[b-v2drcwilbx]{
-	display:inline-block;
+.form-container p[b-v2drcwilbx]{
+	color:red;
+	font-size:8px;
+	text-align:center;
 }
