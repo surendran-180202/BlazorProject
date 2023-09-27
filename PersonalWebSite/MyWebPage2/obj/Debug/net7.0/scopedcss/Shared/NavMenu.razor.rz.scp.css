@@ -274,3 +274,26 @@
         /* animation: fadeIn 1s;*/
     }
 }
+.block[b-fx568spddw]{
+    display:none;
+}.show[b-fx568spddw]{
+     display:block;
+ }
+
+.cancelbtn[b-fx568spddw] {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    right: 36%;
+    top: 16%;
+    z-index: 100;
+    animation: opacity-b-fx568spddw 7s forwards;
+}
+@keyframes opacity-b-fx568spddw{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

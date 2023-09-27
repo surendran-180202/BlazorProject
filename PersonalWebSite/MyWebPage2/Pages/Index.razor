@@ -1,49 +1,22 @@
 ﻿@page "/"
-@page "/LoginPopUp/{popUpLogin}"
-@page "/RegisterPopUp/{popURegister}"
-
-
 <PageTitle>Index</PageTitle>
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
     <br /> 
     <div class="motivationQuote">
-      @*  <p>SUCCESS IS NOT FINAL;FAILURE IS NOT FATAL: IT IS THE COURAGE TO CONTINUE THAT COUNTS. </p>*@
         <h6>
             @foreach(var i in motivationQuote)
             {
                 <span>@i  </span>
             }
-           @* <span>SUCCESS </span><span>IS </span><span>NOT </span><span>FINAL; </span><span>FAILURE; </span><span>IS </span><span>NOT </span><span>FATAL: </span><span>IT </span><span>IS </span><span>THE </span><span>COURAGE </span><span>TO </span><span>CONTINUE </span><span>THAT </span><span>COUNTS </span>*@
-         
         </h6>
-
     </div>
-    @*<div class="insideCircle">
-        <div class="@LoginImageClass">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="imageBg">
-                    <img src=@imageSource class="image" />
-                </div>
-            </div>
-            <div class="col-md-10">
-                <h1 class="h1">MR.B.@CurrentUserName</h1>
-                <span class="introText">CEO of SB Software & Solution</span>
-            </div>
-        </div>
-    </div>
-    </div>*@
-   
     <div class="UserImageDesign"></div>
-
         <div class="GreetingText">
         <img src="css/images/PAGif2.gif" />
             <p>@Datetime Mr.@CurrentUserName !</p>
             <p class="hoverMsg">What Can I Do For You ?</p>
         </div>
- 
 </div>
-
 <div class="loginBtn">
     <i class="material-icons"  @onclick="showMenuIcons">blur_on</i>
     <div class="@IconAmimationNameClass">
@@ -56,24 +29,6 @@
         </div>
     </div>
 </div>
-@*<div class="@PopUpLogin">
-    <div class="form-popup">
-        <button type="button" class="cancelbtn" @onclick="closePopUpLoginIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-        <UserLoginPage  />
-       
-    </div>
-</div>*@
-
-<UserLoginPage PopUpLogin=@popUpLogin />
-
-@*<div class="@PopUpRegister">
-    <div class="form-popup">
-        <button type="button" class="cancelbtn" @onclick="closePopUpsignIn" ><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-       <RegisterPage />
-    </div>
-</div>*@
-<RegisterPage PopUpRegister=@popURegister />
-
 <div class="viewComments">
     <div class="content">
         <div class="container">
@@ -86,45 +41,23 @@
                            <div class="message">@i.COMMENT </div>
                    }
                 }
-               
             </div>
         </div>
     </div>
 </div>
-<PopupImage NotificationPopUp="notificationBoxShowPopup" />
+<PopupImage NotificationPopUp=@popupNotification />
 @code {
-    //[Parameter]
-    //public  string? LoginShow { get; set; }
-
     private string? imageSource;
     private string? Datetime;
-    [Parameter]
-    public string? popUpLogin { get; set; }
-    [Parameter]
-    public string? popURegister { get; set; } 
-
-    //[Parameter]
-    //public string? PopUpRegister { get; set; } = "popuphide";
-
     private string? LoginImageClass { get; set; } = "popuphide";
-    private string? ConformPassword { get; set; }
     private string? IconAmimationNameClass { get; set; } = "popuphide";
-
-
-
-
     private string? CurrentUserName { get; set; }
+    private string? popupNotification { get; set; }
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
     List<string> motivationQuote = new List<string>();
-
-
-
     protected override void OnInitialized()
     {
-        popUpLogin = "LoginPopUphide";
-        popURegister = "RegisterPagePopUpHide";
-
         if(userService.CurrentUserName()!=null) 
         {
             CurrentUserName = userService.CurrentUserName(); LoginImageClass = "popupshow";
@@ -139,33 +72,25 @@
 
         motivationQuote = userService.motivationQuote();
 
-        //PopUpLogin = "popuphide";
-
-      
-        //up.Show();
+        popupNotification = "notificationBoxHidePopup";
     }
-    //private void closePopUpLoginIn()
-    //{
-    //    PopUpLogin = "popuphide";
-    //    uriHelper.NavigateTo("/");
-    //}
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(5000);
+        popupNotification = "notificationBoxShowPopup";
+
+    }
     private void OpenPopUp()
     {
-        //PopUpLogin = "popupshow";
-        //PopUpRegister = "popuphide";
+
     }
 
     private void SignInPopUp()
     {
-        //PopUpLogin = "popuphide";
-        //PopUpRegister = "popupshow";
+
     }
-    //private void closePopUpsignIn()
-    //{
-    //    PopUpRegister = "popuphide";
-    //    PopUpLogin = "popupshow";
-    //}
-  
+
+
     private void showMenuIcons()
     {
         if(IconAmimationNameClass == "popupshow") IconAmimationNameClass = "popuphide";
@@ -173,9 +98,10 @@
     }
     private static void profilePage()
     {
-        //uriHelper.NavigateTo("/ProfilePage");
+
 
     }
+
   
 
 }

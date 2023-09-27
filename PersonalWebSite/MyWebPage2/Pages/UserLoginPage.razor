@@ -1,6 +1,4 @@
-﻿<div class="@PopUpLogin">
-    <div class="form-popup">
-        <button type="button" class="cancelbtn" @onclick="closePopUpLoginIn"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+﻿    <div class="form-popup">
         <div class="form-container">
             <h4>LOGIN</h4>
             <input type="text" placeholder="Enter Your Name" @bind="AddUser.USERNAME"><br />
@@ -11,9 +9,8 @@
             </center>
             <label>Not a Member?<a href="/RegisterPopUp/{popupshow}"> Singn up now </a></label>
         </div>
-
     </div>
-</div>
+
 
 @code {
     tblUser AddUser = new tblUser();
@@ -21,16 +18,9 @@
     private string? LoginPassword { get; set; }
     private string? passwordClass { get; set; }
 
-    [Parameter]
-    public string? PopUpLogin { get; set; } = "LoginPopUphide";
-
-
-
     private void closePopUpLoginIn()
     {
-        PopUpLogin = "LoginPopUphide";
-        //uriHelper.NavigateTo($"/LoginPopUp/LoginPopUphide");
-    uriHelper.NavigateTo("/");
+       
     }
     protected override void OnInitialized()
     {
@@ -41,15 +31,13 @@
     {
         if (userService.UserCheck(AddUser)) OnInitialized();
         {
-            uriHelper.NavigateTo($"/LoginPopUp/{"LoginPopUphide"}");
-            //Index.pageRefresh();
+            uriHelper.NavigateTo("/");
+            
         }
     }
-
     private void show_password()
     {
         if(passwordClass == "password") passwordClass = "text";
         else passwordClass = "password";
-        //a.popUpValue = "hidePopup";
     }
  }
