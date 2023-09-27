@@ -274,3 +274,26 @@
         /* animation: fadeIn 1s;*/
     }
 }
+.block{
+    display:none;
+}.show{
+     display:block;
+ }
+
+.cancelbtn {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    right: 36%;
+    top: 16%;
+    z-index: 100;
+    animation: opacity 7s forwards;
+}
+@keyframes opacity{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

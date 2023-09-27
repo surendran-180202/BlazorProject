@@ -35,14 +35,23 @@
         </div>
         </div>
 </div>
+<div class=@popUpLogin>
+    <div class="Layout">
+        <button type="button" class="cancelbtn" @onclick=@(() => popUpLogin ="block")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+        <UserLoginPage />
+    </div>
+ </div>
+<div class=@popURegister>
+    <button type="button" class="cancelbtn" @onclick=@(() => popURegister ="block")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+    <RegisterPage />
+</div>
 
 @code {
     private bool collapseNavMenu = true;
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
     List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
-    public string? popUpLogin { get; set; } = "LoginPopUpShow";
-    public string? popUpRegister { get; set; } = "RegisterPagePopUpShow";
-
+    public string? popUpLogin { get; set; } = "block";
+    public string? popURegister { get; set; } = "block";
 
     protected override async Task OnInitializedAsync()
     {
@@ -55,11 +64,12 @@
     }
     private void showLoginPopup()
     {
-        uriHelper.NavigateTo($"/LoginPopUp/{popUpLogin}");
-        //popUpValue = "popupshow";
+        popURegister = "block";
+        popUpLogin = "show";
     }
     private void showRegisterPopup()
     {
-        uriHelper.NavigateTo($"/RegisterPopUp/{popUpRegister}");
+        popUpLogin = "block";
+        popURegister = "show";
     }
 }
