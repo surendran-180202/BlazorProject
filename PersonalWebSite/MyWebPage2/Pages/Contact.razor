@@ -66,10 +66,7 @@
     private string? Title { get; set; }
     private string? ErrorMsg { get; set; }
     protected override void OnInitialized()
-    {
-
-
-    }
+    { }
      private void newComment()
     {
         if(NewComment != null)
@@ -84,34 +81,4 @@
         }
 
     }
-
-
-    //private void HandleFileUpload(IFileListEntry[] files)
-    //{
-    //    file = files.FirstOrDefault();
-    //    if(file != null)
-    //    {
-    //        using(var ms = new MemoryStream())
-    //        {
-    //            file.Data.CopyTo(ms);
-    //            imageBytes = ms.ToArray();
-    //        }
-    //    }
-    //}
-
-
-    //private async Task UploadImage()
-    //{
-    //    if(file != null)
-    //    {
-    //        // Save imageBytes to the SQL database using Entity Framework or your preferred method
-    //        // Example: dbContext.Images.Add(new Image { Data = imageBytes });
-    //        // Then, save changes to the database
-    //        // await dbContext.SaveChangesAsync();
-    //    }
-    //}
-   
-}
-
-   
 }

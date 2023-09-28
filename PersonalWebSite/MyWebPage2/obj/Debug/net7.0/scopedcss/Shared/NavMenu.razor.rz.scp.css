@@ -134,11 +134,7 @@
 .search[b-fx568spddw] {
 }
 
-    .search i[b-fx568spddw] {
-        position: absolute;
-        top: 81%;
-        left: 15%;
-    }
+ 
 
     .search input[b-fx568spddw] {
         background-color: rgb(0,0,0,0.4);
@@ -254,12 +250,12 @@
             /* Never collapse the sidebar for wide screens */
             display: block;
         }
-
         .search i[b-fx568spddw] {
             position: absolute;
-            top: 37%;
+            top: 40%;
             left: 42%;
         }
+   
     }
 
     @media screen (min-width: 1439px) {
@@ -284,7 +280,7 @@
         right: 36%;
         top: 16%;
         z-index: 100;
-        animation: opacity-b-fx568spddw 7s forwards;
+        animation: opacity-b-fx568spddw 5s forwards;
     }
 
     @keyframes opacity-b-fx568spddw {

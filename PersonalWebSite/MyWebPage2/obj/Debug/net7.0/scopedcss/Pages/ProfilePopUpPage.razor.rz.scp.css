@@ -72,7 +72,7 @@
 	height: 100px;
 	border-radius: 50%;
 	background-color: white;
-	padding: 2px;
+	padding: 5px;
 	overflow: hidden;
 }
 
@@ -101,4 +101,61 @@
 .show[b-uc4ykr487h] {
 	display: block;
 	animation: slow 1s forwards;
+}
+
+.label[b-uc4ykr487h] {
+	display: block;
+	margin-top: -20px;
+}
+.editContent1[b-uc4ykr487h]{
+	padding:4%;
+}
+	.editContent1 p[b-uc4ykr487h]{
+		color:white;
+	margin-top:10%;
+
+	}
+	@media (max-width: 641px) {
+		.ManageInfo[b-uc4ykr487h]{
+		z-index:10;
+	
+	}
+	.editContent[b-uc4ykr487h] {
+		position:absolute;
+		left:5%;
+		right:5%;
+	}
+	.profilePhoto[b-uc4ykr487h] {
+		width: 50px;
+		height: 50px;
+		
+	}.label[b-uc4ykr487h]{
+		 width:60px;
+		 margin-left:-10px;
+	 }
+
+
+
+	.profilePhoto label i[b-uc4ykr487h] {
+		color: red;
+		font-size: 10px;
+	}
+	
+
+		.editContent[b-uc4ykr487h] {
+			margin-top: 50px;
+		}
+	.editContent1 button[b-uc4ykr487h]{
+		border:none;
+		padding:5px;
+		font-size:10px;
+		border-radius:10px;
+		
+		
+	}
+		.editContent1 p[b-uc4ykr487h]{
+			display:none;
+		}
+	
+
 }

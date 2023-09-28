@@ -6,13 +6,15 @@
     <div class="col-md-3">
         <div class="nav" >
             <ul>
-                <li @onclick="PersonalDetails"><i class='fas fa-user-circle' style='font-size:24px'></i>PersonalInfo</li>
-                <li @onclick="EducationDetails"><i class='fas fa-user-graduate' style='font-size:24px'></i>EducationInfo</li>
-                <li @onclick="ExperienceDetails"><i class='fas fa-laptop-code' style='font-size:24px'></i>ExperienceInfo</li>
-                <li><i class='fas fa-cogs' style='font-size:24px'></i>Settings</li>
+                <li @onclick="PersonalDetails"><i class='fas fa-user-circle' style='font-size:24px'></i><span>PersonalInfo</span></li>
+                <li @onclick="EducationDetails"><i class='fas fa-user-graduate' style='font-size:24px'></i><span>EducationInfo</span></li>
+                <li @onclick="ExperienceDetails"><i class='fas fa-laptop-code' style='font-size:24px'></i><span>ExperienceInfo</span></li>
+                <li><i class='fas fa-cogs' style='font-size:24px'></i><span>Settings</span></li>
+                <li><i class="fa fa-exclamation-circle"></i><span>About</span></li>
+             @*   <p class="about"><i class="fa fa-exclamation-circle"></i>about</p>*@
             </ul>
         </div>
-        <p class="about"><i class="fa fa-exclamation-circle"></i>about</p>
+       
     </div>
     <div class="col-md-7">
         @foreach(var i in tblUserInfo)
