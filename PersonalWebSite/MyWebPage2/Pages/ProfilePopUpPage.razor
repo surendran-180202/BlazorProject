@@ -8,9 +8,9 @@
                 <div class="editContent">
 
                     <center>
-                        <input type="text" placeholder="Enter your name" @bind-value="i.NAME" /><br />
-                        <input type="text" placeholder="Enter your Lastname" @bind-value="i.LASTNAME" /><br />
-                        <input type="date" placeholder="Enter DOB" @bind-value="i.BIRTHDAY" />
+                        <input type="text" placeholder="Enter your name" value="@i.NAME" /><br />
+                        <input type="text" placeholder="Enter your Lastname" value="@i.LASTNAME" /><br />
+                        <input type="date" placeholder="Enter DOB" value="@i.BIRTHDAY" />
 
                         <select>
                             <option value="None">Gender</option>
@@ -19,8 +19,8 @@
                             <option value="Other">Other</option>
                         </select><br />
 
-                        <input type="number" placeholder="Enter your Phone" @bind-value="i.PHONE" /><br />
-                        <input type="email" placeholder="Enter your Email" @bind-value="i.EMAIL" /><br />
+                        <input type="number" placeholder="Enter your Phone" value="@i.PHONE" /><br />
+                        <input type="email" placeholder="Enter your Email" value="@i.EMAIL" /><br />
                         <textarea class="address" rows="3" cols="23" placeholder="Please enter Address..." value="@i.ADDRESS" /><br />
                         <button class="SubmitBtn" @onclick="upDatePersonalInfo">Update</button>
                     </center>
@@ -31,33 +31,29 @@
             <div class="col-md-6">
                 <div class="editContent1">
                     <center>
-                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /></div>
-                     
-                            <div class="profilePhoto">
-                            <img src="@FileSource" class="image" />
-
+                        <div class="profilePhoto">
+                            @if(CurrentImage)
+                            {
+                                <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" for='foo' />
+                            }
+                            else
+                            {
+                                <img src=@FileSource class="image" for='foo' />
+                            }
+                            <InputFile OnChange="OnInputFileChange" directory accept="image/*" Id='foo' style="display:none"></InputFile>
+                            <label for='foo' class="label"><i class='fas fa-pen' style="color:white;"></i></label>
                         </div>
-                        <InputFile OnChange="OnInputFileChange" directory accept="image/*" />
-                        <button @onclick="updateUserInfo">Conform UpLode</button>
+                        <p contenteditable="true">
+                            I already want to take a nap tomorrow.
+                            💫 On a mission to spread positivity and good vibes.
+                            ✨ Life is too short to be ordinary.
+                            💭 Dreamer, believer, achiever.
+                            ✨ Positive vibes only.
+                            👌 Smart work over hard work.
+                            ⚔️ A warrior in a world of worriers.
+                            🌻 Sunflower lover and positivity spreader.
+                        </p>
                     </center>
-
-                    @*   <div class="letter-image">
-                <div class="animated-mail">
-                <div class="back-fold"></div>
-                <div class="letter">
-                <div class="letter-border"></div>
-                <div class="letter-title"></div>
-                <div class="letter-context"></div>
-                <div class="letter-stamp">
-                <div class="letter-stamp-inner"></div>
-                </div>
-                </div>
-                <div class="top-fold"></div>
-                <div class="body"></div>
-                <div class="left-fold"></div>
-                </div>
-                <div class="shadow"></div>
-                </div>*@
                 </div>
             </div>
         </div>
@@ -65,7 +61,7 @@
 }
 
 @code {
- 
+
 
 
     List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
@@ -74,6 +70,10 @@
     IReadOnlyList<IBrowserFile> selectedFiles;
     private string Filepath { get; set; }
 
+    private string DefaultImageSrc { get; set; } = "src";
+    private string ChangedImageSrc { get; set; } = "";
+
+    private bool CurrentImage { get; set; } = true;
 
     protected override async Task OnInitializedAsync()
     {
@@ -82,9 +82,11 @@
     }
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
+
         selectedFiles = e.GetMultipleFiles();
         this.StateHasChanged();
         CopyFile();
+        CurrentImage = false;
     }
     private async void CopyFile()
     {
@@ -108,6 +110,7 @@
     }
     private void upDatePersonalInfo()
     {
+        userService.UpdateUserInfo(Imagepath);
         //string a= tblUserInfo;
     }
 

@@ -1,10 +1,6 @@
 ﻿@page "/Education"
 @using MyWebPage2.Data
-@inject NavigationManager uriHelper;
-@inject UserServices userService;
-
 <PageTitle>Education</PageTitle>
-
 
 <br/>
 <div class="container">
@@ -34,10 +30,11 @@
                     </div>
                 </div>
               }
-        
-        <div class="@PopUp">
+
+        @if(ShowRHide)
+        {
             <div class="form-popup">
-                <button type="button" class="cancelbtn" @onclick="closePopUp"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+                <button type="button" class="cancelbtn" @onclick="(() => ShowRHide = false )"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
                 <div class="form-container">
                     <h4>Commends</h4>
                     <input type="text" placeholder="Leave Your Commends" @bind="NewComment" >
@@ -67,18 +64,21 @@
                      </div>
                 </div>
             </div>
+        }
         </div>
     </div>
-</div>
+
 
 @code {
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
 
-    private string? PopUp { get; set; }  
+ 
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? Cource { get; set; }
     private string? afterSubmit { get; set; }
+
+    private bool ShowRHide { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -89,19 +89,6 @@
         System.Threading.Thread.Sleep(2000);
         EducationDetails = userService.Education();
     }
-    protected override void OnInitialized()
-    {
-        PopUp = "popuphide";
-      
-    }
-    private void OpenPopUp()
-    {
-        PopUp = "popupshow";
-    }
-    private void closePopUp()
-    {
-        PopUp = "popuphide";
-    }
     private void newComment()
     {
         if(NewComment != null) userService.newComment(NewComment, Title);
@@ -109,7 +96,7 @@
     }
     private void HandleItemClick(string item)
     {
-        PopUp = "popupshow";
+        ShowRHide = !ShowRHide;
         Title = item;
     }
     private void AddLike(string Title , int Like)

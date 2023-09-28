@@ -134,11 +134,7 @@
 .search {
 }
 
-    .search i {
-        position: absolute;
-        top: 81%;
-        left: 15%;
-    }
+ 
 
     .search input {
         background-color: rgb(0,0,0,0.4);
@@ -254,12 +250,12 @@
             /* Never collapse the sidebar for wide screens */
             display: block;
         }
-
         .search i {
             position: absolute;
-            top: 37%;
+            top: 40%;
             left: 42%;
         }
+   
     }
 
     @media screen (min-width: 1439px) {
@@ -284,7 +280,7 @@
         right: 36%;
         top: 16%;
         z-index: 100;
-        animation: opacity 7s forwards;
+        animation: opacity 5s forwards;
     }
 
     @keyframes opacity {

@@ -222,10 +222,30 @@
 	}
 	
 }
-@media (max-width: 767px) {
+@media (max-width: 641px) {
 	.nav[b-ay5ry5vugk] {
-		display: none;
+		border: none;
+	
 	}
+		.nav ul li span[b-ay5ry5vugk] {
+			display: none;
+		
+		}
+		.nav ul[b-ay5ry5vugk] {
+			position: fixed;
+			bottom: 0;
+			right: 10%;
+			
+		}
+			.nav ul li[b-ay5ry5vugk] {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+			
+			}
+				.nav ul li i[b-ay5ry5vugk] {
+			
+				}
 	.editContent[b-ay5ry5vugk]{
 		padding:5px;
 	}

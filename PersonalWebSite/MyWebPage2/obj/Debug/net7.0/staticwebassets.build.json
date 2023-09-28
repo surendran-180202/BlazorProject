@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fCa6b2lBb+Ey58Ibcm4UnugYOojU46T6N9ISzKcufBo=",
+  "Hash": "CyFxwZWV/r43Bb7R7cXZitVQJ+/HrUdRa5e+t7qPvVM=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -525,6 +525,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Storage\\29259117.jpg"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\658.jpg",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "Storage/658.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Storage\\658.jpg"
     },
     {
       "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\AadharCard.png",

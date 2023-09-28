@@ -222,10 +222,30 @@
 	}
 	
 }
-@media (max-width: 767px) {
+@media (max-width: 641px) {
 	.nav {
-		display: none;
+		border: none;
+	
 	}
+		.nav ul li span {
+			display: none;
+		
+		}
+		.nav ul {
+			position: fixed;
+			bottom: 0;
+			right: 10%;
+			
+		}
+			.nav ul li {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+			
+			}
+				.nav ul li i {
+			
+				}
 	.editContent{
 		padding:5px;
 	}

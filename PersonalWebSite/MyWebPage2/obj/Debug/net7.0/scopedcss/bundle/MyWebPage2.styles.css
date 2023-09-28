@@ -1424,10 +1424,30 @@ body[b-a55mp78tkh] {
 	}
 	
 }
-@media (max-width: 767px) {
+@media (max-width: 641px) {
 	.nav[b-ay5ry5vugk] {
-		display: none;
+		border: none;
+	
 	}
+		.nav ul li span[b-ay5ry5vugk] {
+			display: none;
+		
+		}
+		.nav ul[b-ay5ry5vugk] {
+			position: fixed;
+			bottom: 0;
+			right: 10%;
+			
+		}
+			.nav ul li[b-ay5ry5vugk] {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+			
+			}
+				.nav ul li i[b-ay5ry5vugk] {
+			
+				}
 	.editContent[b-ay5ry5vugk]{
 		padding:5px;
 	}
@@ -1688,7 +1708,7 @@ body[b-a55mp78tkh] {
 	height: 100px;
 	border-radius: 50%;
 	background-color: white;
-	padding: 2px;
+	padding: 5px;
 	overflow: hidden;
 }
 
@@ -1717,6 +1737,63 @@ body[b-a55mp78tkh] {
 .show[b-uc4ykr487h] {
 	display: block;
 	animation: slow 1s forwards;
+}
+
+.label[b-uc4ykr487h] {
+	display: block;
+	margin-top: -20px;
+}
+.editContent1[b-uc4ykr487h]{
+	padding:4%;
+}
+	.editContent1 p[b-uc4ykr487h]{
+		color:white;
+	margin-top:10%;
+
+	}
+	@media (max-width: 641px) {
+		.ManageInfo[b-uc4ykr487h]{
+		z-index:10;
+	
+	}
+	.editContent[b-uc4ykr487h] {
+		position:absolute;
+		left:5%;
+		right:5%;
+	}
+	.profilePhoto[b-uc4ykr487h] {
+		width: 50px;
+		height: 50px;
+		
+	}.label[b-uc4ykr487h]{
+		 width:60px;
+		 margin-left:-10px;
+	 }
+
+
+
+	.profilePhoto label i[b-uc4ykr487h] {
+		color: red;
+		font-size: 10px;
+	}
+	
+
+		.editContent[b-uc4ykr487h] {
+			margin-top: 50px;
+		}
+	.editContent1 button[b-uc4ykr487h]{
+		border:none;
+		padding:5px;
+		font-size:10px;
+		border-radius:10px;
+		
+		
+	}
+		.editContent1 p[b-uc4ykr487h]{
+			display:none;
+		}
+	
+
 }
 /* _content/MyWebPage2/Pages/RegisterPage.razor.rz.scp.css */
 
@@ -2072,11 +2149,7 @@ main[b-y9royroacc] {
 .search[b-fx568spddw] {
 }
 
-    .search i[b-fx568spddw] {
-        position: absolute;
-        top: 81%;
-        left: 15%;
-    }
+ 
 
     .search input[b-fx568spddw] {
         background-color: rgb(0,0,0,0.4);
@@ -2192,12 +2265,12 @@ main[b-y9royroacc] {
             /* Never collapse the sidebar for wide screens */
             display: block;
         }
-
         .search i[b-fx568spddw] {
             position: absolute;
-            top: 37%;
+            top: 40%;
             left: 42%;
         }
+   
     }
 
     @media screen (min-width: 1439px) {
@@ -2222,7 +2295,7 @@ main[b-y9royroacc] {
         right: 36%;
         top: 16%;
         z-index: 100;
-        animation: opacity-b-fx568spddw 7s forwards;
+        animation: opacity-b-fx568spddw 5s forwards;
     }
 
     @keyframes opacity-b-fx568spddw {
