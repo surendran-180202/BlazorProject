@@ -5,58 +5,22 @@
 <br/>
 <center> 
     <div class="locationIcon">
-        <i class="	fas fa-map-marker-alt fa-stack-11x"></i>
-       
+        <i class="fas fa-map-marker-alt fa-stack-11x"></i>
     </div>
     <span>Address: 24/12 , kanthanchavadi, chennai-600041</span>
-
-
-
-
 <div class="content ">
-
-<span class="fa-stack fa-lg" Tooltip="surendran">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-twitter fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-facebook-f fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-facebook-messenger fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <a href="https://github.com/surendran-180202" target="_blank"><i class="fab fa-github fa-stack-1x"></i></a>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-whatsapp fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-whmcs fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <i class="fab fa-instagram fa-stack-1x"></i>
-</span>
-<span class="fa-stack fa-lg">
-    <i class="far fa-circle fa-stack-2x"></i>
-    <a href="mailto:surendran1822002@gmail.com" target="_blank"> <i class="fab fa-google fa-stack-1x"></i></a>
-</span>
+        @foreach(var item in Icons)
+        {
+            <span class="fa-stack fa-lg" Tooltip="surendran">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <a href=@item[0]><i class="@item[1]"></i></a>
+            </span>
+        } 
 </div>
 
 <br/>
     <div class="col-75">
         <input type="text" id="fname" placeholder="Leave Your Command..." @bind="NewComment">
-      
         <button type="submit" class="SubmitCmdBtn" @onclick="newComment"><i class="fa fa-arrow-circle-right"></i></button><br />
         <label style="color:red;font-size:10px;">@ErrorMsg</label>
     </div>
@@ -65,9 +29,20 @@
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? ErrorMsg { get; set; }
-    protected override void OnInitialized()
-    { }
-     private void newComment()
+    List<string[]> Icons = new List<string[]>()
+    {
+        new string[]{"/","fab fa-twitter fa-stack-1x" },
+        new string[]{"/","fab fa-facebook-f fa-stack-1x" },
+        new string[]{"/","fab fa-facebook-messenger fa-stack-1x" },
+        new string[]{"https://github.com/surendran-180202","fab fa-github fa-stack-1x" },
+        new string[]{"/","fab fa-linkedin-in fa-stack-1x" },
+        new string[]{"/","fab fa-whatsapp fa-stack-1x" },
+        new string[]{"/","fab fa-whmcs fa-stack-1x" },
+        new string[]{"mailto:surendran1822002@gmail.com","fab fa-google fa-stack-1x" },
+
+
+    };
+    private void newComment()
     {
         if(NewComment != null)
         {

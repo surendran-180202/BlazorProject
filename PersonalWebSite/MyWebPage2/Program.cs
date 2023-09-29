@@ -4,7 +4,8 @@ using MyWebPage2.Data;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//DataBase
+string DataBase = builder.Configuration.GetSection("DefaultConnection").GetValue<string>("DataBase");
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

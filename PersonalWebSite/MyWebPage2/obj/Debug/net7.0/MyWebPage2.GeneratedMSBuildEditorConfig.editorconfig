@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/AcknowledgementTab.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNrbm93bGVkZ2VtZW50VGFiLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope = b-3ji5sqopcf
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-gb0ofual5f
 
+[C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/EditTemplate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRlbXBsYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-62yrj5rcsw
+
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/Education.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWR1Y2F0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-6w8w18izqc
@@ -55,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope = b-k73m1lwagc
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zllp0tmasc
+
+[C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/LoadingAnimation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9hZGluZ0FuaW1hdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-r7ezf56uo1
 
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/MotivationQuote.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW90aXZhdGlvblF1b3RlLnJhem9y
