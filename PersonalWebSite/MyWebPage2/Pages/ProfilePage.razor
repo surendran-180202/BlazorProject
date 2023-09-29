@@ -162,7 +162,11 @@
 </div>
 <div class="@Parentmanagebox">
 <button type="button" class="popupbtn" @onclick=@(() => Parentmanagebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-<ProfilePopUpPage  />
+
+
+<EditTemplate>
+        <ProfilePopUpPage />
+</EditTemplate>
 </div>
 
 
@@ -188,7 +192,7 @@
     protected override async Task OnInitializedAsync()
     {
         tblUserInfo = userService.GetPersonalInfo();
-
+       
     }
 
     protected override void OnInitialized()

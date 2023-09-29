@@ -256,3 +256,5 @@ C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\De
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\ProfilePopUpPage.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\PopupImage.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\MotivationQuote.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\EditTemplate.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\LoadingAnimation.razor.rz.scp.css
