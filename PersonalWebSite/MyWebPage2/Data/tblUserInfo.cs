@@ -24,5 +24,10 @@ namespace MyWebPage2.Data
         public long? PHONE { get; set; }
         [Required]
         public string? ADDRESS { get; set; }
+
+        internal tblUserInfo ToArray()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,59 @@
+
+.form-container[b-4ee90w1yxu] {
+	padding: 10%;
+}
+
+	.form-container input[b-4ee90w1yxu] {
+		width: 100%;
+		padding: 2%;
+		height: auto;
+		margin-top: 18%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid white;
+		background-color: transparent;
+		font-weight: 300;
+		color: white;
+		text-align: center;
+		font-size: 22px;
+	}
+
+		.form-container input[b-4ee90w1yxu]::placeholder {
+			text-align: center;
+			color: lightyellow;
+			font-size: 13px;
+			transition: 4s;
+		}
+
+		.form-container input[type=submit][b-4ee90w1yxu] {
+			margin-top: 15%;
+			width: 30%;
+			font-size: 15px;
+			border: 1px solid white;
+			border-radius: 10%;
+		}
+
+.form-container input[type=submit]:hover[b-4ee90w1yxu] {
+	transform: scale(1.05);
+}
+
+.form-container input[type=submit]:active[b-4ee90w1yxu] {
+	transform: scale(0.99);
+}
+
+
+
+.form-container label[b-4ee90w1yxu] {
+	position: absolute;
+	bottom: 2%;
+	font-size: 10px;
+}
+
+	.form-container label a[b-4ee90w1yxu] {
+		color: black;
+	}
+.form-container p[b-4ee90w1yxu]{
+	color:red;
+	font-size:8px;
+	text-align:center;
+}

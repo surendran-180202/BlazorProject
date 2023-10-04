@@ -1,32 +1,25 @@
-﻿
-@foreach(var i in ListUserInfo)
+﻿@foreach(var i in ListUserInfo)
 {
-  
         <div class="row">
             <div class="col-md-6">
                 <div class="editContent">
-
                     <center>
-                        <input type="text" placeholder="Enter your name" value="@i.NAME" /><br />
+                        <input type="text" placeholder="Enter your name" value="@i.NAME"  /><br />
                         <input type="text" placeholder="Enter your Lastname" value="@i.LASTNAME" /><br />
                         <input type="date" placeholder="Enter DOB" value="@i.BIRTHDAY" />
-
                         <select>
                             <option value="None">Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Other">Other</option>
                         </select><br />
-
                         <input type="number" placeholder="Enter your Phone" value="@i.PHONE" /><br />
                         <input type="email" placeholder="Enter your Email" value="@i.EMAIL" /><br />
                         <textarea class="address" rows="3" cols="23" placeholder="Please enter Address..." value="@i.ADDRESS" /><br />
                         <button class="SubmitBtn" @onclick="upDatePersonalInfo">Update</button>
                     </center>
-
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="editContent1">
                     <center>
@@ -64,19 +57,18 @@
 
 
     List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
+    
     public string? FileSource { get; set; }
     public string? Imagepath { get; set; }
     IReadOnlyList<IBrowserFile> selectedFiles;
-    private string Filepath { get; set; }
-
-    private string DefaultImageSrc { get; set; } = "src";
-    private string ChangedImageSrc { get; set; } = "";
+    private string? Filepath { get; set; }
 
     private bool CurrentImage { get; set; } = true;
 
     protected override async Task OnInitializedAsync()
     {
-        ListUserInfo = userService.GetPersonalInfo();
+        ListUserInfo =  userService.GetPersonalInfo();
+        
 
     }
     private void OnInputFileChange(InputFileChangeEventArgs e)
@@ -91,7 +83,7 @@
     {
         foreach(var file in selectedFiles)
         {
-            Stream stream = file.OpenReadStream();
+            Stream stream = file.OpenReadStream(1024*300);
             var path = $"{Environment.WebRootPath}\\Storage\\{file.Name}";
             FileStream fs = File.Create(path);
             await stream.CopyToAsync(fs);

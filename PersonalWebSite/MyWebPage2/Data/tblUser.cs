@@ -5,6 +5,7 @@ namespace MyWebPage2.Data
 {
     public class tblUser
     {
+        [Required]
         public int? USERID { get; set; }
         [Required]
         public string? USERNAME { get; set; }

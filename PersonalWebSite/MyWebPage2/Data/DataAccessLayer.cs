@@ -101,6 +101,35 @@ public class DataAccessLayer
         }
         return PersonDetails;
     }
+
+    //array Try After try - deleteable
+    public tblUserInfo[] GetPersonalInfo1()
+    {
+        List<tblUserInfo> PersonDetails = new List<tblUserInfo>();
+        using(SqlConnection con = new SqlConnection(connectionString))
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tblUserInfo", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                tblUserInfo data = new tblUserInfo();
+                data.USERID = reader.GetInt32(0);
+                data.USERIMAGE = (Byte[]) reader[1];
+                data.USERBIO = reader.GetString(2);
+                data.NAME = reader.GetString(3);
+                data.LASTNAME = reader.GetString(4);
+                data.BIRTHDAY = reader.GetDateTime(5);
+                data.GENDER = reader.GetString(6);
+                data.EMAIL = reader.GetString(7);
+                data.PHONE = reader.GetInt64(8);
+                data.ADDRESS = reader.GetString(9);
+                PersonDetails.Add(data);
+            }
+        }
+        return PersonDetails.ToArray();
+    }
+
     public void AddUser(tblUser user)
     {
         string strPersonalQuery = "insert into tblUserData(USERNAME,EMAIL,PHONE,PASSWORD)values (@username,@email,@phone,@password)";
@@ -246,7 +275,7 @@ public class DataAccessLayer
             con.Close();
         }
     }
-    public void AddImage(string Title, int ctrLikeCount)
+    public void AddImage(string Title)
     {
 
         string strNewCommmentQuery = "insert into tblUserImage(USERID,USERIMAGE,IMAGENAME)values (@userid,@userimage,@imagename)";
@@ -261,57 +290,5 @@ public class DataAccessLayer
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
-
-
-
     }
-
-    
-
 }
-
-
-
-
-
-
-
-
-
-
-//    string fName;
-//    SqlConnection cnn;
-//    string connectionString = null;
-
-//        connectionString = "Data Source=servername; Initial Catalog=databasename; User ID=sa; Password=password";
-//        cnn = new SqlConnection(connectionString);
-//        fName = "D:\\picfile.jpg";
-//        if(File.Exists(fName))
-//        {
-//            int id = 2;
-//            byte[] content = ImageToStream(fName);
-//            cnn.Open();
-//            SqlCommand cmd = new SqlCommand("insert into imgtable (id,img) values ( @id,@img)", cnn);
-//            cmd.Parameters.AddWithValue("@id", id);
-//            cmd.Parameters.AddWithValue("@img", content);
-//            cmd.ExecuteNonQuery();
-//            cnn.Close();
-
-//        }
-//        else
-//        {
-
-//        }
-//    }
-//private byte[] ImageToStream(string fileName)
-//{
-//    byte[] MyImg = (byte[]) Row[0];
-
-//    data.USERIMAGE = MyImg;
-//    MemoryStream ms = new MemoryStream(MyImg);
-//    ms.Position = 0;
-
-//    //Image img = Image.FromStream(ms); //error 
-
-//    //pictureBox1.Image = img;

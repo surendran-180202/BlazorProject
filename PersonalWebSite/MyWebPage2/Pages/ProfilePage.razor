@@ -10,7 +10,10 @@
                 <li @onclick="EducationDetails"><i class='fas fa-user-graduate' style='font-size:24px'></i><span>EducationInfo</span></li>
                 <li @onclick="ExperienceDetails"><i class='fas fa-laptop-code' style='font-size:24px'></i><span>ExperienceInfo</span></li>
                 <li><i class='fas fa-cogs' style='font-size:24px'></i><span>Settings</span></li>
-                <li><i class="fa fa-exclamation-circle"></i><span>About</span></li>
+                <li><i class='fas fa-compass' style='font-size:24px'></i><span>Explore</span></li>
+                <li><i class='fas fa-power-off' style='font-size:24px'></i><span>Logout</span></li>
+             
+            @*    <li><i class="fa fa-exclamation-circle"></i><span>About</span></li>*@
              @*   <p class="about"><i class="fa fa-exclamation-circle"></i>about</p>*@
             </ul>
         </div>
@@ -23,7 +26,7 @@
             <center>
                 <h3>welcome Mr.Surendran</h3>
                 <div class="profileBackground">
-                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit' @onclick=@(() => Parentmanagebox ="show") /></div>
+                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit' @onclick=@(() => editTemplate = true) /></div>
                 </div>
             </center>
             <div class="content">
@@ -49,7 +52,7 @@
                            </tr>
                         </table> 
                         <center>
-                                <button class="btnclass" @onclick=@(() => Parentmanagebox ="show")>Manage Your PersonalInfo</button>
+                                <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your PersonalInfo</button>
                         </center>
                     </div>
                 </div>
@@ -71,7 +74,7 @@
                             </table>
                          
                         <center>
-                                <button class="btnclass" @onclick=@(() => Parentmanagebox ="show")>Manage Your ContactInfo</button>
+                                <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your ContactInfo</button>
                         </center>
                     </div>
                 </div>
@@ -82,7 +85,7 @@
                         <p class="card-title">AddressInfo</p>
                             <p class="card-description" style="color:white;">@i.ADDRESS</p>
                         <center>
-                                <button class="btnclass" @onclick=@(() => Parentmanagebox ="show")>Manage Your AddressInfo</button>
+                                <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your AddressInfo</button>
                         </center>
                     </div>
                 </div>
@@ -117,7 +120,7 @@
                                 </tr>
                             </table>
                         <center>
-                                <button class="btnclass" @onclick=@(() => Parentmanagebox ="show")>Manage Your @educationDetails.TITLE Info</button>
+                                <button class="btnclass" >Manage Your @educationDetails.TITLE Info</button>
                         </center>
                     </div>
                 </div>
@@ -152,7 +155,7 @@
                         </div>
 
                             <center>
-                            <button class="btnclass" @onclick=@(() => Parentmanagebox ="show")>Manage Your Info</button>
+                            <button class="btnclass" >Manage Your Info</button>
                             </center>
                         </div>
                     </div>
@@ -160,14 +163,14 @@
         </div>
     </div>
 </div>
-<div class="@Parentmanagebox">
-<button type="button" class="popupbtn" @onclick=@(() => Parentmanagebox ="hide")><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
 
-
-<EditTemplate>
-        <ProfilePopUpPage />
-</EditTemplate>
-</div>
+@if(editTemplate)
+{
+    <button type="button" class="popupbtn" @onclick=@(() => editTemplate = false)><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+    <EditTemplate>
+            <ProfilePopUpPage />
+    </EditTemplate>
+}
 
 
 @code {
@@ -179,12 +182,14 @@
     private string? EducationDetailsContent { get; set; }
     private string? ExperienceDetailsContent { get; set; }
 
-    private string? Parentmanagebox { get; set; } = "hide";
+  
 
     private string? OnChooseFile { get; set; }
     private string? ProFilePhotoManagebox { get; set; }
     private string? imageSource;
     private string? Cource { get; set; }
+
+    private bool editTemplate { get; set; }
 
 
 

@@ -30,6 +30,14 @@ namespace MyWebPage2.Data
             List<tblUserInfo> User = dataAccessLayer.GetPersonalInfo().ToList();
             return User;
         }
+
+
+        //After Deleteable 
+        public tblUserInfo[] GetPersonalInfo1()
+        {
+            tblUserInfo[] User = dataAccessLayer.GetPersonalInfo1();
+            return User;
+        }
         public bool UserCheck(tblUser checkUser )
         {
             bool result = false;

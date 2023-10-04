@@ -9,8 +9,8 @@ string DataBase = builder.Configuration.GetSection("DefaultConnection").GetValue
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<UserServices>();
+//builder.Services.AddSingleton(DataBase);
 
 
 builder.Services.AddSyncfusionBlazor();

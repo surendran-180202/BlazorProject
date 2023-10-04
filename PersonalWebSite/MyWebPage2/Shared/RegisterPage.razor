@@ -2,7 +2,7 @@
         <div class="form-container">
             <h4>Register</h4>
             <input type="text" placeholder="Enter Your Name" @bind="_user.USERNAME">
-            <input type="text" placeholder="Enter Your Email" @bind="_user.EMAIL">
+            <input type="email" placeholder="Enter Your Email" @bind="_user.EMAIL">
             <input type="text" placeholder="Enter Your Phone Number" @bind="_user.PHONE">
             <input type="password" placeholder="enter your password" @bind="_user.PASSWORD">
             <input type="@passwordClass" placeholder="Conform password" @bind="ConformPassword">
@@ -20,6 +20,9 @@
     private string? ConformPassword { get; set; }
     private string? passwordClass { get; set; }
 
+    [Parameter]
+    public EventCallback<bool> OnRegister { get; set; }
+    protected bool IsTrue { get; set; }
 
     protected override void OnInitialized()
     {
@@ -35,7 +38,13 @@
         if(_user.PASSWORD.Equals(ConformPassword) && Validation.EmailValidation(_user.EMAIL))
         {
             userService.Create(_user);
+            OnUserRegister();
         }
+    }
+    protected async Task OnUserRegister()
+    {
+        IsTrue = true;
+        await OnRegister.InvokeAsync(IsTrue);
     }
   
 
