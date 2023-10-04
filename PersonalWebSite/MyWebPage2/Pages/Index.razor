@@ -1,9 +1,7 @@
 ﻿@page "/"
 <PageTitle>Index</PageTitle>
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
-     
     <MotivationQuote motivationQuote=@motivationQuote VType="string" />
-  
     <div class="UserImageDesign"></div>
         <div class="GreetingText">
         <img src="css/images/PAGif2.gif"  />
@@ -11,7 +9,7 @@
             <p class="hoverMsg">What Can I Do For You ?</p>
         </div>
 </div>
-<AcknowledgementTab Content="New User successfully Created!"/>
+
 <div class="viewComments">
     <div class="content">
         <div class="container">
@@ -28,13 +26,13 @@
         </div>
     </div>
 </div>
-<PopupImage NotificationPopUp=@popupNotification />
-
+<PopupImage Show=@popupNotification />
 @code {
     private string? imageSource;
     private string? Datetime;
     private string? CurrentUserName { get; set; }
-    private string? popupNotification { get; set; }
+    private bool popupNotification { get; set; }
+    private bool ackTab { get; set; } 
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
     List<string> motivationQuote = new List<string>();
@@ -42,7 +40,8 @@
     {
         if(userService.CurrentUserName()!=null) 
         {
-            CurrentUserName = userService.CurrentUserName(); 
+            CurrentUserName = userService.CurrentUserName();
+            ackTab = true;
         }
         else CurrentUserName = "Guest";
         imageSource = $"css/images/UserImageBgRemoved.png";
@@ -50,16 +49,16 @@
         if(DateTime.Now.Hour < 12) Datetime = "Good Morning";
         else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
         else Datetime = "Good Evening";
-      //  EducationDetails = userService.Education();
+        EducationDetails = userService.Education();
 
         motivationQuote = userService.motivationQuote();
 
-        popupNotification = "notificationBoxHidePopup";
+      
     }
     protected override async Task OnInitializedAsync()
     {
         await Task.Delay(5000);
-        popupNotification = "notificationBoxShowPopup";
+        popupNotification = true;
 
     }
 

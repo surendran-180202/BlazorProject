@@ -251,10 +251,11 @@ C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\De
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\MyWebPage2.pdb
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\MyWebPage2.genruntimeconfig.cache
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\ref\MyWebPage2.dll
-C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\RegisterPage.razor.rz.scp.css
-C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\UserLoginPage.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\ProfilePopUpPage.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\PopupImage.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\MotivationQuote.razor.rz.scp.css
-C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\EditTemplate.razor.rz.scp.css
-C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Pages\LoadingAnimation.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Shared\RegisterPage.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Shared\UserLoginPage.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Template\AcknowledgementTab.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Template\EditTemplate.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Template\LoadingAnimation.razor.rz.scp.css

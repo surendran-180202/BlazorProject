@@ -1,6 +1,7 @@
-﻿<div class="@NotificationPopUp">
+﻿@if(Show)
+{
 <div class="popupbox">
-    <button type="button" class="cancelbtn" @onclick="closePopup"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
+    <button type="button" class="cancelbtn" @onclick="(()=>Show= !Show)"><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
     <div class="row">
         <div class="col-md-3">
             <img src="css/images/UserImageBgRemoved.png" />
@@ -17,13 +18,9 @@
         </div>
     </div>
 </div>
-</div>
+}
 @code {
     [Parameter]
-    public string? NotificationPopUp { get; set; } = "notificationBoxHidePopup";
-
-    private void closePopup()
-    {
-        NotificationPopUp = "notificationBoxHidePopup";
-    }
+    public bool Show { get; set; } = false;
+  
 }

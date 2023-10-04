@@ -15,7 +15,6 @@
 }
 .top-row[b-fx568spddw] {
     overflow: hidden;
-   
     position: relative;
 }
 .top-row a[b-fx568spddw] {
@@ -27,30 +26,269 @@
 }
 .top-row a:hover[b-fx568spddw] {
     color: black;
+}.Logo[b-fx568spddw]{
+     width:50px;
+     height:50px;
+     }
+.UserLogo[b-fx568spddw]{
+    width:40px;
+    height:40px;
+    background-color:white;
+    border-radius:50%;
 }
-@media (min-width: 641px) {
-    .navbar-toggler[b-fx568spddw] {
-    display: none;
-}
-.top-row[b-fx568spddw] {
-   position:fixed;
-display:flex;
-justify-content:flex-end;
-width:100%;
-   background-color:transparent;
-    
-}
-    .top-row a[b-fx568spddw] {
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
+    .UserLogo a[b-fx568spddw]{
+        padding:0;
+        margin:0;
     }
-    .top-row a:hover[b-fx568spddw] {
-        color: antiquewhite;
+    .UserImage[b-fx568spddw] {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
       
     }
-.collapse[b-fx568spddw] {
-    /* Never collapse the sidebar for wide screens */
-    display: block;
+.iconContainer[b-fx568spddw] {
+    display: none;
 }
+.UserLogo:hover .iconContainer[b-fx568spddw] {
+    display: inline-block;
+    position: fixed;
+    top: 2%;
+    right: 3%;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    z-index: -1;
+    padding:1%;
+    background-color: rgb(0,0,0,0.2);
+    border-radius:20px;
+  
 }
+
+    .iconContainer i:hover[b-fx568spddw] {
+        transform: translateY(-5px);
+    }
+
+
+.iconContainer i:hover i[b-fx568spddw]::before {
+    width:300px;
+    height:20px;
+    background-color:black;
+   
+}
+.iconContainer span[b-fx568spddw]{
+    display:none;
+}
+.iconContainer:hover span[b-fx568spddw] {
+    display:block;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background-color:rgba(0,0,0,0.2);
+    padding: 5px 15px 5px 15px;
+    height: 30px;
+    border-radius: 20px;
+}
+@keyframes fadeIn-b-fx568spddw {
+    0% {
+    
+        right: 10%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0%;
+        opacity: 1;
+    }
+}
+.iconContainer i[b-fx568spddw]{
+    font-size:25px;
+}
+.iconContainer i:nth-child(1)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 6%;
+}
+
+.iconContainer i:nth-child(2)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 9%;
+}
+.iconContainer i:nth-child(3)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 12%;
+}
+.iconContainer i:nth-child(4)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 15%;
+}
+.iconContainer i:nth-child(5)[b-fx568spddw] {
+    position: fixed;
+    top: 3%;
+    right: 18%;
+}
+
+.search[b-fx568spddw] {
+}
+
+ 
+
+    .search input[b-fx568spddw] {
+        background-color: rgb(0,0,0,0.4);
+        border: none;
+        padding: 2%;
+        padding-left: 40px;
+        border-radius: 20px;
+        outline: none;
+        color: white;
+    }
+
+        .search input[b-fx568spddw]::placeholder {
+            font-size: 10px;
+        }
+
+
+
+/*Responsive */
+
+@media (max-width: 641px) {
+    .UserLogo[b-fx568spddw] {
+         position:fixed;
+         top:2%;
+         right:70%;
+         width:30px;
+         height:30px;
+     
+    }
+    .UserImage[b-fx568spddw] {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .iconContainer[b-fx568spddw] {
+        display: inline-block;
+        position: fixed;
+        top: 1%;
+        right:18%;
+        width: 64%;
+        height: 40px;
+        cursor: pointer;
+        color: white;
+        z-index: -1;
+        padding: 1%;
+        background-color: rgb(0,0,0,0.2);
+        border-radius: 20px;
+    }
+        .iconContainer i[b-fx568spddw] {
+            display: block;
+            position: fixed;
+            z-index: 1000;
+        }
+
+            .iconContainer i:nth-child(1)[b-fx568spddw] {
+               top:2%;
+               right:20%;
+              
+            }
+
+            .iconContainer i:nth-child(2)[b-fx568spddw] {
+                top: 2%;
+                right: 30%;
+            }
+
+            .iconContainer i:nth-child(3)[b-fx568spddw] {
+                top: 2%;
+                right: 40%;
+            }
+
+            .iconContainer i:nth-child(4)[b-fx568spddw] {
+                top: 2%;
+                right: 50%;
+            }
+
+            .iconContainer i:nth-child(5)[b-fx568spddw] {
+                top: 2%;
+                right: 60%;
+            }
+
+
+
+}
+
+    @media (min-width: 641px) {
+        .navbar-toggler[b-fx568spddw] {
+            display: none;
+        }
+
+        .top-row[b-fx568spddw] {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            background-color: transparent;
+        }
+
+            .top-row a[b-fx568spddw] {
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+            }
+
+                .top-row a:hover[b-fx568spddw] {
+                    color: antiquewhite;
+                }
+
+        .UserLogo[b-fx568spddw] {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+        }
+
+        .collapse[b-fx568spddw] {
+            /* Never collapse the sidebar for wide screens */
+            display: block;
+        }
+        .search i[b-fx568spddw] {
+            position: absolute;
+            top: 40%;
+            left: 42%;
+        }
+   
+    }
+
+    @media screen (min-width: 1439px) {
+        .UserLogo:hover .iconContainer[b-fx568spddw] {
+            width: 200px;
+            /* animation: fadeIn 1s;*/
+        }
+    }
+
+    .block[b-fx568spddw] {
+        display: none;
+    }
+
+    .show[b-fx568spddw] {
+        display: block;
+    }
+
+    .cancelbtn[b-fx568spddw] {
+        background-color: transparent;
+        border: none;
+        position: fixed;
+        right: 38%;
+        top: 20%;
+        z-index: 100;
+        animation: opacity-b-fx568spddw 5s forwards;
+    }
+
+    @keyframes opacity-b-fx568spddw {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }

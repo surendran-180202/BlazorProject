@@ -18,12 +18,12 @@
     private string? LoginUserName { get; set; }
     private string? LoginPassword { get; set; }
     private string? passwordClass { get; set; }
-
     string? warning;
-    private void closePopUpLoginIn()
-    {
 
-    }
+    [Parameter]
+    public EventCallback<bool> OnLogin { get; set; }
+    protected bool IsTrue { get; set; }
+
     protected override void OnInitialized()
     {
         _user.USERNAME = null;
@@ -36,13 +36,23 @@
         if(userService.UserCheck(_user))
         {
             warning = null;           
-            uriHelper.NavigateTo("/");
+            OnUserLoginTrue();
         }
         else
         {
             warning = "Invalid UserName or Password";
         }
     }
+
+
+    protected async Task OnUserLoginTrue()
+    {
+        IsTrue = true;
+        await OnLogin.InvokeAsync(IsTrue);
+    }
+
+
+
     private void show_password()
     {
         if(passwordClass == "password") passwordClass = "text";
