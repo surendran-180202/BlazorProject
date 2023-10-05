@@ -1,6 +1,7 @@
 ﻿@page "/"
 <PageTitle>Index</PageTitle>
 <div class="body" style="background-image:url('../css/images/image7.jpg'); " >
+   @* <video autoplay muted loop class="videoBackground"><source src="../Storage/videoBackground2.mp4" type="video/mp4"></video>*@
     <MotivationQuote motivationQuote=@motivationQuote VType="string" />
     <div class="UserImageDesign"></div>
         <div class="GreetingText">
@@ -18,7 +19,9 @@
                 {
                    @foreach(var i in educationDetails.COMMENT)
                    {
-                           <div class="UserIcon"><img src=@imageSource/></div><br/>
+                        <div class="UserIcon"><UserImage className="UserImage2"/></div>
+
+                        <br />
                            <div class="message">@i.COMMENT </div>
                    }
                 }
@@ -28,11 +31,11 @@
 </div>
 <PopupImage Show=@popupNotification />
 @code {
-    private string? imageSource;
+
     private string? Datetime;
     private string? CurrentUserName { get; set; }
     private bool popupNotification { get; set; }
-    private bool ackTab { get; set; } 
+
 
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
     List<string> motivationQuote = new List<string>();
@@ -41,21 +44,17 @@
         if(userService.CurrentUserName()!=null) 
         {
             CurrentUserName = userService.CurrentUserName();
-            ackTab = true;
+            EducationDetails = userService.Education();
+            motivationQuote = userService.motivationQuote();
+            notificationPopUp();
         }
         else CurrentUserName = "Guest";
-        imageSource = $"css/images/UserImageBgRemoved.png";
 
         if(DateTime.Now.Hour < 12) Datetime = "Good Morning";
         else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
         else Datetime = "Good Evening";
-        EducationDetails = userService.Education();
-
-        motivationQuote = userService.motivationQuote();
-
-      
     }
-    protected override async Task OnInitializedAsync()
+    protected  async Task notificationPopUp()
     {
         await Task.Delay(5000);
         popupNotification = true;

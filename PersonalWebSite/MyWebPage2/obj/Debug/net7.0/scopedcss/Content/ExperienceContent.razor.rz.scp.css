@@ -1,0 +1,32 @@
+/*tblstyel */
+.table[b-6us2e5veaj] {
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	background-color: transparent;
+	color: white;
+}
+
+	.table th[b-6us2e5veaj] {
+		width: 50%;
+		padding: 5px;
+	}
+
+	 .table th[b-6us2e5veaj] {
+		text-align: center;
+		padding: 8px;
+	}
+
+	.table tr:nth-child(even)[b-6us2e5veaj] {
+		background-color: rgba(173, 216, 230,0.1);
+	}
+
+.experienceOverflow[b-6us2e5veaj] {
+	overflow-x: auto;
+	overflow-y: hidden;
+}

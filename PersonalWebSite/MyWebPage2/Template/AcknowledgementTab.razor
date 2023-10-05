@@ -1,13 +1,12 @@
 ﻿@if(Show)
 {
  <section class=@active>
-    <span class="overlay" @onclick="(() => Show = !Show)">surendran</span>
     <div class="modal-box">
         <i class="fa-regular fa-circle-check"></i>
         <h2>Completed</h2>
         <h3>@Content</h3>
         <div class="buttons">
-                <button class="close-btn" @onclick="(() => Show = !Show)">Ok, Close</button>
+              <button class="close-btn" @onclick="(() => Show = !Show)">Ok, Close</button>
         </div>
     </div>
 </section>

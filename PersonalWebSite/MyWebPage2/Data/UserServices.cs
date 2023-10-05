@@ -15,6 +15,10 @@ namespace MyWebPage2.Data
         {
             return DataAccessLayer.currentUserName;
         }
+        public byte[]? CurrentUserImage()
+        {
+            return DataAccessLayer.currentUserImage;
+        }
         public string Create(tblUser newUser)
         {
             dataAccessLayer.AddUser(newUser);
@@ -28,14 +32,6 @@ namespace MyWebPage2.Data
         public List<tblUserInfo> GetPersonalInfo()
         {
             List<tblUserInfo> User = dataAccessLayer.GetPersonalInfo().ToList();
-            return User;
-        }
-
-
-        //After Deleteable 
-        public tblUserInfo[] GetPersonalInfo1()
-        {
-            tblUserInfo[] User = dataAccessLayer.GetPersonalInfo1();
             return User;
         }
         public bool UserCheck(tblUser checkUser )

@@ -9,12 +9,7 @@
 	padding:2px;
 	overflow:hidden;
 }
-.image[b-ay5ry5vugk] {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
 
-}
 .profilePhoto i[b-ay5ry5vugk]{
  position:relative;
  top:-30%;
@@ -153,34 +148,6 @@
 }
 
 
-/*tblstyel */
-.table[b-ay5ry5vugk], .table1[b-ay5ry5vugk] {
-	border-radius: 5px;
-	font-size: 15px;
-	font-weight: normal;
-	border: none;
-	border-collapse: collapse;
-	width: 100%;
-	max-width: 100%;
-	white-space: nowrap;
-	background-color: transparent;
-	color: white;
-}
-	.table th[b-ay5ry5vugk]{
-		width: 50%;
-		padding:5px;
-	}
-	.table1 td[b-ay5ry5vugk], .table1 th[b-ay5ry5vugk] {
-		text-align: center;
-		padding: 8px;
-	}
-	.table1 tr:nth-child(even)[b-ay5ry5vugk] {
-		background-color: rgba(173, 216, 230,0.1);
-	}
-.experienceOverflow[b-ay5ry5vugk] {
-	overflow-x: auto;
-	overflow-y: hidden;
-}
 .addmorebtn[b-ay5ry5vugk]{
 	position:fixed;
 	bottom:10px;

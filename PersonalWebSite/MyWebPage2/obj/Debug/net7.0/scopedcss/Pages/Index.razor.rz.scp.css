@@ -10,6 +10,17 @@
     backdrop-filter: blur(100px);
 
 }
+.videoBackground[b-zllp0tmasc] {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
 
 .UserImageDesign[b-zllp0tmasc] {
     position: fixed;
@@ -114,20 +125,13 @@
     animation-name: change;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-
+   
 }
 .UserIcon[b-zllp0tmasc]{
     width:10px;
     height:10px;
 }
-.UserIcon img[b-zllp0tmasc]{
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    margin-top:40px;
-    
 
-}
 
 
 

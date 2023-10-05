@@ -1,0 +1,31 @@
+﻿
+    @if(education.TITLE.ToLower().Contains("school")) Cource = "Class"; else Cource = "Degree";
+    <table class="table">
+        <tr>
+            <th>Year</th>
+            <td>@education.YEAR</td>
+        </tr>
+        <tr>
+            <th>@Cource</th>
+            <td>@education.CLASS</td>
+        </tr>
+        <tr>
+            <th>Institute:</th>
+            <td>@education.INSTITUTE</td>
+        </tr>
+        <tr>
+            <th>CGPA</th>
+            <td>@education.PERCENTAGE</td>
+        </tr>
+    </table>
+    <center>
+        <button class="btnclass">Manage Your @education.TITLE Info</button>
+    </center>
+
+
+@code {
+    [Parameter]
+    public tblEducationDetails education { get; set; }
+
+    private string? Cource { get; set; }
+}

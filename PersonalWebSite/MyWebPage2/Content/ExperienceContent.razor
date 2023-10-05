@@ -1,0 +1,23 @@
+﻿<table class="table">
+    <tr>
+        <th>Year</th>
+        <th>Cource</th>
+        <th>Institute</th>
+    </tr>
+    @foreach(var experience in Experience)
+    {
+        <tr>
+            <td>@experience.YEAR</td>
+            <td>@experience.LEARING</td>
+            <td>@experience.INSTITUTE</td>
+            <td><i class='far fa-edit'></i>  <i class='fas fa-trash-alt'></i></td>
+        </tr>
+    }
+</table>
+
+@code {
+    [Parameter]
+    public List<tblExperience>? Experience { get; set; }
+
+
+}

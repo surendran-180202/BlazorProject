@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UTEyMLu69jCFHQQwe1KLAduDnaDZIgWF1kFYM2nUTIo=",
+  "Hash": "uVt+6BFjOsqXWWhnXcUpzv2ih3vk61/0N29fvyS+IRc=",
   "Source": "MyWebPage2",
   "BasePath": "_content/MyWebPage2",
   "Mode": "Default",
@@ -629,6 +629,23 @@
       "OriginalItemSpec": "wwwroot\\Storage\\images.jfif"
     },
     {
+      "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\marvels-spider-man-2-2023-games-playstation-5-marvel-2560x1440-6501.jpg",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "Storage/marvels-spider-man-2-2023-games-playstation-5-marvel-2560x1440-6501.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Storage\\marvels-spider-man-2-2023-games-playstation-5-marvel-2560x1440-6501.jpg"
+    },
+    {
       "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\passport size.png",
       "SourceId": "MyWebPage2",
       "SourceType": "Discovered",
@@ -644,6 +661,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Storage\\passport size.png"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\videoBackground.mp4",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "Storage/videoBackground.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Storage\\videoBackground.mp4"
+    },
+    {
+      "Identity": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\videoBackground2.mp4",
+      "SourceId": "MyWebPage2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\",
+      "BasePath": "_content/MyWebPage2",
+      "RelativePath": "Storage/videoBackground2.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Storage\\videoBackground2.mp4"
     },
     {
       "Identity": "C:\\Users\\Administrator\\.nuget\\packages\\syncfusion.blazor.buttons\\22.2.9\\staticwebassets\\scripts\\sf-floating-action-button.min.js",

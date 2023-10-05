@@ -1,0 +1,18 @@
+﻿<div class="content">
+       <div class="card">
+          <div class="container-card bg-blue-box">
+            <p class="card-title">@Title</p>
+            @ChildContent
+          </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+
+}

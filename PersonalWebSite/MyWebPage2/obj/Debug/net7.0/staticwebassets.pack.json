@@ -33,8 +33,20 @@
       "PackagePath": "staticwebassets\\Storage\\images.jfif"
     },
     {
+      "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\marvels-spider-man-2-2023-games-playstation-5-marvel-2560x1440-6501.jpg",
+      "PackagePath": "staticwebassets\\Storage\\marvels-spider-man-2-2023-games-playstation-5-marvel-2560x1440-6501.jpg"
+    },
+    {
       "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\passport size.png",
       "PackagePath": "staticwebassets\\Storage\\passport size.png"
+    },
+    {
+      "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\videoBackground.mp4",
+      "PackagePath": "staticwebassets\\Storage\\videoBackground.mp4"
+    },
+    {
+      "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\Storage\\videoBackground2.mp4",
+      "PackagePath": "staticwebassets\\Storage\\videoBackground2.mp4"
     },
     {
       "Id": "C:\\Education\\Trining\\Try\\Blazor try\\Blazor Git\\PersonalWebSite\\MyWebPage2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
