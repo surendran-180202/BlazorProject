@@ -1,0 +1,32 @@
+﻿/*tblstyel */
+.table {
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	background-color: transparent;
+	color: white;
+}
+
+	.table th {
+		width: 50%;
+		padding: 5px;
+	}
+
+	 .table th {
+		text-align: center;
+		padding: 8px;
+	}
+
+	.table tr:nth-child(even) {
+		background-color: rgba(173, 216, 230,0.1);
+	}
+
+.experienceOverflow {
+	overflow-x: auto;
+	overflow-y: hidden;
+}

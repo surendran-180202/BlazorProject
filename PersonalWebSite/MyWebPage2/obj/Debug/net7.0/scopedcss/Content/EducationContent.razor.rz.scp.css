@@ -1,0 +1,31 @@
+
+.table[b-2mnqj8yljp] {
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	background-color: transparent;
+	color: white;
+}
+	.table th[b-2mnqj8yljp] {
+		width: 50%;
+		padding: 5px;
+	}
+
+.btnclass[b-2mnqj8yljp] {
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 15px;
+	font-size: 12px;
+	color: lightgoldenrodyellow;
+	background-color: transparent;
+}
+
+.experienceOverflow[b-2mnqj8yljp] {
+	overflow-x: auto;
+	overflow-y: hidden;
+}

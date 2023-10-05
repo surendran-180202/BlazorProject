@@ -35,6 +35,7 @@
     height:40px;
     background-color:white;
     border-radius:50%;
+    z-index:3;
 }
     .UserLogo a{
         padding:0;
@@ -58,7 +59,7 @@
     height: 40px;
     cursor: pointer;
     color: white;
-    z-index: -1;
+    z-index:-1;
     padding:1%;
     background-color: rgb(0,0,0,0.2);
     border-radius:20px;

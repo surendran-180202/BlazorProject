@@ -26,14 +26,14 @@
                         <div class="profilePhoto">
                             @if(CurrentImage)
                             {
-                                <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" for='foo' />
+                                 <UserImage className="UserImage3" />
                             }
                             else
                             {
                                 <img src=@FileSource class="image" for='foo' />
                             }
-                            <InputFile OnChange="OnInputFileChange" directory accept="image/*" Id='foo' style="display:none"></InputFile>
-                            <label for='foo' class="label"><i class='fas fa-pen' style="color:white;"></i></label>
+                         <InputFile OnChange="OnInputFileChange" directory accept="image/*" Id='InputFile' style="display:none"></InputFile>
+                        <label for='InputFile' class="label"><i class='fas fa-pen' style="color:white;"></i></label>
                         </div>
                         <p contenteditable="true">
                             I already want to take a nap tomorrow.
@@ -57,7 +57,7 @@
 
 
     List<tblUserInfo>? ListUserInfo = new List<tblUserInfo>();
-    
+
     public string? FileSource { get; set; }
     public string? Imagepath { get; set; }
     IReadOnlyList<IBrowserFile> selectedFiles;
@@ -67,9 +67,10 @@
 
     protected override async Task OnInitializedAsync()
     {
-        ListUserInfo =  userService.GetPersonalInfo();
-        
-
+        if (userService.CurrentUserName() != null)
+        {
+            ListUserInfo = userService.GetPersonalInfo();
+        }
     }
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
@@ -83,7 +84,7 @@
     {
         foreach(var file in selectedFiles)
         {
-            Stream stream = file.OpenReadStream(1024*300);
+            Stream stream = file.OpenReadStream(1024*1000);
             var path = $"{Environment.WebRootPath}\\Storage\\{file.Name}";
             FileStream fs = File.Create(path);
             await stream.CopyToAsync(fs);

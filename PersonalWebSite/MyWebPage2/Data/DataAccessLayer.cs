@@ -9,6 +9,8 @@ public class DataAccessLayer
 {
     internal static int currentUserID { get; set; }
     internal static string? currentUserName { get; set; }
+    internal static byte[]? currentUserImage { get; set; }
+
     public static string connectionString = "Data Source=MS-00715;Initial Catalog=SBPERSONAL;Integrated Security=True";
     public List<tblUser> GetAllUser()
     {
@@ -81,13 +83,15 @@ public class DataAccessLayer
         tblUserInfo data = new tblUserInfo();
         using(SqlConnection con = new SqlConnection(connectionString))
         {
-            SqlCommand cmd = new SqlCommand("Select * from tblUserInfo", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblUserInfo where USERID=@userid", con);
+            cmd.Parameters.AddWithValue("@userid", currentUserID);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
             {
                 data.USERID = reader.GetInt32(0);
                 data.USERIMAGE = (Byte[]) reader[1];
+                currentUserImage = (Byte[]) reader[1];
                 data.USERBIO = reader.GetString(2);
                 data.NAME = reader.GetString(3);
                 data.LASTNAME = reader.GetString(4);
@@ -101,35 +105,6 @@ public class DataAccessLayer
         }
         return PersonDetails;
     }
-
-    //array Try After try - deleteable
-    public tblUserInfo[] GetPersonalInfo1()
-    {
-        List<tblUserInfo> PersonDetails = new List<tblUserInfo>();
-        using(SqlConnection con = new SqlConnection(connectionString))
-        {
-            SqlCommand cmd = new SqlCommand("Select * from tblUserInfo", con);
-            con.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            while(reader.Read())
-            {
-                tblUserInfo data = new tblUserInfo();
-                data.USERID = reader.GetInt32(0);
-                data.USERIMAGE = (Byte[]) reader[1];
-                data.USERBIO = reader.GetString(2);
-                data.NAME = reader.GetString(3);
-                data.LASTNAME = reader.GetString(4);
-                data.BIRTHDAY = reader.GetDateTime(5);
-                data.GENDER = reader.GetString(6);
-                data.EMAIL = reader.GetString(7);
-                data.PHONE = reader.GetInt64(8);
-                data.ADDRESS = reader.GetString(9);
-                PersonDetails.Add(data);
-            }
-        }
-        return PersonDetails.ToArray();
-    }
-
     public void AddUser(tblUser user)
     {
         string strPersonalQuery = "insert into tblUserData(USERNAME,EMAIL,PHONE,PASSWORD)values (@username,@email,@phone,@password)";
@@ -150,17 +125,16 @@ public class DataAccessLayer
         bool result = false;
         using(SqlConnection con = new SqlConnection(connectionString))
         {
-            SqlCommand cmd = new SqlCommand("Select * from tblUserData", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblUserData where USERNAME=@username and PASSWORD=password", con);
+            cmd.Parameters.AddWithValue("@username", checkdata.USERNAME);
+            cmd.Parameters.AddWithValue("@password", checkdata.PASSWORD);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
             {
-                if(reader.GetString(1).Equals(checkdata.USERNAME) && reader.GetString(4).Equals(checkdata.PASSWORD))
-                {
-                    currentUserID = reader.GetInt32(0);
-                    currentUserName =reader.GetString(1);
-                    result = true;
-                }
+                currentUserID = reader.GetInt32(0);
+                currentUserName =reader.GetString(1);
+                result = true;
             }
         }
         return result;

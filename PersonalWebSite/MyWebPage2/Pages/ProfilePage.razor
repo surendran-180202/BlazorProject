@@ -20,19 +20,17 @@
        
     </div>
     <div class="col-md-7">
-        @foreach(var i in tblUserInfo)
+        @if(PersonalContentShow)
         {
-        <div class="@PersonalDetailsContent">
             <center>
                 <h3>welcome Mr.Surendran</h3>
                 <div class="profileBackground">
-                        <div class="profilePhoto"> <img src="@($"data:image/png;base64,{Convert.ToBase64String(i.USERIMAGE)}")" class="image" /><i class='far fa-edit' @onclick=@(() => editTemplate = true) /></div>
+                        <div class="profilePhoto"> <UserImage className="UserImage3"/><i class='far fa-edit' @onclick=@(() => editTemplate = true) /></div>
                 </div>
             </center>
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
-                        <p class="card-title">PersonalInfo</p>
+            @foreach(var i in tblUserInfo)
+            {
+                <CardTemplate Title="PersonalInfo">
                         <table class="table">
                            <tr>
                                 <th>Name</th>
@@ -54,13 +52,9 @@
                         <center>
                                 <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your PersonalInfo</button>
                         </center>
-                    </div>
-                </div>
-            </div>
+                </CardTemplate>
 
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
+                <CardTemplate Title="ContactInfo">
                         <p class="card-title">ContactInfo</p>
                             <table class="table">
                                 <tr>
@@ -72,95 +66,41 @@
                                     <td>@i.EMAIL</td>
                                 </tr>
                             </table>
-                         
                         <center>
                                 <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your ContactInfo</button>
                         </center>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
-                        <p class="card-title">AddressInfo</p>
+                </CardTemplate>
+
+                <CardTemplate Title="AddressInfo">
+                        
                             <p class="card-description" style="color:white;">@i.ADDRESS</p>
                         <center>
                                 <button class="btnclass" @onclick=@(() => editTemplate = true)>Manage Your AddressInfo</button>
                         </center>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </CardTemplate>
+            
 }
+        }
 
-   <div class="@EducationDetailsContent">
-        @foreach(var educationDetails in EducationDetails1)
-           {
-            <div class="content">
-                <div class="card">
-                    <div class="container-card bg-blue-box">
-                         <p class="card-title">@educationDetails.TITLE</p>
-                            @if(educationDetails.TITLE.ToLower().Contains("school")) Cource = "Class"; else Cource = "Degree";
-                            <table class="table">
-                                <tr>
-                                    <th>Year</th>
-                                    <td>@educationDetails.YEAR</td>
-                                </tr>
-                                <tr>
-                                    <th>@Cource</th>
-                                    <td>@educationDetails.CLASS</td>
-                                </tr>
-                                <tr>
-                                    <th>Institute:</th>
-                                    <td>@educationDetails.INSTITUTE</td>
-                                </tr>
-                                <tr>
-                                    <th>CGPA</th>
-                                    <td>@educationDetails.PERCENTAGE</td>
-                                </tr>
-                            </table>
-                        <center>
-                                <button class="btnclass" >Manage Your @educationDetails.TITLE Info</button>
-                        </center>
-                    </div>
-                </div>
-            </div>
+        @if(EducationContentShow)
+        {
+            @foreach (var educationDetails in EducationDetails1)
+            {
+                <CardTemplate Title="@educationDetails.TITLE">
+                    <EducationContent education=@educationDetails></EducationContent>
+                </CardTemplate>
             }
             <button class="addmorebtn">  <i class="fa fa-plus-circle"></i></button>
-        </div>
-        <div class="@ExperienceDetailsContent">
-                <div class="content">
-                    <div class="card">
-                        <div class="container-card bg-blue-box">
-                            <p class="card-title">Experience</p>
-                         <div class="experienceOverflow">
-
-                   
-                           <table class="table1">
-                               <tr>
-                                <th>Year</th>
-                                <th>Cource</th>
-                                <th>Institute</th>
-                               </tr>
-                            @foreach(var experience in Experience)
-                            {
-                               <tr>
-                                    <td>@experience.YEAR</td>
-                                    <td>@experience.LEARING</td>
-                                    <td>@experience.INSTITUTE</td>
-                                    <td><i class='far fa-edit'></i> <i class='fas fa-trash-alt'></i></td>
-                               </tr>
-                            }
-                           </table>
-                        </div>
-
-                            <center>
-                            <button class="btnclass" >Manage Your Info</button>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-        </div>
+        }
+        @if(ExperienceContentShow)
+        {
+              <CardTemplate Title="Experience">
+                <ExperienceContent Experience=@Experience  />
+              </CardTemplate>
+                     
+        }
+          
+     
     </div>
 </div>
 
@@ -177,61 +117,45 @@
     List<tblEducationDetails>? EducationDetails1 = new List<tblEducationDetails>();
     List<tblExperience>? Experience = new List<tblExperience>();
     List<tblUserInfo>? tblUserInfo = new List<tblUserInfo>();
+    tblUserInfo[]? tblUser;
 
-    private string? PersonalDetailsContent { get; set; }
-    private string? EducationDetailsContent { get; set; }
-    private string? ExperienceDetailsContent { get; set; }
-
-  
-
-    private string? OnChooseFile { get; set; }
-    private string? ProFilePhotoManagebox { get; set; }
-    private string? imageSource;
-    private string? Cource { get; set; }
-
+    private bool PersonalContentShow { get; set; } = true;
+    private bool EducationContentShow { get; set; } = false;
+    private bool ExperienceContentShow { get; set; } = false;
     private bool editTemplate { get; set; }
-
-
-
 
     protected override async Task OnInitializedAsync()
     {
-        tblUserInfo = userService.GetPersonalInfo();
-       
     }
 
     protected override void OnInitialized()
     {
-        
-        PersonalDetailsContent = "show";
-        EducationDetailsContent = "hide";
-        ExperienceDetailsContent = "hide";
-        imageSource = $"css/images/UserImage{1}.png";
-        EducationDetails1 = userService.Education();
-        Experience = userService.Experience();
-        // tblUserInfo = userService.GetPersonalInfo();
-  
+        if(userService.CurrentUserName()!=null) 
+        {
+            EducationDetails1 = userService.Education();
+            Experience = userService.Experience();
+            tblUserInfo = userService.GetPersonalInfo();
+        }
     }
 
     private void PersonalDetails()
     {
-        PersonalDetailsContent = "show";
-        EducationDetailsContent = "hide";
-        ExperienceDetailsContent = "hide";
+        PersonalContentShow = true;
+        EducationContentShow = false;
+        ExperienceContentShow = false;
 
     }
     private void EducationDetails()
     {
-        PersonalDetailsContent = "hide";
-        EducationDetailsContent = "show";
-        ExperienceDetailsContent = "hide";
+        PersonalContentShow = false;
+        EducationContentShow = true;
+        ExperienceContentShow = false;
     }
     private void ExperienceDetails()
     {
-        PersonalDetailsContent = "hide";
-        EducationDetailsContent = "hide";
-        ExperienceDetailsContent = "show";
-
+        PersonalContentShow = false;
+        EducationContentShow = false;
+        ExperienceContentShow = true;
     }
   
    
