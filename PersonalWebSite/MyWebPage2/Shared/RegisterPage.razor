@@ -1,4 +1,8 @@
-﻿    <div class="form-popup">
+﻿@if(show)
+{
+<form>    
+<div class="form-popup">
+    <button type="button" class="cancelbtn" @onclick=cancelRegister><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
         <div class="form-container">
             <h4>Register</h4>
             <input type="text" placeholder="Enter Your Name" @bind="_user.USERNAME">
@@ -13,7 +17,8 @@
         </div>
     </div>
 
-
+    </form>
+}
 
 @code {
     tblUser _user = new tblUser();
@@ -23,6 +28,17 @@
     [Parameter]
     public EventCallback<bool> OnRegister { get; set; }
     protected bool IsTrue { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> Oncancel { get; set; }
+    protected bool IsCancel { get; set; }
+
+
+
+    [Parameter]
+    public bool show { get; set; }
+
+
 
     protected override void OnInitialized()
     {
@@ -46,7 +62,13 @@
         IsTrue = true;
         await OnRegister.InvokeAsync(IsTrue);
     }
-  
+
+    private async Task cancelRegister()
+    {
+        IsCancel = true;
+        await Oncancel.InvokeAsync(IsCancel);
+    }
+
 
 
 }

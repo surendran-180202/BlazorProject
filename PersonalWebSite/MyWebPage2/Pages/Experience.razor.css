@@ -36,4 +36,107 @@ td {
 
 
 
+/*new design*/
 
+.nav{
+
+}
+    .nav span:nth-child(1)
+    {
+        position:fixed;
+        top:50%;
+        left:5%;
+
+    }
+    .nav span:nth-child(2) {
+        position: fixed;
+        top: 50%;
+        right: 5%;
+    }
+    .nav span i {
+        font-size:50px;
+        color:white;
+    }
+
+
+
+
+/*new*/
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow:hidden;
+  
+}
+
+.wrap {
+
+    flex-wrap: wrap;
+}
+
+
+.chatUser{
+    
+}
+    .chatUser span{
+
+    }
+    .chatUser span img{
+        width:30px;
+        border-radius:50px;
+    }
+.flex-item {
+    padding: -5px;
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.3);
+    /*  background: url("/css/images/image1.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+   
+}
+    .flex-item span {
+        padding: 5px;
+        width: 30px;
+        border-radius: 50%;
+    }
+        .flex-item span img {
+            width: 30px;
+            border-radius: 50%;
+         
+        }
+    .flex-item img {
+        width: 100%;
+        border-radius: 20px;
+      
+    }
+    .flex-item p {
+        position: absolute;
+        margin:-40px 0 0 220px;
+   
+        color: white;
+        font-weight:500;
+        cursor:pointer;
+    }
+.content {
+   display:none;
+}
+.flex-item:hover .content {
+    width: 100%;
+    display: block;
+    color: white;
+    margin: -25% 0 0 0;
+ 
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 20px;
+}
+.iconContainer {
+    position:absolute;
+    color: white;
+    font-size: 20px;
+}

@@ -20,6 +20,7 @@
                     </div>
                 </div>
               }
+    
 
         @if(ShowRHide)
         {
@@ -54,21 +55,30 @@
                      </div>
                 </div>
             </div>
+          
         }
         </div>
+        @if(experience)
+        {
+    <CardTemplate Title="Experience">
+        <ExperienceContent Experience=@Experience />
+    </CardTemplate>
+        }
     </div>
 
 
 @code {
     List<tblEducationDetails>? EducationDetails = new List<tblEducationDetails>();
+    List<tblExperience>? Experience = new List<tblExperience>();
 
- 
     private string? NewComment { get; set; }
     private string? Title { get; set; }
     private string? Cource { get; set; }
     private string? afterSubmit { get; set; }
 
     private bool ShowRHide { get; set; } = false;
+
+    private bool experience { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -77,7 +87,12 @@
     private void LoadEducation()
     {
         System.Threading.Thread.Sleep(2000);
-        EducationDetails = userService.Education();
+        if (userService.CurrentUserName() != null)
+        {
+            EducationDetails = userService.Education();
+            Experience = userService.Experience();
+            experience = true;
+        }
     }
     private void newComment()
     {

@@ -2,7 +2,7 @@
 {
  <section class=@active>
     <div class="modal-box">
-        <i class="fa-regular fa-circle-check"></i>
+            <i class='fas fa-smile' style='font-size:36px'></i>
         <h2>Completed</h2>
         <h3>@Content</h3>
         <div class="buttons">
@@ -17,7 +17,7 @@
     [Parameter]
     public bool Show { get; set; } = false;
 
-    private string active = "";
+    private string? active { get; set; }
     protected override async Task OnInitializedAsync()
     {
         await Task.Run(LoadEducation);

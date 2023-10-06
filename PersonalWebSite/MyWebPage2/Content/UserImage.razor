@@ -6,41 +6,19 @@
     <div class=@className><i class='fas fa-user-circle'></i></div>
    
 }
-<style>
-    .UserImage {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    .UserImage2 {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin-top: 40px;
-    }
-
-    .UserImage3 {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-    }
-
-    .UserImage i {
-       padding:1px;
-        font-size:39px;
-        color: darkgrey;
-    }
-</style>
 
 @code {
     [Parameter]
     public string? className { get; set; }
     private byte[]? imageData { get; set; }
-    protected override void OnInitialized()
-    {
-        imageData = userService.CurrentUserImage();
-    }
+    //protected override void OnInitialized()
+    //{
+    //    imageData = userService.CurrentUserImage();
+    //}
 
+    protected override async Task OnInitializedAsync()
+    {
+        imageData = await userService.CurrentUserImage1();
+    }
 
 }
