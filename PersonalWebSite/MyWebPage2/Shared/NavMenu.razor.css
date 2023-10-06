@@ -151,7 +151,10 @@
             font-size: 10px;
         }
 
-
+    .search i {
+        position: absolute;
+        margin: 10px 0 0 10px;
+    }
 
 /*Responsive */
 
@@ -251,11 +254,7 @@
             /* Never collapse the sidebar for wide screens */
             display: block;
         }
-        .search i {
-            position: absolute;
-            top: 40%;
-            left: 42%;
-        }
+   
    
     }
 

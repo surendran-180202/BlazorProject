@@ -19,6 +19,10 @@ namespace MyWebPage2.Data
         {
             return DataAccessLayer.currentUserImage;
         }
+        public async Task<byte[]> CurrentUserImage1()
+        {
+            return DataAccessLayer.currentUserImage;
+        }
         public string Create(tblUser newUser)
         {
             dataAccessLayer.AddUser(newUser);

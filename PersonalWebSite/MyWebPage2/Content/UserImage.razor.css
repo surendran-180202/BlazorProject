@@ -1,0 +1,34 @@
+﻿.UserImage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.UserImage2 {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-top: 40px;
+}
+
+.UserImage3 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.UserImage i {
+	padding: 1px;
+	font-size: 39px;
+	color: darkgrey;
+	background: white;
+	border-radius: 50%;
+}
+
+@media (max-width: 641px) {
+	.UserImage i {
+		
+		font-size: 28px;
+		
+	}
+}

@@ -57,3 +57,10 @@
 	font-size:8px;
 	text-align:center;
 }
+.cancelbtn{
+	border:none;
+	background-color:transparent;
+	position:absolute;
+	right:1%;
+	top:1%;
+}

@@ -61,3 +61,10 @@
 	top: 5px;
 	position: fixed;
 }
+.cancelbtn {
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	right: 1%;
+	top: 1%;
+}

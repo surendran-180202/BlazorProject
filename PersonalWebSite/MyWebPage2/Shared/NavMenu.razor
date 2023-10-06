@@ -7,7 +7,7 @@
                 <img src="css\images\Logo1.png" class="Logo" />
                  <a href="#" >Home</a>
                  <a href="Education">Education</a>
-                 <a href="Experience">Experience</a>
+                 <a href="Explore">Explore</a>
                  <a href="Contact" >Contact</a>
                  <a href="About" >About</a>
                  <a href="#"><div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search something ..." /></div></a>
@@ -28,19 +28,8 @@
         </div>
         </div>
 </div>
-
-  @if(popUpLogin)
-  {
-    <button type="button" class="cancelbtn" @onclick=@(() => popUpLogin = !popUpLogin)><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-    <UserLoginPage OnLogin=afterLogin />
-
-}
-@if(popURegister)
-{
-    <button type="button" class="cancelbtn" @onclick=@(() => popURegister = !popURegister)><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
-    <RegisterPage OnRegister="(()=>popURegister = false)" />
-}
-
+<UserLoginPage show=@popUpLogin OnLogin=afterLogin   Oncancel=cancelLogin/>
+<RegisterPage show=@popURegister OnRegister=@(()=>popURegister = false) Oncancel=cancelRegister />
 <AcknowledgementTab Content=@content Show=@ackTab />
 
 @code {
@@ -57,6 +46,7 @@
 
     protected override void OnInitialized()
     {
+
     }
     private void navProfile()
     {
@@ -85,6 +75,18 @@
         popUpLogin = false;
         popURegister = !popURegister;
     }
+    private void cancelLogin()
+    {
+        popUpLogin = false;
+        ackTab = true;
+        content = "Login cancel !";
+    }
+    private void cancelRegister()
+    {
+        popURegister = false;
+        ackTab = true;
+        content = "Register cancel !";
+    }
     private void afterLogin()
     {
         popUpLogin = false;
@@ -92,5 +94,8 @@
         content = "Login successfull !";
         uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
 
+
     }
-}
+
+    }
+    

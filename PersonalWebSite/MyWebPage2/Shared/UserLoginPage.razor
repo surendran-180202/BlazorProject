@@ -1,4 +1,8 @@
-﻿<div class="form-popup">
+﻿@if(show)
+{
+<form>
+<div class="form-popup">
+            <button type="button" class="cancelbtn" @onclick=cancelLogin><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
     <div class="form-container">
             <h4>LOGIN</h4>
         <input type="text" placeholder="Enter Your Name" @bind="_user.USERNAME"><br />
@@ -11,18 +15,29 @@
             <label>Not a Member?<a href="/RegisterPopUp/{popupshow}"> Singn up now </a></label>
         </div>
     </div>
-
-
+</form>
+}
 @code {
+    [Parameter]
+    public EventCallback<bool> OnLogin { get; set; }
+    protected bool IsTrue { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> Oncancel { get; set; }
+    protected bool IsCancel { get; set; }
+
+
+
+    [Parameter]
+    public bool show { get; set; }
+
     tblUser _user = new tblUser();
     private string? LoginUserName { get; set; }
     private string? LoginPassword { get; set; }
     private string? passwordClass { get; set; }
     string? warning;
 
-    [Parameter]
-    public EventCallback<bool> OnLogin { get; set; }
-    protected bool IsTrue { get; set; }
+
 
     protected override void OnInitialized()
     {
@@ -43,10 +58,16 @@
             warning = "Invalid UserName or Password";
         }
     }
+    protected async Task cancelLogin()
+    {
+        IsCancel = true;
+        await Oncancel.InvokeAsync(IsCancel);
+    }
 
 
     protected async Task OnUserLoginTrue()
     {
+        
         IsTrue = true;
         await OnLogin.InvokeAsync(IsTrue);
     }

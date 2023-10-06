@@ -1,0 +1,34 @@
+.UserImage[b-mp6ojrvj4r] {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.UserImage2[b-mp6ojrvj4r] {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-top: 40px;
+}
+
+.UserImage3[b-mp6ojrvj4r] {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.UserImage i[b-mp6ojrvj4r] {
+	padding: 1px;
+	font-size: 39px;
+	color: darkgrey;
+	background: white;
+	border-radius: 50%;
+}
+
+@media (max-width: 641px) {
+	.UserImage i[b-mp6ojrvj4r] {
+		
+		font-size: 28px;
+		
+	}
+}

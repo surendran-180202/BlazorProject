@@ -262,3 +262,4 @@ C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\De
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Template\CardTemplate.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Content\EducationContent.razor.rz.scp.css
 C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Content\ExperienceContent.razor.rz.scp.css
+C:\Education\Trining\Try\Blazor try\Blazor Git\PersonalWebSite\MyWebPage2\obj\Debug\net7.0\scopedcss\Content\UserImage.razor.rz.scp.css

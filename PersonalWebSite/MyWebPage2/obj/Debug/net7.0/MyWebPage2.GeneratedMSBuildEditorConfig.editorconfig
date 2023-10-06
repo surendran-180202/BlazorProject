@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Content/UserImage.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29udGVudFxVc2VySW1hZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Template/PdfView.razor]
 build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVcUGRmVmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -39,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope = b-2mnqj8yljp
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Content/ExperienceContent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udGVudFxFeHBlcmllbmNlQ29udGVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-6us2e5veaj
+
+[C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Content/UserImage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udGVudFxVc2VySW1hZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-mp6ojrvj4r
 
 [C:/Education/Trining/Try/Blazor try/Blazor Git/PersonalWebSite/MyWebPage2/Pages/About.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=

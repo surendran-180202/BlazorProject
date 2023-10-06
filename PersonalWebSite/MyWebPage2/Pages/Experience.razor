@@ -1,8 +1,8 @@
-﻿@page "/Experience"
-<PageTitle>Buiness</PageTitle>
+﻿@page "/Explore"
+<PageTitle>Explore</PageTitle>
 
 <br/>
-<center>
+@*<center>
 <div class="table">
      @if (Experiencetable.Count == 0)
         {
@@ -31,6 +31,61 @@
         <a href="PdfView"> <button @onclick="ViewResume">View Resume <i class="fa fa-arrow-circle-down"></i> </button></a>
     </div>
 </center>
+*@
+
+
+@*<div> 
+    <div class="nav"> 
+        <span><i class='fas fa-angle-left' ></i></span>
+        <span><i class='fas fa-angle-right'></i></span>
+    </div>
+    <div class="content">
+        <h3>Title</h3>
+        <img>
+    </div>
+
+</div>*@
+
+<div class="row">
+    <div class="col-md-3">
+
+        <div class="chatUser">
+
+
+            <span><img src="/css/images/UserImage1.png" />    </span>
+            <label>User Name <small>Last Text</small></label>
+        
+
+
+        </div>
+    </div>
+<div class="col-md-9">
+    <div class="flex-container wrap">
+        @for(int i = 0; i < 20; i++)
+        {
+            <div class="flex-item">
+                <span><img src="/css/images/UserImage1.png"/></span>
+                <p>...</p>
+                <img src="/css/images/image4.jpg"/>
+                <div class="content">
+                   @* <span>This is content</span>*@
+                    <div class="iconContainer">
+                            <i class="fa fa-share-alt"></i>
+                            <i class='fas fa-comment'></i>
+                            <i class='fas fa-user-alt'></i>
+                    </div>
+                 
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+</div>
+
+
+
 
 
 
