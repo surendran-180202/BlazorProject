@@ -30,6 +30,7 @@
     </div>
 </div>
 <PopupImage Show=@popupNotification />
+
 @code {
 
     private string? Datetime;
@@ -46,7 +47,7 @@
             CurrentUserName = userService.CurrentUserName();
             EducationDetails = userService.Education();
             motivationQuote = userService.motivationQuote();
-            notificationPopUp();
+
         }
         else CurrentUserName = "Guest";
 
@@ -54,12 +55,15 @@
         else if(DateTime.Now.Hour < 17) Datetime = "Good Afternoon";
         else Datetime = "Good Evening";
     }
-    protected  async Task notificationPopUp()
+    protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(5000);
-        popupNotification = true;
-
+        if(userService.CurrentUserName()!=null)
+        {
+            await Task.Delay(5000);
+            popupNotification = true;
+        }
     }
+ 
 
 
   

@@ -1,0 +1,52 @@
+div[b-dhie7nr1jl] {
+	/*  leverage cascade for cross-browser gradients  */
+	background: radial-gradient( hsl(100 100% 60%), hsl(200 100% 60%) ) fixed;
+	background: conic-gradient( hsl(100 100% 60%), hsl(200 100% 60%), hsl(100 100% 60%) ) fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+body[b-dhie7nr1jl] {
+	background: hsl(204 100% 5%);
+	/*   background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%),
+    hsl(100 100% 60%)
+  ) fixed; */
+	color: white;
+	min-block-size: 200vh;
+	min-inline-size: 100%;
+	padding: 5vmin;
+	box-sizing: border-box;
+	display: grid;
+	place-content: center;
+	font-family: system-ui;
+	font-size: min(200%, 5vmin);
+	z-index:1001;
+}
+
+h1[b-dhie7nr1jl], p[b-dhie7nr1jl], body[b-dhie7nr1jl] {
+	margin: 0;
+}
+
+h1[b-dhie7nr1jl] {
+	font-size: 10vmin;
+	line-height: 1.1;
+	max-inline-size: 15ch;
+	margin: auto;
+}
+
+p[b-dhie7nr1jl] {
+	font-family: "Dank Mono", ui-monospace, monospace;
+	margin-top: 1ch;
+	line-height: 1.35;
+	max-inline-size: 40ch;
+	margin: auto;
+}
+
+html[b-dhie7nr1jl] {
+	block-size: 100%;
+	inline-size: 100%;
+	text-align: center;
+}

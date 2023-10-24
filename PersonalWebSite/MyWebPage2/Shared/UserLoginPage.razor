@@ -1,7 +1,7 @@
 ﻿@if(show)
 {
-<form>
-<div class="form-popup">
+    <form class="form-popup">
+
             <button type="button" class="cancelbtn" @onclick=cancelLogin><i class="fa fa-plus-circle" style="transform: rotate(45deg);color:lightcoral;"></i></button>
     <div class="form-container">
             <h4>LOGIN</h4>
@@ -12,9 +12,9 @@
             <center>
                 <input type="submit" value="submit" @onclick="LoginUser">
             </center>
-            <label>Not a Member?<a href="/RegisterPopUp/{popupshow}"> Singn up now </a></label>
+            <label>Not a Member?<a href="/RegisterPopUp/true"> Singn up now </a></label>
         </div>
-    </div>
+  
 </form>
 }
 @code {

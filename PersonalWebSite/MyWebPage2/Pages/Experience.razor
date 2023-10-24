@@ -2,80 +2,49 @@
 <PageTitle>Explore</PageTitle>
 
 <br/>
-@*<center>
-<div class="table">
-     @if (Experiencetable.Count == 0)
-        {
-            <LoadingAnimation />
-        }
-        else
-        {
-          <table>
-              <tr>
-                  <th>Year</th>
-                  <th>Learing</th>
-                  <th>Institute</th>
-              </tr>
-            @foreach (var experience in Experiencetable)
-            {
-                <tr>
-                    <td width="20%">@experience.YEAR</td>
-                    <td width="40%">@experience.LEARING</td>
-                    <td width="40%">@experience.INSTITUTE</td>
-                </tr>
-            }
-           </table>
-        }
-</div>
-    <div class="ResumeButton">
-        <a href="PdfView"> <button @onclick="ViewResume">View Resume <i class="fa fa-arrow-circle-down"></i> </button></a>
-    </div>
-</center>
-*@
 
-
-@*<div> 
-    <div class="nav"> 
-        <span><i class='fas fa-angle-left' ></i></span>
-        <span><i class='fas fa-angle-right'></i></span>
-    </div>
-    <div class="content">
-        <h3>Title</h3>
-        <img>
-    </div>
-
-</div>*@
 
 <div class="row">
     <div class="col-md-3">
-
         <div class="chatUser">
-
-
-            <span><img src="/css/images/UserImage1.png" />    </span>
-            <label>User Name <small>Last Text</small></label>
-        
-
-
+            <div class="search"><i class="fa fa-search"></i><input type="text" placeholder="Search User ..." /><div class="enterBtn"><i class="fa fa-arrow-circle-right"></i></div> </div><br />
+            @for(int i = 0; i < 20; i++)
+            {
+                <div class="chatBoxOutLine" style="padding:5px;">
+            <div class="row" >
+                <div class="col-md-2">
+                            <span><img src="/css/images/UserImage1.png" /></span>
+                </div>
+                <div class="col-md-10">
+                            <div class="UserContent">
+                                <label style="font-size:12px;">User Name </label><br/>
+                                <small>erbrthrththrthrthrthdfbdfbdfbfgbfgbgfbryjthr</small>
+                            </div>
+                </div>
+            </div>
+            </div>
+            }
         </div>
+        
     </div>
+
 <div class="col-md-9">
     <div class="flex-container wrap">
         @for(int i = 0; i < 20; i++)
         {
             <div class="flex-item">
+                    <div class="content">
+                        @* <span>This is content</span>*@
+                        <div class="iconContainer">
+                            <i class="fa fa-share-alt"></i>&nbsp;
+                            <i class='fas fa-comment'></i>&nbsp;
+                            <i class='fas fa-user-alt'></i>&nbsp;
+                        </div>
+                    </div>
                 <span><img src="/css/images/UserImage1.png"/></span>
                 <p>...</p>
-                <img src="/css/images/image4.jpg"/>
-                <div class="content">
-                   @* <span>This is content</span>*@
-                    <div class="iconContainer">
-                            <i class="fa fa-share-alt"></i>
-                            <i class='fas fa-comment'></i>
-                            <i class='fas fa-user-alt'></i>
-                    </div>
-                 
-                </div>
+                <img src="/css/images/image1.jpg"/>
+             
             </div>
 
         }
@@ -95,7 +64,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Run(LoadEducation);
+       // await Task.Run(LoadEducation);
     }
     private void LoadEducation()
     {

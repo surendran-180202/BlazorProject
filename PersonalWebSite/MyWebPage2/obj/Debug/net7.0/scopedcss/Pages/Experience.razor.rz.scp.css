@@ -78,11 +78,28 @@ td[b-k73m1lwagc] {
 
 
 .chatUser[b-k73m1lwagc]{
+    width:25%;
+    background-color:rgba(255,255,255,0.5);
+    height:100vh;
+    position:fixed;
+    overflow-x:hidden;
+    padding:20px;
+  
     
 }
-    .chatUser span[b-k73m1lwagc]{
+.UserContent[b-k73m1lwagc] {
+    overflow-x: hidden;
+    
 
-    }
+}
+
+.chatBoxOutLine[b-k73m1lwagc] {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 0.1px solid white;
+}
+.chatUser span[b-k73m1lwagc] {
+}
     .chatUser span img[b-k73m1lwagc]{
         width:30px;
         border-radius:50px;
@@ -107,17 +124,14 @@ td[b-k73m1lwagc] {
         .flex-item span img[b-k73m1lwagc] {
             width: 30px;
             border-radius: 50%;
-         
         }
     .flex-item img[b-k73m1lwagc] {
         width: 100%;
         border-radius: 20px;
-      
     }
     .flex-item p[b-k73m1lwagc] {
         position: absolute;
-        margin:-40px 0 0 220px;
-   
+        margin:-30px 0 0 220px;
         color: white;
         font-weight:500;
         cursor:pointer;
@@ -126,17 +140,53 @@ td[b-k73m1lwagc] {
    display:none;
 }
 .flex-item:hover .content[b-k73m1lwagc] {
-    width: 100%;
+    position: absolute;
     display: block;
     color: white;
-    margin: -25% 0 0 0;
- 
-    background-color: rgba(0,0,0,0.5);
+    width: 250px;
+ /*   background-color: rgba(0,0,0,0.5);*/
+    background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.9));
     padding: 30px;
     border-radius: 20px;
+    margin: 110px 0 0 0;
 }
 .iconContainer[b-k73m1lwagc] {
-    position:absolute;
+ cursor:pointer;
     color: white;
     font-size: 20px;
 }
+
+.search[b-k73m1lwagc] {
+
+
+  
+}
+
+
+
+    .search input[b-k73m1lwagc] {
+        background-color: rgb(255,255,255,0.4);
+        border: none;
+        padding: 2% 18% 2% 2%;
+        padding-left: 40px;
+        border-radius: 20px;
+        outline: none;
+        color: white;
+    }
+
+        .search input[b-k73m1lwagc]::placeholder {
+            font-size: 10px;
+        }
+
+    .search i[b-k73m1lwagc] {
+        position: absolute;
+        margin: 10px 0 0 10px;
+    }
+.enterBtn[b-k73m1lwagc] {
+    cursor:pointer;
+    font-size: 20px;
+    position: absolute;
+    margin: -37px 0 0 250px;
+}
+
+
